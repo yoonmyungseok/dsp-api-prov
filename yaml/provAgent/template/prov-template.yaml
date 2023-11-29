@@ -1,0 +1,25 @@
+- route-template:
+    id: prov-template
+    parameters:
+      - name: FtpPath
+    from:
+#      uri: sftp://root@172.30.1.80{{FtpPath}}?password=vtw0810!@#&strictHostKeyChecking=no&include=^.*\.(yaml|jar|sh)$&binary=true&move=complete&soTimeout=30000
+      uri: sftp://root@172.30.1.80{{FtpPath}}?password=vtw0810!@#&strictHostKeyChecking=no&include=^.*\.tar$&binary=true&knownHostsFile=/root/.ssh/known_hosts&delay=20000&move=complete
+      steps:
+        - setHeader:
+            name: filename
+            simple: ${header.CamelFileName}
+        - setHeader:
+            name: funcPath
+            simple: file
+        - log: ${headers}
+        - choice:
+            when:
+              - simple: ${header.CamelFileParent} == "if"
+                steps:
+                  - to: http://172.30.1.84:6666/deploy/file&bridgeEndpoint=true
+              - simple: ${header.CamelFileParent} == "deploy"
+                steps:
+                  - to: http://172.30.1.84:7777/if/file&bridgeEndpoint=true
+#        - log: "전송 후 바디: ${body}"
+#        - log: "전송 후 헤더: ${headers}"

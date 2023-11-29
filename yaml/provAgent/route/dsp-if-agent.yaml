@@ -1,0 +1,6 @@
+- templated-route:
+    route-id: dsp-if-agent
+    route-template-ref: prov-template
+    parameters:
+      - name: FtpPath
+        value: /if

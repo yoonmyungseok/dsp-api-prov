@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: prov
+server:
+  port: 8888
+camel:
+  springboot:
+    routes-include-pattern: file:yaml/provAgent/**/*.yaml

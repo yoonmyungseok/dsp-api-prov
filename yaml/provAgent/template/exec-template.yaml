@@ -1,27 +1,27 @@
 - route-template:
     id: exec-template
-    parameters:
-      - name: funcPath
-#      - name: RequestHostDeploy
-#      - name: RequestHostIf
-      - name: httpHost
-      - name: httpPath
+#    parameters:
+#      - name: funcPath
+##      - name: RequestHostDeploy
+##      - name: RequestHostIf
+#      - name: httpHost
+#      - name: httpPath
     from:
-      uri: jetty:http://{{httpHost}}{{httpPath}}{{funcPath}}
-#      uri: jetty:http://localhost:5555/{}/{}
+#      uri: jetty:http://{{httpHost}}{{httpPath}}{{funcPath}}
+      uri: jetty:http://localhost:5555/{}/{}
       steps:
-        - process:
-            ref: requestProcessor
+#        - process:
+#            ref: requestProcessor
         - log: ${headers}
-        - choice:
-            when:
-              - simple: ${header.httpPath} == "if"
-                steps:
-                  - toD: http://172.30.1.84:6666/deploy/${header.funcPath}?bridgeEndpoint=true
-                  - log: if
-#                  - toD: http://localhost:6666${header.CamelHttpUri}?bridgeEndpoint=true
-              - simple: ${header.httpPath} == "deploy"
-                steps:
-                  - toD: http://172.30.1.84:7777/if/${header.funcPath}?bridgeEndpoint=true
-                  - log: deploy
-#                  - toD: http://localhost:7777${header.CamelHttpUri}?bridgeEndpoint=true
+#        - choice:
+#            when:
+#              - simple: ${header.httpPath} == "if"
+#                steps:
+#                  - toD: http://172.30.1.84:6666/deploy/${header.funcPath}?bridgeEndpoint=true
+#                  - log: if
+##                  - toD: http://localhost:6666${header.CamelHttpUri}?bridgeEndpoint=true
+#              - simple: ${header.httpPath} == "deploy"
+#                steps:
+#                  - toD: http://172.30.1.84:7777/if/${header.funcPath}?bridgeEndpoint=true
+#                  - log: deploy
+##                  - toD: http://localhost:7777${header.CamelHttpUri}?bridgeEndpoint=true

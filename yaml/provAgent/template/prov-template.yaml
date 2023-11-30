@@ -1,25 +1,38 @@
 - route-template:
     id: prov-template
-    parameters:
-      - name: FtpPath
     from:
-#      uri: sftp://root@172.30.1.80{{FtpPath}}?password=vtw0810!@#&strictHostKeyChecking=no&include=^.*\.(yaml|jar|sh)$&binary=true&move=complete&soTimeout=30000
-      uri: sftp://root@172.30.1.80{{FtpPath}}?password=vtw0810!@#&strictHostKeyChecking=no&include=^.*\.tar$&binary=true&knownHostsFile=/root/.ssh/known_hosts&delay=20000&move=complete
+      uri: file://file?include=^.*\.(yaml|jar|sh)$&noop=true
       steps:
-        - setHeader:
-            name: filename
-            simple: ${header.CamelFileName}
-        - setHeader:
-            name: funcPath
-            simple: file
+        - process:
+            ref: fileExtProcessor
         - log: ${headers}
+        - log: "확장자: ${header.fileExtension}"
+        - log: "파일명: ${header.fileName}"
+        - log: "서비스명: ${header.serviceName}"
+        - log: "에이전트: ${header.agentName}"
         - choice:
             when:
-              - simple: ${header.CamelFileParent} == "if"
+              - simple: ${header.fileExtension} == "jar"
                 steps:
-                  - to: http://172.30.1.84:6666/deploy/file&bridgeEndpoint=true
-              - simple: ${header.CamelFileParent} == "deploy"
+                  - log: "jar 시간 지연 10초 시작"
+                  - delay:
+                      constant: 10000
+                  - process:
+                      ref: fileSendProcessor
+                  - log: "jar 시간 지연 10초 끝"
+              - simple: ${header.fileExtension} == "yaml" || ${header.fileExtension} == "sh"
                 steps:
-                  - to: http://172.30.1.84:7777/if/file&bridgeEndpoint=true
+                  - log: "시간 지연 2초 시작"
+                  - delay:
+                      constant: 2000
+                  - process:
+                      ref: fileSendProcessor
+                  - log: "시간 지연 2초 끝"
+#              - simple: ${header.CamelFileParent} == "if"
+#                steps:
+#                  - to: http://172.30.1.84:6666/deploy/file&bridgeEndpoint=true
+#              - simple: ${header.CamelFileParent} == "deploy"
+#                steps:
+#                  - to: http://172.30.1.84:7777/if/file&bridgeEndpoint=true
 #        - log: "전송 후 바디: ${body}"
 #        - log: "전송 후 헤더: ${headers}"

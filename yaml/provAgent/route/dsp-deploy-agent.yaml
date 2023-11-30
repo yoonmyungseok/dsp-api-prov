@@ -1,6 +1,3 @@
 - templated-route:
     route-id: dsp-deploy-agent
     route-template-ref: prov-template
-    parameters:
-      - name: FtpPath
-        value: /deploy

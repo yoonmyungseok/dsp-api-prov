@@ -32,7 +32,7 @@ public class FileSendProcessor implements Processor {
         Exchange sendExchange = producerTemplate.withExchange(exchange).to(url+"/file").send();
         exchange.getMessage().setBody(sendExchange.getMessage().getBody());
         exchange.getMessage().setHeaders(sendExchange.getMessage().getHeaders());
-        log.info("url===="+url);
+        log.info("====url===="+url);
       }
     } catch (IOException e) {
       log.error("에러: "+e.getMessage());

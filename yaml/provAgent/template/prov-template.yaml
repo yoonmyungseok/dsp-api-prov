@@ -1,8 +1,14 @@
 - route-template:
     id: prov-template
     from:
-      uri: file://file?include=^.*\.(yaml|jar|sh)$&noop=true
+      uri: file://file?include=^.*\.(yaml|jar|sh)$
       steps:
+        - onException:
+            handled:
+              constant: true
+            exception: java.lang.Exception
+            steps:
+              - log: ${exception.message}
         - process:
             ref: fileExtProcessor
         - log: ${headers}
@@ -20,6 +26,7 @@
                   - process:
                       ref: fileSendProcessor
                   - log: "jar 시간 지연 10초 끝"
+                  - log: "파일 전송 성공"
               - simple: ${header.fileExtension} == "yaml" || ${header.fileExtension} == "sh"
                 steps:
                   - log: "시간 지연 2초 시작"
@@ -28,6 +35,7 @@
                   - process:
                       ref: fileSendProcessor
                   - log: "시간 지연 2초 끝"
+                  - log: "파일 전송 성공"
 #              - simple: ${header.CamelFileParent} == "if"
 #                steps:
 #                  - to: http://172.30.1.84:6666/deploy/file&bridgeEndpoint=true

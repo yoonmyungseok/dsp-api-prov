@@ -15,11 +15,15 @@ public class FileExtProcessor implements Processor {
     String fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
     String[] split=fileName.split("-");
 
+    if(!(split[0].startsWith("S")&&split[0].length()==6)){
+      throw new RuntimeException("서비스명이 잘못됨");
+    }
+
     double fileSizeInMB=Math.round(convertBytesToMegabytes(exchange.getMessage().getHeader("CamelFileLength", long.class))*100)/100.0;
 
+    exchange.getMessage().setHeader("serviceName",split[0]);//서비스 명
     exchange.getMessage().setHeader("fileExtension",fileExtension);//확장자
     exchange.getMessage().setHeader("fileName",fileName);//파일 명
-    exchange.getMessage().setHeader("serviceName",split[0]);//서비스 명
     exchange.getMessage().setHeader("agentName",split[1].toLowerCase());//에이전트 구분(I/F, Deploy)
     log.info("파일 크기: {} mb",fileSizeInMB);
   }

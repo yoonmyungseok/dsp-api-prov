@@ -1,738 +1,142 @@
-2023-12-01 13:21:41.493  INFO 48716 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
-2023-12-01 13:21:41.544  INFO 48716 --- [Camel (camel-1) thread #2 - ShutdownTask] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@4679554d{HTTP/1.1, (http/1.1)}{localhost:5555}
-2023-12-01 13:21:41.548  INFO 48716 --- [Camel (camel-1) thread #2 - ShutdownTask] o.e.jetty.server.handler.ContextHandler  : Stopped o.e.j.s.ServletContextHandler@29394966{/,null,STOPPED}
-2023-12-01 13:21:41.553  INFO 48716 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
-2023-12-01 13:21:41.554  INFO 48716 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-deploy-agent (file://file)
-2023-12-01 13:21:41.554  INFO 48716 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
-2023-12-01 13:21:41.559  INFO 48716 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 65ms (uptime:20h55m)
-2023-12-01 13:21:42.189  INFO 48716 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
-2023-12-01 13:22:02.748  INFO 48396 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 48396 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-01 13:22:02.752  INFO 48396 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-01 13:22:04.065  INFO 48396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-01 13:22:04.071  INFO 48396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-01 13:22:04.071  INFO 48396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-01 13:22:04.175  INFO 48396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-01 13:22:04.175  INFO 48396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1369 ms
-2023-12-01 13:22:05.204  INFO 48396 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-01 13:22:05.287  INFO 48396 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-01 13:22:05.289  INFO 48396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-01 13:22:05.717  INFO 48396 --- [main] o.a.camel.component.file.FileEndpoint    : Endpoint is configured with noop=true so forcing endpoint to be idempotent as well
-2023-12-01 13:22:05.717  INFO 48396 --- [main] o.a.camel.component.file.FileEndpoint    : Using default memory based idempotent repository with cache max size: 1000
-2023-12-01 13:22:05.721  INFO 48396 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-01 13:22:05.738  INFO 48396 --- [main] org.eclipse.jetty.util.log               : Logging initialized @5256ms to org.eclipse.jetty.util.log.Slf4jLog
-2023-12-01 13:22:05.770  WARN 48396 --- [main] o.a.c.c.jetty.JettyHttpComponent         : You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? jetty:http://localhost:5555/%7B%7D/%7B%7D
-2023-12-01 13:22:05.793  INFO 48396 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.20+8
-2023-12-01 13:22:05.820  INFO 48396 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@59aa1d1c{/,null,AVAILABLE}
-2023-12-01 13:22:05.835  INFO 48396 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@3691d4da{HTTP/1.1, (http/1.1)}{localhost:5555}
-2023-12-01 13:22:05.835  INFO 48396 --- [main] org.eclipse.jetty.server.Server          : Started @5353ms
-2023-12-01 13:22:05.849  INFO 48396 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-01 13:22:05.849  INFO 48396 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
-2023-12-01 13:22:05.849  INFO 48396 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy-agent (file://file)
-2023-12-01 13:22:05.849  INFO 48396 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 405ms (build:37ms init:242ms start:126ms)
-2023-12-01 13:22:05.855  INFO 48396 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 3.495 seconds (JVM running for 5.373)
-2023-12-01 13:22:06.883  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:22:06.886  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@2eaf123a, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:22:06.887  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:22:06.887  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:22:06.887  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:22:06.887  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:22:06.892  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:22:07.358  INFO 48396 --- [RMI TCP Connection(5)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-01 13:22:07.359  INFO 48396 --- [RMI TCP Connection(5)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-01 13:22:07.360  INFO 48396 --- [RMI TCP Connection(5)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-01 13:22:11.402  INFO 48396 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:22:11.410 ERROR 48396 --- [Camel (camel-1) thread #2 - Delay] o.a.c.p.e.DefaultErrorHandler            : Failed delivery for (MessageId: 45B711775A2BEC3-0000000000000000 on ExchangeId: 45B711775A2BEC3-0000000000000000). Exhausted after delivery attempt: 1 caught: org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-
-Message History (complete message history is disabled)
----------------------------------------------------------------------------------------------------------------------------------------
-Source                                   ID                             Processor                                          Elapsed (ms)
-prov-template.yaml:3                     dsp-deploy-agent/dsp-deploy-ag from[file://file?include=%5E.*%5C.%28yaml%7Cjar%7C    345809765
-	...
-prov-template.yaml:28                    dsp-deploy-agent/process3      ref:fileSendProcessor                                         0
-
-Stacktrace
----------------------------------------------------------------------------------------------------------------------------------------
-
-org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.camel.component.http.HttpProducer.executeMethod(HttpProducer.java:445) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:273) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:66) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:214) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:111) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:83) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:108) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:199) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:176) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultFluentProducerTemplate.send(DefaultFluentProducerTemplate.java:453) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at go.kr.dsp.api.processor.FileSendProcessor.process(FileSendProcessor.java:32) ~[main/:na]
-	at org.apache.camel.support.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:65) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:482) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:416) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:80) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:62) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:71) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	... 36 common frames omitted
-
-2023-12-01 13:22:11.412  WARN 48396 --- [Camel (camel-1) thread #2 - Delay] o.a.c.c.file.GenericFileOnCompletion     : Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7a1be0e1 for file: GenericFile[S00001-if-prov-template.yaml]
-2023-12-01 13:22:11.506  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:22:11.506  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@1ad2c5ed, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:22:11.506  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:22:11.507  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:22:11.507  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:22:11.507  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:22:11.507  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:22:15.565  INFO 48396 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:22:15.567 ERROR 48396 --- [Camel (camel-1) thread #2 - Delay] o.a.c.p.e.DefaultErrorHandler            : Failed delivery for (MessageId: 45B711775A2BEC3-0000000000000001 on ExchangeId: 45B711775A2BEC3-0000000000000001). Exhausted after delivery attempt: 1 caught: org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-
-Message History (complete message history is disabled)
----------------------------------------------------------------------------------------------------------------------------------------
-Source                                   ID                             Processor                                          Elapsed (ms)
-prov-template.yaml:3                     dsp-deploy-agent/dsp-deploy-ag from[file://file?include=%5E.*%5C.%28yaml%7Cjar%7C    345813928
-	...
-prov-template.yaml:28                    dsp-deploy-agent/process3      ref:fileSendProcessor                                         0
-
-Stacktrace
----------------------------------------------------------------------------------------------------------------------------------------
-
-org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.camel.component.http.HttpProducer.executeMethod(HttpProducer.java:445) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:273) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:66) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:214) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:111) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:83) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:108) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:199) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:176) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultFluentProducerTemplate.send(DefaultFluentProducerTemplate.java:453) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at go.kr.dsp.api.processor.FileSendProcessor.process(FileSendProcessor.java:32) ~[main/:na]
-	at org.apache.camel.support.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:65) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:482) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:416) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:80) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:62) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:71) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	... 36 common frames omitted
-
-2023-12-01 13:22:15.568  WARN 48396 --- [Camel (camel-1) thread #2 - Delay] o.a.c.c.file.GenericFileOnCompletion     : Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7a1be0e1 for file: GenericFile[S00001-if-prov-template.yaml]
-2023-12-01 13:22:15.611  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:22:15.612  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@7fe7280b, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:22:15.612  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:22:15.612  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:22:15.612  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:22:15.613  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:22:15.613  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:22:19.667  INFO 48396 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:22:19.668 ERROR 48396 --- [Camel (camel-1) thread #3 - Delay] o.a.c.p.e.DefaultErrorHandler            : Failed delivery for (MessageId: 45B711775A2BEC3-0000000000000002 on ExchangeId: 45B711775A2BEC3-0000000000000002). Exhausted after delivery attempt: 1 caught: org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-
-Message History (complete message history is disabled)
----------------------------------------------------------------------------------------------------------------------------------------
-Source                                   ID                             Processor                                          Elapsed (ms)
-prov-template.yaml:3                     dsp-deploy-agent/dsp-deploy-ag from[file://file?include=%5E.*%5C.%28yaml%7Cjar%7C    345818029
-	...
-prov-template.yaml:28                    dsp-deploy-agent/process3      ref:fileSendProcessor                                         0
-
-Stacktrace
----------------------------------------------------------------------------------------------------------------------------------------
-
-org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.camel.component.http.HttpProducer.executeMethod(HttpProducer.java:445) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:273) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:66) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:214) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:111) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:83) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:108) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:199) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:176) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultFluentProducerTemplate.send(DefaultFluentProducerTemplate.java:453) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at go.kr.dsp.api.processor.FileSendProcessor.process(FileSendProcessor.java:32) ~[main/:na]
-	at org.apache.camel.support.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:65) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:482) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:416) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:80) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:62) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:71) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	... 36 common frames omitted
-
-2023-12-01 13:22:19.669  WARN 48396 --- [Camel (camel-1) thread #3 - Delay] o.a.c.c.file.GenericFileOnCompletion     : Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7a1be0e1 for file: GenericFile[S00001-if-prov-template.yaml]
-2023-12-01 13:22:19.711  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:22:19.711  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@576a8e05, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:22:19.711  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:22:19.712  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:22:19.712  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:22:19.712  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:22:19.712  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:22:23.769  INFO 48396 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:22:23.773 ERROR 48396 --- [Camel (camel-1) thread #2 - Delay] o.a.c.p.e.DefaultErrorHandler            : Failed delivery for (MessageId: 45B711775A2BEC3-0000000000000003 on ExchangeId: 45B711775A2BEC3-0000000000000003). Exhausted after delivery attempt: 1 caught: org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-
-Message History (complete message history is disabled)
----------------------------------------------------------------------------------------------------------------------------------------
-Source                                   ID                             Processor                                          Elapsed (ms)
-prov-template.yaml:3                     dsp-deploy-agent/dsp-deploy-ag from[file://file?include=%5E.*%5C.%28yaml%7Cjar%7C    345822133
-	...
-prov-template.yaml:28                    dsp-deploy-agent/process3      ref:fileSendProcessor                                         0
-
-Stacktrace
----------------------------------------------------------------------------------------------------------------------------------------
-
-org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.camel.component.http.HttpProducer.executeMethod(HttpProducer.java:445) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:273) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:66) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:214) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:111) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:83) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:108) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:199) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:176) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultFluentProducerTemplate.send(DefaultFluentProducerTemplate.java:453) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at go.kr.dsp.api.processor.FileSendProcessor.process(FileSendProcessor.java:32) ~[main/:na]
-	at org.apache.camel.support.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:65) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:482) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:416) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:80) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:62) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:71) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	... 36 common frames omitted
-
-2023-12-01 13:22:23.774  WARN 48396 --- [Camel (camel-1) thread #2 - Delay] o.a.c.c.file.GenericFileOnCompletion     : Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7a1be0e1 for file: GenericFile[S00001-if-prov-template.yaml]
-2023-12-01 13:22:23.827  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:22:23.827  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@41bfe01c, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:22:23.827  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:22:23.828  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:22:23.828  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:22:23.830  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:22:23.831  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:22:27.898  INFO 48396 --- [Camel (camel-1) thread #4 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:22:27.900 ERROR 48396 --- [Camel (camel-1) thread #4 - Delay] o.a.c.p.e.DefaultErrorHandler            : Failed delivery for (MessageId: 45B711775A2BEC3-0000000000000004 on ExchangeId: 45B711775A2BEC3-0000000000000004). Exhausted after delivery attempt: 1 caught: org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-
-Message History (complete message history is disabled)
----------------------------------------------------------------------------------------------------------------------------------------
-Source                                   ID                             Processor                                          Elapsed (ms)
-prov-template.yaml:3                     dsp-deploy-agent/dsp-deploy-ag from[file://file?include=%5E.*%5C.%28yaml%7Cjar%7C    345826260
-	...
-prov-template.yaml:28                    dsp-deploy-agent/process3      ref:fileSendProcessor                                         0
-
-Stacktrace
----------------------------------------------------------------------------------------------------------------------------------------
-
-org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.camel.component.http.HttpProducer.executeMethod(HttpProducer.java:445) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:273) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:66) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:214) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:111) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:83) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:108) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:199) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:176) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultFluentProducerTemplate.send(DefaultFluentProducerTemplate.java:453) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at go.kr.dsp.api.processor.FileSendProcessor.process(FileSendProcessor.java:32) ~[main/:na]
-	at org.apache.camel.support.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:65) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:482) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:416) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:80) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:62) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:71) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	... 36 common frames omitted
-
-2023-12-01 13:22:27.901  WARN 48396 --- [Camel (camel-1) thread #4 - Delay] o.a.c.c.file.GenericFileOnCompletion     : Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7a1be0e1 for file: GenericFile[S00001-if-prov-template.yaml]
-2023-12-01 13:22:27.927  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:22:27.927  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@47111bda, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:22:27.927  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:22:27.927  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:22:27.927  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:22:27.927  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:22:27.928  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:22:31.989  INFO 48396 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:22:31.991 ERROR 48396 --- [Camel (camel-1) thread #3 - Delay] o.a.c.p.e.DefaultErrorHandler            : Failed delivery for (MessageId: 45B711775A2BEC3-0000000000000005 on ExchangeId: 45B711775A2BEC3-0000000000000005). Exhausted after delivery attempt: 1 caught: org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-
-Message History (complete message history is disabled)
----------------------------------------------------------------------------------------------------------------------------------------
-Source                                   ID                             Processor                                          Elapsed (ms)
-prov-template.yaml:3                     dsp-deploy-agent/dsp-deploy-ag from[file://file?include=%5E.*%5C.%28yaml%7Cjar%7C    345830352
-	...
-prov-template.yaml:28                    dsp-deploy-agent/process3      ref:fileSendProcessor                                         0
-
-Stacktrace
----------------------------------------------------------------------------------------------------------------------------------------
-
-org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.camel.component.http.HttpProducer.executeMethod(HttpProducer.java:445) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:273) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:66) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:214) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:111) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:83) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:108) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:199) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:176) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultFluentProducerTemplate.send(DefaultFluentProducerTemplate.java:453) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at go.kr.dsp.api.processor.FileSendProcessor.process(FileSendProcessor.java:32) ~[main/:na]
-	at org.apache.camel.support.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:65) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:482) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:416) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:80) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:62) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:71) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	... 36 common frames omitted
-
-2023-12-01 13:22:31.992  WARN 48396 --- [Camel (camel-1) thread #3 - Delay] o.a.c.c.file.GenericFileOnCompletion     : Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7a1be0e1 for file: GenericFile[S00001-if-prov-template.yaml]
-2023-12-01 13:22:32.019  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:22:32.019  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@f040f5f, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:22:32.019  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:22:32.019  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:22:32.019  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:22:32.019  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:22:32.019  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:22:36.090  INFO 48396 --- [Camel (camel-1) thread #5 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:22:36.092 ERROR 48396 --- [Camel (camel-1) thread #5 - Delay] o.a.c.p.e.DefaultErrorHandler            : Failed delivery for (MessageId: 45B711775A2BEC3-0000000000000006 on ExchangeId: 45B711775A2BEC3-0000000000000006). Exhausted after delivery attempt: 1 caught: org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-
-Message History (complete message history is disabled)
----------------------------------------------------------------------------------------------------------------------------------------
-Source                                   ID                             Processor                                          Elapsed (ms)
-prov-template.yaml:3                     dsp-deploy-agent/dsp-deploy-ag from[file://file?include=%5E.*%5C.%28yaml%7Cjar%7C    345834453
-	...
-prov-template.yaml:28                    dsp-deploy-agent/process3      ref:fileSendProcessor                                         0
-
-Stacktrace
----------------------------------------------------------------------------------------------------------------------------------------
-
-org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.camel.component.http.HttpProducer.executeMethod(HttpProducer.java:445) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:273) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:66) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:214) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:111) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:83) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:108) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:199) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:176) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultFluentProducerTemplate.send(DefaultFluentProducerTemplate.java:453) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at go.kr.dsp.api.processor.FileSendProcessor.process(FileSendProcessor.java:32) ~[main/:na]
-	at org.apache.camel.support.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:65) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:482) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:416) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:80) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:62) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:71) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	... 36 common frames omitted
-
-2023-12-01 13:22:36.093  WARN 48396 --- [Camel (camel-1) thread #5 - Delay] o.a.c.c.file.GenericFileOnCompletion     : Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7a1be0e1 for file: GenericFile[S00001-if-prov-template.yaml]
-2023-12-01 13:22:36.118  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:22:36.120  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@41721377, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:22:36.120  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:22:36.120  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:22:36.120  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:22:36.120  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:22:36.120  INFO 48396 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:22:37.426  INFO 48396 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
-2023-12-01 13:22:37.432  INFO 48396 --- [Camel (camel-1) thread #10 - ShutdownTask] o.a.c.i.engine.DefaultShutdownStrategy   : Waiting as there are still 1 inflight and pending exchanges to complete, timeout in 45 seconds. Inflights per route: [dsp-deploy-agent = 1]
-2023-12-01 13:22:38.441  INFO 48396 --- [Camel (camel-1) thread #10 - ShutdownTask] o.a.c.i.engine.DefaultShutdownStrategy   : Waiting as there are still 1 inflight and pending exchanges to complete, timeout in 44 seconds. Inflights per route: [dsp-deploy-agent = 1]
-2023-12-01 13:22:39.449  INFO 48396 --- [Camel (camel-1) thread #10 - ShutdownTask] o.a.c.i.engine.DefaultShutdownStrategy   : Waiting as there are still 1 inflight and pending exchanges to complete, timeout in 43 seconds. Inflights per route: [dsp-deploy-agent = 1]
-2023-12-01 13:22:40.179  INFO 48396 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:22:40.181 ERROR 48396 --- [Camel (camel-1) thread #2 - Delay] o.a.c.p.e.DefaultErrorHandler            : Failed delivery for (MessageId: 45B711775A2BEC3-0000000000000007 on ExchangeId: 45B711775A2BEC3-0000000000000007). Exhausted after delivery attempt: 1 caught: org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-
-Message History (complete message history is disabled)
----------------------------------------------------------------------------------------------------------------------------------------
-Source                                   ID                             Processor                                          Elapsed (ms)
-prov-template.yaml:3                     dsp-deploy-agent/dsp-deploy-ag from[file://file?include=%5E.*%5C.%28yaml%7Cjar%7C    345838541
-	...
-prov-template.yaml:28                    dsp-deploy-agent/process3      ref:fileSendProcessor                                         0
-
-Stacktrace
----------------------------------------------------------------------------------------------------------------------------------------
-
-org.apache.http.conn.HttpHostConnectException: Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.camel.component.http.HttpProducer.executeMethod(HttpProducer.java:445) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:273) ~[camel-http-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:66) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:214) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:111) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:83) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:108) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:199) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:176) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultFluentProducerTemplate.send(DefaultFluentProducerTemplate.java:453) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at go.kr.dsp.api.processor.FileSendProcessor.process(FileSendProcessor.java:32) ~[main/:na]
-	at org.apache.camel.support.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:65) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54) ~[camel-base-engine-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:482) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:416) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:80) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:62) ~[camel-support-3.20.0.jar:3.20.0]
-	at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:71) ~[camel-core-processor-3.20.0.jar:3.20.0]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	... 36 common frames omitted
-
-2023-12-01 13:22:40.182  WARN 48396 --- [Camel (camel-1) thread #2 - Delay] o.a.c.c.file.GenericFileOnCompletion     : Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7a1be0e1 for file: GenericFile[S00001-if-prov-template.yaml]
-2023-12-01 13:22:40.476  INFO 48396 --- [Camel (camel-1) thread #10 - ShutdownTask] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@3691d4da{HTTP/1.1, (http/1.1)}{localhost:5555}
-2023-12-01 13:22:40.481  INFO 48396 --- [Camel (camel-1) thread #10 - ShutdownTask] o.e.jetty.server.handler.ContextHandler  : Stopped o.e.j.s.ServletContextHandler@59aa1d1c{/,null,STOPPED}
-2023-12-01 13:22:40.489  INFO 48396 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
-2023-12-01 13:22:40.489  INFO 48396 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-deploy-agent (file://file)
-2023-12-01 13:22:40.489  INFO 48396 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
-2023-12-01 13:22:40.496  INFO 48396 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 3s69ms (uptime:34s)
-2023-12-01 13:22:41.077  INFO 48396 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
-2023-12-01 13:23:44.880  INFO 21212 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 21212 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-01 13:23:44.881  INFO 21212 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-01 13:23:45.862  INFO 21212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-01 13:23:45.869  INFO 21212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-01 13:23:45.869  INFO 21212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-01 13:23:45.971  INFO 21212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-01 13:23:45.971  INFO 21212 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1063 ms
-2023-12-01 13:23:46.794  INFO 21212 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-01 13:23:46.849  INFO 21212 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-01 13:23:46.850  INFO 21212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-01 13:23:47.092  INFO 21212 --- [main] o.a.camel.component.file.FileEndpoint    : Endpoint is configured with noop=true so forcing endpoint to be idempotent as well
-2023-12-01 13:23:47.093  INFO 21212 --- [main] o.a.camel.component.file.FileEndpoint    : Using default memory based idempotent repository with cache max size: 1000
-2023-12-01 13:23:47.094  INFO 21212 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-01 13:23:47.108  INFO 21212 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3658ms to org.eclipse.jetty.util.log.Slf4jLog
-2023-12-01 13:23:47.133  WARN 21212 --- [main] o.a.c.c.jetty.JettyHttpComponent         : You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? jetty:http://localhost:5555/%7B%7D/%7B%7D
-2023-12-01 13:23:47.146  INFO 21212 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.20+8
-2023-12-01 13:23:47.168  INFO 21212 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@59aa1d1c{/,null,AVAILABLE}
-2023-12-01 13:23:47.181  INFO 21212 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@3691d4da{HTTP/1.1, (http/1.1)}{localhost:5555}
-2023-12-01 13:23:47.182  INFO 21212 --- [main] org.eclipse.jetty.server.Server          : Started @3731ms
-2023-12-01 13:23:47.192  INFO 21212 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-01 13:23:47.192  INFO 21212 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
-2023-12-01 13:23:47.193  INFO 21212 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy-agent (file://file)
-2023-12-01 13:23:47.193  INFO 21212 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 288ms (build:39ms init:152ms start:97ms)
-2023-12-01 13:23:47.197  INFO 21212 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.582 seconds (JVM running for 3.747)
-2023-12-01 13:23:48.208  INFO 21212 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:23:48.212  INFO 21212 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@3759c073, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:23:48.212  INFO 21212 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:23:48.212  INFO 21212 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:23:48.212  INFO 21212 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:23:48.212  INFO 21212 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:23:48.215  INFO 21212 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:23:48.315  INFO 21212 --- [RMI TCP Connection(2)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-01 13:23:48.316  INFO 21212 --- [RMI TCP Connection(2)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-01 13:23:48.319  INFO 21212 --- [RMI TCP Connection(2)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2023-12-01 13:23:50.627  INFO 21212 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:23:50.628  INFO 21212 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:30                    : 시간 지연 2초 끝
-2023-12-01 13:25:36.468  INFO 21212 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
-2023-12-01 13:25:36.486  INFO 21212 --- [Camel (camel-1) thread #3 - ShutdownTask] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@3691d4da{HTTP/1.1, (http/1.1)}{localhost:5555}
-2023-12-01 13:25:36.491  INFO 21212 --- [Camel (camel-1) thread #3 - ShutdownTask] o.e.jetty.server.handler.ContextHandler  : Stopped o.e.j.s.ServletContextHandler@59aa1d1c{/,null,STOPPED}
-2023-12-01 13:25:36.495  INFO 21212 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
-2023-12-01 13:25:36.495  INFO 21212 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-deploy-agent (file://file)
-2023-12-01 13:25:36.495  INFO 21212 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
-2023-12-01 13:25:36.503  INFO 21212 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 34ms (uptime:1m49s)
-2023-12-01 13:25:37.268  INFO 21212 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
-2023-12-01 13:25:41.347  INFO 33804 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 33804 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-01 13:25:41.350  INFO 33804 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-01 13:25:42.241  INFO 33804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-01 13:25:42.248  INFO 33804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-01 13:25:42.248  INFO 33804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-01 13:25:42.357  INFO 33804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-01 13:25:42.357  INFO 33804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 982 ms
-2023-12-01 13:25:43.194  INFO 33804 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-01 13:25:43.257  INFO 33804 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-01 13:25:43.258  INFO 33804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-01 13:25:43.483  INFO 33804 --- [main] o.a.camel.component.file.FileEndpoint    : Endpoint is configured with noop=true so forcing endpoint to be idempotent as well
-2023-12-01 13:25:43.483  INFO 33804 --- [main] o.a.camel.component.file.FileEndpoint    : Using default memory based idempotent repository with cache max size: 1000
-2023-12-01 13:25:43.484  INFO 33804 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-01 13:25:43.497  INFO 33804 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3677ms to org.eclipse.jetty.util.log.Slf4jLog
-2023-12-01 13:25:43.521  WARN 33804 --- [main] o.a.c.c.jetty.JettyHttpComponent         : You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? jetty:http://localhost:5555/%7B%7D/%7B%7D
-2023-12-01 13:25:43.533  INFO 33804 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.20+8
-2023-12-01 13:25:43.552  INFO 33804 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@bc4a9b0{/,null,AVAILABLE}
-2023-12-01 13:25:43.567  INFO 33804 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@48aaaed9{HTTP/1.1, (http/1.1)}{localhost:5555}
-2023-12-01 13:25:43.568  INFO 33804 --- [main] org.eclipse.jetty.server.Server          : Started @3748ms
-2023-12-01 13:25:43.580  INFO 33804 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-01 13:25:43.580  INFO 33804 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
-2023-12-01 13:25:43.580  INFO 33804 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy-agent (file://file)
-2023-12-01 13:25:43.580  INFO 33804 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 281ms (build:40ms init:145ms start:96ms)
-2023-12-01 13:25:43.585  INFO 33804 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.51 seconds (JVM running for 3.766)
-2023-12-01 13:25:44.378  INFO 33804 --- [RMI TCP Connection(2)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-01 13:25:44.381  INFO 33804 --- [RMI TCP Connection(2)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-01 13:25:44.382  INFO 33804 --- [RMI TCP Connection(2)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-01 13:25:44.605  INFO 33804 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:25:44.606  INFO 33804 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@269400f8, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:25:44.607  INFO 33804 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:25:44.607  INFO 33804 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:25:44.607  INFO 33804 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:25:44.607  INFO 33804 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:25:44.609  INFO 33804 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:25:46.777  INFO 33804 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
-2023-12-01 13:25:46.779  INFO 33804 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:30                    : 시간 지연 2초 끝
-2023-12-01 13:27:09.502  INFO 33804 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
-2023-12-01 13:27:09.516  INFO 33804 --- [Camel (camel-1) thread #3 - ShutdownTask] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@48aaaed9{HTTP/1.1, (http/1.1)}{localhost:5555}
-2023-12-01 13:27:09.518  INFO 33804 --- [Camel (camel-1) thread #3 - ShutdownTask] o.e.jetty.server.handler.ContextHandler  : Stopped o.e.j.s.ServletContextHandler@bc4a9b0{/,null,STOPPED}
-2023-12-01 13:27:09.522  INFO 33804 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
-2023-12-01 13:27:09.522  INFO 33804 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-deploy-agent (file://file)
-2023-12-01 13:27:09.522  INFO 33804 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
-2023-12-01 13:27:09.526  INFO 33804 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 24ms (uptime:1m26s)
-2023-12-01 13:27:10.162  INFO 33804 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
-2023-12-01 13:27:14.160  INFO 29112 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 29112 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-01 13:27:14.162  INFO 29112 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-01 13:27:15.091  INFO 29112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-01 13:27:15.098  INFO 29112 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-01 13:27:15.098  INFO 29112 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-01 13:27:15.202  INFO 29112 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-01 13:27:15.202  INFO 29112 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1006 ms
-2023-12-01 13:27:15.966  INFO 29112 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-01 13:27:16.023  INFO 29112 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-01 13:27:16.024  INFO 29112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-01 13:27:16.256  INFO 29112 --- [main] o.a.camel.component.file.FileEndpoint    : Endpoint is configured with noop=true so forcing endpoint to be idempotent as well
-2023-12-01 13:27:16.256  INFO 29112 --- [main] o.a.camel.component.file.FileEndpoint    : Using default memory based idempotent repository with cache max size: 1000
-2023-12-01 13:27:16.257  INFO 29112 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-01 13:27:16.271  INFO 29112 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3519ms to org.eclipse.jetty.util.log.Slf4jLog
-2023-12-01 13:27:16.294  WARN 29112 --- [main] o.a.c.c.jetty.JettyHttpComponent         : You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? jetty:http://localhost:5555/%7B%7D/%7B%7D
-2023-12-01 13:27:16.304  INFO 29112 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.20+8
-2023-12-01 13:27:16.325  INFO 29112 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@59aa1d1c{/,null,AVAILABLE}
-2023-12-01 13:27:16.340  INFO 29112 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@3691d4da{HTTP/1.1, (http/1.1)}{localhost:5555}
-2023-12-01 13:27:16.341  INFO 29112 --- [main] org.eclipse.jetty.server.Server          : Started @3589ms
-2023-12-01 13:27:16.352  INFO 29112 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-01 13:27:16.353  INFO 29112 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
-2023-12-01 13:27:16.353  INFO 29112 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy-agent (file://file)
-2023-12-01 13:27:16.353  INFO 29112 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 283ms (build:36ms init:152ms start:95ms)
-2023-12-01 13:27:16.358  INFO 29112 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.47 seconds (JVM running for 3.606)
-2023-12-01 13:27:17.285  INFO 29112 --- [RMI TCP Connection(2)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-01 13:27:17.287  INFO 29112 --- [RMI TCP Connection(2)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-01 13:27:17.289  INFO 29112 --- [RMI TCP Connection(2)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-01 13:27:17.369  INFO 29112 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
-2023-12-01 13:27:17.370  INFO 29112 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:8                     : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@6b871487, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
-2023-12-01 13:27:17.371  INFO 29112 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:9                     : 확장자: yaml
-2023-12-01 13:27:17.371  INFO 29112 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:10                    : 파일명: S00001-if-prov-template.yaml
-2023-12-01 13:27:17.371  INFO 29112 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명: S00001
-2023-12-01 13:27:17.371  INFO 29112 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:12                    : 에이전트: if
-2023-12-01 13:27:17.373  INFO 29112 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:25                    : 시간 지연 2초 시작
-2023-12-01 13:27:19.633  INFO 29112 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://localhost:6666
-2023-12-01 13:27:19.635  INFO 29112 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:30                    : 시간 지연 2초 끝
+2023-12-04 09:33:46.850  INFO 22948 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 22948 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-04 09:33:46.856  INFO 22948 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
+2023-12-04 09:33:48.255  INFO 22948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-04 09:33:48.265  INFO 22948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-04 09:33:48.265  INFO 22948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-04 09:33:48.412  INFO 22948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-04 09:33:48.412  INFO 22948 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1517 ms
+2023-12-04 09:33:49.341  INFO 22948 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-04 09:33:49.432  INFO 22948 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-04 09:33:49.434  INFO 22948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-04 09:33:49.882  INFO 22948 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-04 09:33:49.898  INFO 22948 --- [main] org.eclipse.jetty.util.log               : Logging initialized @4802ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-04 09:33:49.930  WARN 22948 --- [main] o.a.c.c.jetty.JettyHttpComponent         : You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? jetty:http://localhost:5555/%7B%7D/%7B%7D
+2023-12-04 09:33:49.946  INFO 22948 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.20+8
+2023-12-04 09:33:49.971  INFO 22948 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@51da7b08{/,null,AVAILABLE}
+2023-12-04 09:33:49.982  INFO 22948 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@4ae5ddc0{HTTP/1.1, (http/1.1)}{localhost:5555}
+2023-12-04 09:33:49.983  INFO 22948 --- [main] org.eclipse.jetty.server.Server          : Started @4886ms
+2023-12-04 09:33:49.995  INFO 22948 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-04 09:33:49.995  INFO 22948 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
+2023-12-04 09:33:49.995  INFO 22948 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy-agent (file://file)
+2023-12-04 09:33:49.995  INFO 22948 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 448ms (build:53ms init:283ms start:112ms)
+2023-12-04 09:33:50.001  INFO 22948 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 3.511 seconds (JVM running for 4.904)
+2023-12-04 09:33:51.020  INFO 22948 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
+2023-12-04 09:33:51.022  INFO 22948 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:14                    : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@65a54425, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
+2023-12-04 09:33:51.022  INFO 22948 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:15                    : 확장자: yaml
+2023-12-04 09:33:51.023  INFO 22948 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:16                    : 파일명: S00001-if-prov-template.yaml
+2023-12-04 09:33:51.023  INFO 22948 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:17                    : 서비스명: S00001
+2023-12-04 09:33:51.023  INFO 22948 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:18                    : 에이전트: if
+2023-12-04 09:33:51.025  INFO 22948 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:32                    : 시간 지연 2초 시작
+2023-12-04 09:33:51.358  INFO 22948 --- [RMI TCP Connection(3)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 09:33:51.358  INFO 22948 --- [RMI TCP Connection(3)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-04 09:33:51.359  INFO 22948 --- [RMI TCP Connection(3)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-04 09:33:55.435  INFO 22948 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
+2023-12-04 09:33:55.457  INFO 22948 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:11                    : Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
+2023-12-04 09:55:20.018  INFO 22948 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-04 09:55:20.031  INFO 22948 --- [Camel (camel-1) thread #3 - ShutdownTask] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@4ae5ddc0{HTTP/1.1, (http/1.1)}{localhost:5555}
+2023-12-04 09:55:20.033  INFO 22948 --- [Camel (camel-1) thread #3 - ShutdownTask] o.e.jetty.server.handler.ContextHandler  : Stopped o.e.j.s.ServletContextHandler@51da7b08{/,null,STOPPED}
+2023-12-04 09:55:20.038  INFO 22948 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-04 09:55:20.038  INFO 22948 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-deploy-agent (file://file)
+2023-12-04 09:55:20.038  INFO 22948 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
+2023-12-04 09:55:20.042  INFO 22948 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 23ms (uptime:21m30s)
+2023-12-04 09:55:20.632  INFO 22948 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-04 09:55:26.290  INFO 4664 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 4664 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-04 09:55:26.292  INFO 4664 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
+2023-12-04 09:55:27.179  INFO 4664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-04 09:55:27.185  INFO 4664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-04 09:55:27.186  INFO 4664 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-04 09:55:27.291  INFO 4664 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-04 09:55:27.292  INFO 4664 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 974 ms
+2023-12-04 09:55:28.216  INFO 4664 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-04 09:55:28.277  INFO 4664 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-04 09:55:28.278  INFO 4664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-04 09:55:28.636  INFO 4664 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-04 09:55:28.648  INFO 4664 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3791ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-04 09:55:28.678  WARN 4664 --- [main] o.a.c.c.jetty.JettyHttpComponent         : You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? jetty:http://localhost:5555/%7B%7D/%7B%7D
+2023-12-04 09:55:28.691  INFO 4664 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.20+8
+2023-12-04 09:55:28.712  INFO 4664 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@14eb96e9{/,null,AVAILABLE}
+2023-12-04 09:55:28.730  INFO 4664 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@491cc0eb{HTTP/1.1, (http/1.1)}{localhost:5555}
+2023-12-04 09:55:28.730  INFO 4664 --- [main] org.eclipse.jetty.server.Server          : Started @3873ms
+2023-12-04 09:55:28.738  INFO 4664 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-04 09:55:28.738  INFO 4664 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
+2023-12-04 09:55:28.738  INFO 4664 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy-agent (file://file)
+2023-12-04 09:55:28.738  INFO 4664 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 381ms (build:39ms init:240ms start:102ms)
+2023-12-04 09:55:28.744  INFO 4664 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.708 seconds (JVM running for 3.886)
+2023-12-04 09:55:29.725  INFO 4664 --- [RMI TCP Connection(1)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 09:55:29.727  INFO 4664 --- [RMI TCP Connection(1)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-04 09:55:29.729  INFO 4664 --- [RMI TCP Connection(1)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-04 09:55:34.917  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 서비스명이 잘못됨
+2023-12-04 09:56:47.308  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 에이전트명이 잘못됨
+2023-12-04 09:57:05.771  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
+2023-12-04 09:57:05.771  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:14                    : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@569b4c4, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
+2023-12-04 09:57:05.772  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:15                    : 확장자: yaml
+2023-12-04 09:57:05.772  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:16                    : 파일명: S00001-if-prov-template.yaml
+2023-12-04 09:57:05.772  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:17                    : 서비스명: S00001
+2023-12-04 09:57:05.772  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:18                    : 에이전트: if
+2023-12-04 09:57:05.775  INFO 4664 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:32                    : 시간 지연 2초 시작
+2023-12-04 09:57:10.004  INFO 4664 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
+2023-12-04 09:57:10.005  INFO 4664 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:11                    : Connect to 172.30.1.84:6666 [/172.30.1.84] failed: Connection refused: connect
+2023-12-04 10:24:42.629  INFO 4664 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-04 10:24:42.640  INFO 4664 --- [Camel (camel-1) thread #3 - ShutdownTask] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@491cc0eb{HTTP/1.1, (http/1.1)}{localhost:5555}
+2023-12-04 10:24:42.644  INFO 4664 --- [Camel (camel-1) thread #3 - ShutdownTask] o.e.jetty.server.handler.ContextHandler  : Stopped o.e.j.s.ServletContextHandler@14eb96e9{/,null,STOPPED}
+2023-12-04 10:24:42.648  INFO 4664 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-04 10:24:42.648  INFO 4664 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-deploy-agent (file://file)
+2023-12-04 10:24:42.648  INFO 4664 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
+2023-12-04 10:24:42.652  INFO 4664 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 22ms (uptime:29m14s)
+2023-12-04 10:24:43.247  INFO 4664 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-04 10:24:47.390  INFO 32636 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 32636 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-04 10:24:47.394  INFO 32636 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
+2023-12-04 10:24:48.292  INFO 32636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-04 10:24:48.298  INFO 32636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-04 10:24:48.298  INFO 32636 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-04 10:24:48.394  INFO 32636 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-04 10:24:48.394  INFO 32636 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 966 ms
+2023-12-04 10:24:49.169  INFO 32636 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-04 10:24:49.222  INFO 32636 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-04 10:24:49.223  INFO 32636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-04 10:24:49.462  INFO 32636 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-04 10:24:49.474  INFO 32636 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3463ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-04 10:24:49.495  WARN 32636 --- [main] o.a.c.c.jetty.JettyHttpComponent         : You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? jetty:http://localhost:5555/%7B%7D/%7B%7D
+2023-12-04 10:24:49.507  INFO 32636 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.20+8
+2023-12-04 10:24:49.524  INFO 32636 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@446cc036{/,null,AVAILABLE}
+2023-12-04 10:24:49.536  INFO 32636 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@1cfd6f63{HTTP/1.1, (http/1.1)}{localhost:5555}
+2023-12-04 10:24:49.537  INFO 32636 --- [main] org.eclipse.jetty.server.Server          : Started @3525ms
+2023-12-04 10:24:49.545  INFO 32636 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-04 10:24:49.545  INFO 32636 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-exec (jetty:http://localhost:5555/%7B%7D/%7B%7D)
+2023-12-04 10:24:49.545  INFO 32636 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy-agent (file://file)
+2023-12-04 10:24:49.545  INFO 32636 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 278ms (build:37ms init:159ms start:82ms)
+2023-12-04 10:24:49.549  INFO 32636 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.436 seconds (JVM running for 3.538)
+2023-12-04 10:24:51.075  INFO 32636 --- [RMI TCP Connection(3)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 10:24:51.076  INFO 32636 --- [RMI TCP Connection(3)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-04 10:24:51.078  INFO 32636 --- [RMI TCP Connection(3)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-12-04 10:47:10.346  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:11                    : 에이전트명이 잘못됨
+2023-12-04 10:47:35.617  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
+2023-12-04 10:47:35.619  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:14                    : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@2aa040bb, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
+2023-12-04 10:47:35.623  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:15                    : 확장자: yaml
+2023-12-04 10:47:35.625  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:16                    : 파일명: S00001-if-prov-template.yaml
+2023-12-04 10:47:35.629  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:17                    : 서비스명: S00001
+2023-12-04 10:47:35.630  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:18                    : 에이전트: if
+2023-12-04 10:47:35.641  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:32                    : 시간 지연 2초 시작
+2023-12-04 10:47:37.901  INFO 32636 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
+2023-12-04 10:47:37.903  INFO 32636 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:37                    : 시간 지연 2초 끝
+2023-12-04 10:47:37.903  INFO 32636 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:38                    : 파일 전송 성공
+2023-12-04 11:18:27.518  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
+2023-12-04 11:18:27.519  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:14                    : {agentName=deploy, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-deploy-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@794869d6, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-deploy-prov-template.yaml, CamelFileNameConsumed=S00001-deploy-prov-template.yaml, CamelFileNameOnly=S00001-deploy-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-deploy-prov-template.yaml, CamelFileRelativePath=S00001-deploy-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-deploy-prov-template.yaml, serviceName=S00001}
+2023-12-04 11:18:27.519  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:15                    : 확장자: yaml
+2023-12-04 11:18:27.519  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:16                    : 파일명: S00001-deploy-prov-template.yaml
+2023-12-04 11:18:27.519  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:17                    : 서비스명: S00001
+2023-12-04 11:18:27.520  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:18                    : 에이전트: deploy
+2023-12-04 11:18:27.520  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:32                    : 시간 지연 2초 시작
+2023-12-04 11:18:28.024  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.84 mb
+2023-12-04 11:18:28.024  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:14                    : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\S00001-if-prov-template.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@790b88da, CamelFileLastModified=1700555482755, CamelFileLength=865, CamelFileName=S00001-if-prov-template.yaml, CamelFileNameConsumed=S00001-if-prov-template.yaml, CamelFileNameOnly=S00001-if-prov-template.yaml, CamelFileParent=file, CamelFilePath=file\S00001-if-prov-template.yaml, CamelFileRelativePath=S00001-if-prov-template.yaml, CamelMessageTimestamp=1700555482755, fileExtension=yaml, fileName=S00001-if-prov-template.yaml, serviceName=S00001}
+2023-12-04 11:18:28.024  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:15                    : 확장자: yaml
+2023-12-04 11:18:28.024  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:16                    : 파일명: S00001-if-prov-template.yaml
+2023-12-04 11:18:28.024  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:17                    : 서비스명: S00001
+2023-12-04 11:18:28.024  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:18                    : 에이전트: if
+2023-12-04 11:18:28.025  INFO 32636 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:32                    : 시간 지연 2초 시작
+2023-12-04 11:18:29.550  INFO 32636 --- [Camel (camel-1) thread #2 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
+2023-12-04 11:18:29.552  INFO 32636 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:37                    : 시간 지연 2초 끝
+2023-12-04 11:18:29.552  INFO 32636 --- [Camel (camel-1) thread #2 - Delay] prov-template.yaml:38                    : 파일 전송 성공
+2023-12-04 11:18:30.039  INFO 32636 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : ====url====http://172.30.1.84:6666
+2023-12-04 11:18:30.040  INFO 32636 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:37                    : 시간 지연 2초 끝
+2023-12-04 11:18:30.041  INFO 32636 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:38                    : 파일 전송 성공

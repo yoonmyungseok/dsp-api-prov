@@ -1,5 +1,6 @@
 package go.kr.dsp.api.processor;
 
+import go.kr.dsp.api.exception.DspException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
@@ -16,7 +17,9 @@ public class FileExtProcessor implements Processor {
     String[] split=fileName.split("-");
 
     if(!(split[0].startsWith("S")&&split[0].length()==6)){
-      throw new RuntimeException("서비스명이 잘못됨");
+      throw new DspException("서비스명이 잘못됨");
+    }else if (!(split[1].equalsIgnoreCase("if")||split[1].equalsIgnoreCase("deploy"))){
+      throw new DspException("에이전트명이 잘못됨");
     }
 
     double fileSizeInMB=Math.round(convertBytesToMegabytes(exchange.getMessage().getHeader("CamelFileLength", long.class))*100)/100.0;

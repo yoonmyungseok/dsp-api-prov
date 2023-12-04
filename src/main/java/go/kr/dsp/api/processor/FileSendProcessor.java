@@ -29,7 +29,7 @@ public class FileSendProcessor implements Processor {
       Map<String, Map<String, Object>> yamlMap = yaml.load(input);
       List<String> urls=(List<String>) yamlMap.get(split[0]).get("url");
       for(String url: urls){
-        Exchange sendExchange = producerTemplate.withExchange(exchange).to(url+"/file").send();
+        Exchange sendExchange = producerTemplate.withExchange(exchange).to(url+"/file?connectTimeout=10000").send();
         exchange.getMessage().setBody(sendExchange.getMessage().getBody());
         exchange.getMessage().setHeaders(sendExchange.getMessage().getHeaders());
         log.info("====url===="+url);

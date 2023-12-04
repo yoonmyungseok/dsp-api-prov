@@ -2,6 +2,14 @@ spring:
   config:
     activate:
       on-profile: prov
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://172.30.1.7:5432/dsp
+    username: admin
+    password: admin
+mybatis:
+  config-location: classpath:/mybatis/mapper-config.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml
 server:
   port: 8888
 camel:
@@ -11,10 +19,9 @@ camel:
 logging:
   level:
     root: info
-    org.apache.kafka.clients.consumer.ConsumerConfig: warn
+#    org.apache.kafka.clients.consumer.ConsumerConfig: warn
   logback:
     rollingpolicy:
       max-history: 90
   file:
     name: logs/mylog.log
-

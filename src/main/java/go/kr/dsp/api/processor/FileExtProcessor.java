@@ -15,19 +15,32 @@ public class FileExtProcessor implements Processor {
     String fileName = exchange.getMessage().getHeader("CamelFileName", String.class);
     String fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
     String[] split=fileName.split("-");
+    String inst=split[0];
+    String service=split[1];
+    String seq=split[2];
+    String agent=split[3];
 
-    if(!(split[0].startsWith("S")&&split[0].length()==6)){
-      throw new DspException("서비스명이 잘못됨");
-    }else if (!(split[1].equalsIgnoreCase("if")||split[1].equalsIgnoreCase("deploy"))){
-      throw new DspException("에이전트명이 잘못됨");
+    /**
+     * I0000001-S00001-1-IF-script-template.yaml
+     * 기관코드-서비스코드-서버번호-에이전트
+     */
+
+    if(!(inst.startsWith("I")&&inst.length()==8)){
+      throw new DspException("기관코드 잘못됨");
+    }else if (!(service.startsWith("S")&&service.length()==6)){
+      throw new DspException("서비스코드 잘못됨");
+    }else if(!(seq.length()<=2&&Integer.parseInt(seq)>=1&&Integer.parseInt(seq)<=99)){
+      throw new DspException("서버번호 잘못됨");
+    }else if(!(agent.equalsIgnoreCase("if")|| agent.equalsIgnoreCase("deploy"))){
+      throw new DspException("에이전트 잘못됨");
     }
 
     double fileSizeInMB=Math.round(convertBytesToMegabytes(exchange.getMessage().getHeader("CamelFileLength", long.class))*100)/100.0;
 
-    exchange.getMessage().setHeader("serviceName",split[0]);//서비스 명
+    exchange.getMessage().setHeader("serviceName",service);//서비스 코드
     exchange.getMessage().setHeader("fileExtension",fileExtension);//확장자
     exchange.getMessage().setHeader("fileName",fileName);//파일 명
-    exchange.getMessage().setHeader("agentName",split[1].toLowerCase());//에이전트 구분(I/F, Deploy)
+    exchange.getMessage().setHeader("agentName",agent.toLowerCase());//에이전트 구분(I/F, Deploy)
     log.info("파일 크기: {} mb",fileSizeInMB);
   }
 

@@ -1,33 +1,21 @@
-<!--<?xml version="1.0" encoding="UTF-8"?>-->
-<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!--<mapper namespace="go.kr.dsp.api.util.apiInfo.ApiInfoMapper">-->
+<mapper namespace="go.kr.dsp.api.app.repository.DeployRepository">
 
-<!--  <resultMap id="ApiInfo" type="go.kr.dsp.api.util.apiInfo.ApiInfo">-->
-<!--    <id property="apiId" column="api_id"/>-->
-<!--    <result property="instId" column="utztn_inst_id"/>-->
-<!--    <result property="apiUrl" column="platform_url_addr"/>-->
-<!--    <result property="responseUrl" column="rspns_url_addr"/>-->
-<!--    <result property="serviceCd" column="api_grp_cd"/>-->
-<!--    <result property="useYN" column="use_yn"/>-->
-<!--    <result property="whetherIoE" column="etc_vlu3"/>-->
-<!--    <result property="revYN" column="rev_yn"/>-->
-<!--  </resultMap>-->
+  <resultMap id="Deploy" type="go.kr.dsp.api.app.domain.Deploy">
+    <id property="id" column="id"/>
+    <result property="host" column="host"/>
+    <result property="seq" column="seq"/>
+    <result property="service" column="service"/>
+    <result property="inst" column="inst"/>
+    <result property="dir" column="dir"/>
+  </resultMap>
 
-<!--  <select id="selectApiInfoList" resultMap="ApiInfo">-->
-<!--    SELECT-->
-<!--      A.api_id,-->
-<!--      A.utztn_inst_id,-->
-<!--      A.platform_url_addr,-->
-<!--      A.rspns_url_addr,-->
-<!--      A.api_grp_cd,-->
-<!--      A.use_yn,-->
-<!--      B.etc_vlu3,-->
-<!--      A.rev_yn-->
-<!--    FROM scdsp.ASM_API_INFO_B A-->
-<!--           LEFT JOIN scdsp.OCM_COMM_DTL_CD_B B-->
-<!--                     ON A.api_grp_cd = B.cd-->
-<!--    WHERE A.use_yn = 'Y' AND B.cd_id ='COM022'-->
-<!--  </select>-->
+  <select id="selectService" resultMap="Deploy">
+    SELECT host
+    FROM test
+    WHERE service=#{service} AND inst=#{inst} AND seq=#{seq}
+  </select>
 
-<!--</mapper>-->
+</mapper>

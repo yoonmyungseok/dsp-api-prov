@@ -1,0 +1,3 @@
+- templated-route:
+    route-id: dsp-api-prov-script
+    route-template-ref: prov-script-template

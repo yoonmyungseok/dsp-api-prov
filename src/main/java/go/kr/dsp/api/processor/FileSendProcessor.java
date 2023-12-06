@@ -42,6 +42,8 @@ public class FileSendProcessor implements Processor {
 
   @Override
   public void process(Exchange exchange) throws Exception {
+    String fileName = exchange.getMessage().getHeader("CamelFileName", String.class);
+    String fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
     String[] split=exchange.getIn().getHeader("CamelFileName", String.class).split("-");
 
     DeployDto deployDto = deployQueryService.selectService(DeployDto.builder().inst(split[0]).service(split[1]).seq(split[2]).build());
@@ -52,32 +54,20 @@ public class FileSendProcessor implements Processor {
     log.info("기관코드: {}",split[0]);
     log.info("에이전트: {}",split[3]);
 
+    //헤더에 추가해야 할 듯
+
     if(isServerConnected("http://"+deployDto.getHost()+"/file?connectTimeout=10000")){
       log.info("연결 성공");
-//      Exchange sendExchange = producerTemplate.withExchange(exchange).to("http://"+deployDto.getHost()+"/file?socketTimeout=10000").send();
       String request = producerTemplate.withBody(exchange.getMessage().getBody())
-        .withHeaders(exchange.getMessage().getHeaders())
-        .to("http://" + deployDto.getHost() + "/file?socketTimeout=10000")
+        .withHeader("serviceName",split[1])
+        .withHeader("fileExtension",fileExtension)
+        .withHeader("fileName",fileName)
+        .withHeader("agentName",split[3])
+        .toF("http://" + deployDto.getHost() + "/file?socketTimeout=10000")
         .request(String.class);
-      System.out.println(request);
+      log.info(request);
     }else{
       throw new DspException("연결 실패");
     }
-
-
-//    String filePath = "yaml/host.yaml";
-//    try (InputStream input = new FileInputStream(filePath)) {
-//      Yaml yaml = new Yaml();
-//      Map<String, Map<String, Object>> yamlMap = yaml.load(input);
-//      List<String> urls=(List<String>) yamlMap.get(split[0]).get("url");
-//      for(String url: urls){
-//        Exchange sendExchange = producerTemplate.withExchange(exchange).to(url+"/file?connectTimeout=10000").send();
-//        exchange.getMessage().setBody(sendExchange.getMessage().getBody());
-//        exchange.getMessage().setHeaders(sendExchange.getMessage().getHeaders());
-//        log.info("====url===="+url);
-//      }
-//    } catch (IOException e) {
-//      log.error("에러: "+e.getMessage());
-//    }
   }
 }

@@ -1,0 +1,27 @@
+- route-template:
+    id: prov-script-template
+    from:
+      uri: file://script?include=^.*\.sh$
+      steps:
+        - onException:
+            handled:
+              constant: true
+            exception: java.lang.Exception
+            steps:
+              - log: ${exception.message}
+
+        - process:
+            ref: fileExtProcessor
+        - log: ${headers}
+        - log: "파일명: ${header.fileName}"
+        - log: "서비스명: ${header.serviceName}"
+        - log: "서버번호: ${header.serverNum}"
+        - log: "에이전트: ${header.agentName}"
+        - log: "스크립트 전송 시간 지연 2초 시작"
+        - delay:
+            constant: 2000
+        - log: "스크립트 전송 시간 지연 2초 끝"
+        - to: http://172.30.1.84:6666/file
+        - log: ${body}
+#        - process:
+#            ref: fileSendProcessor

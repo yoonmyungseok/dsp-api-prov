@@ -6,6 +6,8 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.springframework.stereotype.Component;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Component
 @Slf4j
 public class FileExtProcessor implements Processor {
@@ -40,6 +42,7 @@ public class FileExtProcessor implements Processor {
     exchange.getMessage().setHeader("serviceName",service);//서비스 코드
     exchange.getMessage().setHeader("fileExtension",fileExtension);//확장자
     exchange.getMessage().setHeader("fileName",fileName);//파일 명
+    exchange.getMessage().setHeader("serverNum",seq);
     exchange.getMessage().setHeader("agentName",agent.toLowerCase());//에이전트 구분(I/F, Deploy)
     log.info("파일 크기: {} mb",fileSizeInMB);
   }

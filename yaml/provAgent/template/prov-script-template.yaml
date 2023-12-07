@@ -9,7 +9,6 @@
             exception: java.lang.Exception
             steps:
               - log: ${exception.message}
-
         - process:
             ref: fileExtProcessor
         - log: ${headers}
@@ -21,7 +20,8 @@
         - delay:
             constant: 2000
         - log: "스크립트 전송 시간 지연 2초 끝"
-        - to: http://172.30.1.84:6666/file
-        - log: ${body}
-#        - process:
-#            ref: fileSendProcessor
+        - process:
+            ref: fileSendProcessor
+        - toD: http://${header.Host}/file?socketTimeout=10000
+        - process:
+            ref: resultProcessor

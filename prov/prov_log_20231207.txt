@@ -1,0 +1,144 @@
+2023-12-07 16:52:07.455  INFO 7480 --- [main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 7480 (/home/dsp_deploy/agent-1.0.0.jar started by root in /home/dsp_deploy)
+2023-12-07 16:52:07.457  INFO 7480 --- [main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "deploy"
+2023-12-07 16:52:08.847  INFO 7480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7878 (http)
+2023-12-07 16:52:08.855  INFO 7480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-07 16:52:08.855  INFO 7480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-07 16:52:08.903  INFO 7480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-07 16:52:08.903  INFO 7480 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1358 ms
+2023-12-07 16:52:09.830  INFO 7480 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-07 16:52:09.875  INFO 7480 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-07 16:52:09.877  INFO 7480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7878 (http) with context path ''
+2023-12-07 16:52:10.132  INFO 7480 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-07 16:52:10.154  INFO 7480 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3618ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-07 16:52:10.195  INFO 7480 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-07 16:52:10.214  INFO 7480 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@6fca5907{/,null,AVAILABLE}
+2023-12-07 16:52:10.222  INFO 7480 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@387bf2d9{HTTP/1.1, (http/1.1)}{172.30.1.84:6666}
+2023-12-07 16:52:10.222  INFO 7480 --- [main] org.eclipse.jetty.server.Server          : Started @3686ms
+2023-12-07 16:52:10.229  INFO 7480 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-07 16:52:10.229  INFO 7480 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy (jetty:http://172.30.1.84:6666/file)
+2023-12-07 16:52:10.229  INFO 7480 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 265ms (build:40ms init:129ms start:96ms)
+2023-12-07 16:52:10.232  INFO 7480 --- [main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.293 seconds (JVM running for 3.696)
+2023-12-07 16:52:53.616  INFO 7480 --- [qtp1406851189-36] deploy-template.yaml:14                  : {Accept=text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2, CamelHttpMethod=HEAD, CamelHttpPath=, CamelHttpQuery=connectTimeout=10000, CamelHttpServletRequest=Request(HEAD //172.30.1.84:6666/file?connectTimeout=10000)@41c17b31, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, connectTimeout=10000, Host=172.30.1.84:6666, User-Agent=Java/11.0.20}
+2023-12-07 16:52:53.621  INFO 7480 --- [qtp1406851189-36] deploy-template.yaml:32                  : 연결 시도
+2023-12-07 16:52:53.647  INFO 7480 --- [qtp1406851189-32] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=if, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=socketTimeout=10000, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file?socketTimeout=10000)@341cdc3b, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=52, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, Host=172.30.1.84:6666, serverNum=1, serviceName=S00001, socketTimeout=10000, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20)}
+2023-12-07 16:52:53.742  INFO 7480 --- [qtp1406851189-32] g.kr.dsp.api.processor.RequestProcessor  : Test...
+합계 77876
+drwxr-xr-x. 6 root root       77 12월  7 16:52 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79743897 12월  7 16:52 agent-1.0.0.jar
+drwxr-xr-x. 3 root root       58 12월  6 15:48 deploy
+drwxr-xr-x. 3 root root      101 12월  6 15:07 if
+drwxr-xr-x. 2 root root       24 12월  7 16:52 logs
+drwxr-xr-x. 4 root root       40 12월  7 16:48 yaml
+Done
+
+2023-12-07 17:02:25.944  INFO 7480 --- [qtp1406851189-32] deploy-template.yaml:14                  : {Accept=text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2, CamelHttpMethod=HEAD, CamelHttpPath=, CamelHttpQuery=connectTimeout=10000, CamelHttpServletRequest=Request(HEAD //172.30.1.84:6666/file?connectTimeout=10000)@46fd34a5, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, connectTimeout=10000, Host=172.30.1.84:6666, User-Agent=Java/11.0.20}
+2023-12-07 17:02:25.944  INFO 7480 --- [qtp1406851189-32] deploy-template.yaml:32                  : 연결 시도
+2023-12-07 17:02:26.070  INFO 7480 --- [qtp1406851189-38] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=if, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=socketTimeout=10000, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file?socketTimeout=10000)@5136e73b, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=52, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, Host=172.30.1.84:6666, serverNum=1, serviceName=S00001, socketTimeout=10000, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20)}
+2023-12-07 17:02:26.084  INFO 7480 --- [qtp1406851189-38] g.kr.dsp.api.processor.RequestProcessor  : Test...
+합계 77876
+drwxr-xr-x. 6 root root       77 12월  7 16:52 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79743897 12월  7 16:52 agent-1.0.0.jar
+drwxr-xr-x. 3 root root       58 12월  6 15:48 deploy
+drwxr-xr-x. 3 root root      101 12월  6 15:07 if
+drwxr-xr-x. 2 root root       24 12월  7 16:52 logs
+drwxr-xr-x. 4 root root       40 12월  7 16:48 yaml
+Done
+
+2023-12-07 17:03:49.044  INFO 7480 --- [qtp1406851189-34] deploy-template.yaml:14                  : {Accept=text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2, CamelHttpMethod=HEAD, CamelHttpPath=, CamelHttpQuery=connectTimeout=10000, CamelHttpServletRequest=Request(HEAD //172.30.1.84:6666/file?connectTimeout=10000)@52d72f8, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, connectTimeout=10000, Host=172.30.1.84:6666, User-Agent=Java/11.0.20}
+2023-12-07 17:03:49.044  INFO 7480 --- [qtp1406851189-34] deploy-template.yaml:32                  : 연결 시도
+2023-12-07 17:03:49.069  INFO 7480 --- [qtp1406851189-38] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=if, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=socketTimeout=10000, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file?socketTimeout=10000)@38a99d, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=52, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, Host=172.30.1.84:6666, serverNum=1, serviceName=S00001, socketTimeout=10000, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20)}
+2023-12-07 17:03:49.081  INFO 7480 --- [qtp1406851189-38] g.kr.dsp.api.processor.RequestProcessor  : Test...
+합계 77876
+drwxr-xr-x. 6 root root       77 12월  7 16:52 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79743897 12월  7 16:52 agent-1.0.0.jar
+drwxr-xr-x. 3 root root       58 12월  6 15:48 deploy
+drwxr-xr-x. 3 root root      101 12월  6 15:07 if
+drwxr-xr-x. 2 root root       24 12월  7 16:52 logs
+drwxr-xr-x. 4 root root       40 12월  7 16:48 yaml
+Done
+
+2023-12-07 17:26:15.156  INFO 7480 --- [qtp1406851189-39] deploy-template.yaml:14                  : {Accept=text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2, CamelHttpMethod=HEAD, CamelHttpPath=, CamelHttpQuery=connectTimeout=10000, CamelHttpServletRequest=Request(HEAD //172.30.1.84:6666/file?connectTimeout=10000)@3b81a08f, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, connectTimeout=10000, Host=172.30.1.84:6666, User-Agent=Java/11.0.20}
+2023-12-07 17:26:15.157  INFO 7480 --- [qtp1406851189-39] deploy-template.yaml:32                  : 연결 시도
+2023-12-07 17:26:15.292  INFO 7480 --- [qtp1406851189-38] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=if, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=socketTimeout=10000, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file?socketTimeout=10000)@71c5a2b9, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=52, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, Host=172.30.1.84:6666, serverNum=1, serviceName=S00001, socketTimeout=10000, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20)}
+2023-12-07 17:26:15.303  INFO 7480 --- [qtp1406851189-38] g.kr.dsp.api.processor.RequestProcessor  : Test...
+합계 77876
+drwxr-xr-x. 6 root root       77 12월  7 16:52 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79743897 12월  7 16:52 agent-1.0.0.jar
+drwxr-xr-x. 3 root root       58 12월  6 15:48 deploy
+drwxr-xr-x. 3 root root      101 12월  6 15:07 if
+drwxr-xr-x. 2 root root       24 12월  7 16:52 logs
+drwxr-xr-x. 4 root root       40 12월  7 16:48 yaml
+Done
+
+2023-12-07 17:32:03.707  INFO 7480 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-07 17:32:03.727  INFO 7480 --- [Camel (camel-1) thread #1 - ShutdownTask] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@387bf2d9{HTTP/1.1, (http/1.1)}{172.30.1.84:6666}
+2023-12-07 17:32:03.729  INFO 7480 --- [Camel (camel-1) thread #1 - ShutdownTask] o.e.jetty.server.handler.ContextHandler  : Stopped o.e.j.s.ServletContextHandler@6fca5907{/,null,STOPPED}
+2023-12-07 17:32:03.737  INFO 7480 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:1)
+2023-12-07 17:32:03.737  INFO 7480 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-deploy (jetty:http://172.30.1.84:6666/file)
+2023-12-07 17:32:03.740  INFO 7480 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 32ms (uptime:39m53s)
+2023-12-07 17:32:03.746  INFO 7480 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-07 17:32:27.352  INFO 7629 --- [main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 7629 (/home/dsp_deploy/agent-1.0.0.jar started by root in /home/dsp_deploy)
+2023-12-07 17:32:27.353  INFO 7629 --- [main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "deploy"
+2023-12-07 17:32:28.617  INFO 7629 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7878 (http)
+2023-12-07 17:32:28.626  INFO 7629 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-07 17:32:28.626  INFO 7629 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-07 17:32:28.675  INFO 7629 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-07 17:32:28.676  INFO 7629 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1256 ms
+2023-12-07 17:32:29.691  INFO 7629 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-07 17:32:29.735  INFO 7629 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-07 17:32:29.737  INFO 7629 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7878 (http) with context path ''
+2023-12-07 17:32:29.989  INFO 7629 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-07 17:32:30.014  INFO 7629 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3486ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-07 17:32:30.068  INFO 7629 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-07 17:32:30.094  INFO 7629 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@2416498e{/,null,AVAILABLE}
+2023-12-07 17:32:30.101  INFO 7629 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@47b179d7{HTTP/1.1, (http/1.1)}{172.30.1.84:6666}
+2023-12-07 17:32:30.101  INFO 7629 --- [main] org.eclipse.jetty.server.Server          : Started @3574ms
+2023-12-07 17:32:30.107  INFO 7629 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-07 17:32:30.108  INFO 7629 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy (jetty:http://172.30.1.84:6666/file)
+2023-12-07 17:32:30.108  INFO 7629 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 313ms (build:48ms init:147ms start:118ms)
+2023-12-07 17:32:30.111  INFO 7629 --- [main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.188 seconds (JVM running for 3.584)
+2023-12-07 17:33:54.601  INFO 7629 --- [qtp1920321355-36] deploy-template.yaml:14                  : {Accept=text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2, CamelHttpMethod=HEAD, CamelHttpPath=, CamelHttpQuery=connectTimeout=10000, CamelHttpServletRequest=Request(HEAD //172.30.1.84:6666/file?connectTimeout=10000)@4043078d, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, connectTimeout=10000, Host=172.30.1.84:6666, User-Agent=Java/11.0.20}
+2023-12-07 17:33:54.606  INFO 7629 --- [qtp1920321355-36] deploy-template.yaml:32                  : 연결 시도
+2023-12-07 17:33:54.761  INFO 7629 --- [qtp1920321355-32] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=if, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=socketTimeout=10000, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file?socketTimeout=10000)@2bcd3e2d, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=52, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, Host=172.30.1.84:6666, serverNum=1, serviceName=S00001, socketTimeout=10000, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20)}
+2023-12-07 17:33:54.856  INFO 7629 --- [qtp1920321355-32] g.kr.dsp.api.processor.LogFileProcessor  : Test...
+합계 77876
+drwxr-xr-x. 6 root root       77 12월  7 17:32 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79744017 12월  7 17:32 agent-1.0.0.jar
+drwxr-xr-x. 3 root root       58 12월  6 15:48 deploy
+drwxr-xr-x. 3 root root      101 12월  6 15:07 if
+drwxr-xr-x. 2 root root       24 12월  7 16:52 logs
+drwxr-xr-x. 4 root root       40 12월  7 17:32 yaml
+Done
+
+2023-12-07 17:34:56.407  INFO 7629 --- [qtp1920321355-38] deploy-template.yaml:14                  : {Accept=text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2, CamelHttpMethod=HEAD, CamelHttpPath=, CamelHttpQuery=connectTimeout=10000, CamelHttpServletRequest=Request(HEAD //172.30.1.84:6666/file?connectTimeout=10000)@341e5fcf, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, connectTimeout=10000, Host=172.30.1.84:6666, User-Agent=Java/11.0.20}
+2023-12-07 17:34:56.407  INFO 7629 --- [qtp1920321355-38] deploy-template.yaml:32                  : 연결 시도
+2023-12-07 17:34:56.418  INFO 7629 --- [qtp1920321355-35] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=if, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=socketTimeout=10000, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file?socketTimeout=10000)@513cdce8, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=52, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, Host=172.30.1.84:6666, serverNum=1, serviceName=S00001, socketTimeout=10000, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20)}

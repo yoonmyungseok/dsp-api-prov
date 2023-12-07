@@ -1,17 +1,20 @@
 package go.kr.dsp.api.processor;
 
+import com.fasterxml.jackson.databind.json.JsonMapper;
 import go.kr.dsp.api.app.dto.DeployDto;
 import go.kr.dsp.api.app.query.DeployQueryService;
+import go.kr.dsp.api.app.service.ServerConnection;
 import go.kr.dsp.api.exception.DspException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
 import org.apache.camel.FluentProducerTemplate;
 import org.apache.camel.Processor;
+import org.eclipse.jetty.util.ajax.JSON;
 import org.springframework.stereotype.Component;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 @Component
 @Slf4j
@@ -19,26 +22,7 @@ import java.net.URL;
 public class FileSendProcessor implements Processor {
   private final FluentProducerTemplate producerTemplate;
   private final DeployQueryService deployQueryService;
-
-  private static boolean isServerConnected(String urlString) {
-    try {
-      URL url = new URL(urlString);
-      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-      connection.setRequestMethod("HEAD");
-      connection.connect();
-
-      int responseCode = connection.getResponseCode();
-      if (responseCode >= 200 && responseCode < 400) {
-        // 2xx and 3xx codes indicate successful responses
-        log.info("응답 코드: {}",responseCode);
-        return true;
-      }
-    } catch (Exception e) {
-      log.error("연결 에러: {}",e.getMessage());
-
-    }
-    return false;
-  }
+  private final ServerConnection serverConnection;
 
   @Override
   public void process(Exchange exchange) throws Exception {
@@ -54,18 +38,12 @@ public class FileSendProcessor implements Processor {
     log.info("기관코드: {}",split[0]);
     log.info("에이전트: {}",split[3]);
 
-    //헤더에 추가해야 할 듯
 
-    if(isServerConnected("http://"+deployDto.getHost()+"/file?connectTimeout=10000")){
+    if(serverConnection.isServerConnected("http://"+deployDto.getHost()+"/file?connectTimeout=10000")){
       log.info("연결 성공");
-      String request = producerTemplate.withBody(exchange.getMessage().getBody())
-        .withHeader("serviceName",split[1])
-        .withHeader("fileExtension",fileExtension)
-        .withHeader("fileName",fileName)
-        .withHeader("agentName",split[3])
-        .toF("http://" + deployDto.getHost() + "/file?socketTimeout=10000")
-        .request(String.class);
-      log.info(request);
+      exchange.getMessage().setHeader("Host",deployDto.getHost());
+      exchange.getMessage().setHeader("fileExtension",fileExtension);
+      exchange.getMessage().setHeader(Exchange.HTTP_METHOD,"POST");
     }else{
       throw new DspException("연결 실패");
     }

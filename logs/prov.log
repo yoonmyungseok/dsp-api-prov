@@ -1,0 +1,189 @@
+2023-12-07 17:02:06.559  INFO 1916 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 1916 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-07 17:02:06.561  INFO 1916 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
+2023-12-07 17:02:07.650  INFO 1916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-07 17:02:07.656  INFO 1916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-07 17:02:07.656  INFO 1916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-07 17:02:07.781  INFO 1916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-07 17:02:07.781  INFO 1916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1194 ms
+2023-12-07 17:02:09.031  INFO 1916 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-07 17:02:09.143  INFO 1916 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-07 17:02:09.146  INFO 1916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-07 17:02:09.550  INFO 1916 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-07 17:02:09.581  INFO 1916 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-07 17:02:09.581  INFO 1916 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-07 17:02:09.581  INFO 1916 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-07 17:02:09.581  INFO 1916 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 327ms (build:42ms init:255ms start:30ms)
+2023-12-07 17:02:09.587  INFO 1916 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 3.3 seconds (JVM running for 4.482)
+2023-12-07 17:02:11.780  INFO 1916 --- [RMI TCP Connection(3)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 17:02:11.782  INFO 1916 --- [RMI TCP Connection(3)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-07 17:02:11.784  INFO 1916 --- [RMI TCP Connection(3)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-07 17:02:11.791  INFO 1916 --- [RMI TCP Connection(4)-172.30.1.11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-07 17:02:11.969  INFO 1916 --- [RMI TCP Connection(4)-172.30.1.11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-07 17:02:25.978  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.05 mb
+2023-12-07 17:02:25.980  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:14             : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\I0000001-S00001-1-if-ls.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@610f78fd, CamelFileLastModified=1701845622539, CamelFileLength=52, CamelFileName=I0000001-S00001-1-if-ls.sh, CamelFileNameConsumed=I0000001-S00001-1-if-ls.sh, CamelFileNameOnly=I0000001-S00001-1-if-ls.sh, CamelFileParent=script, CamelFilePath=script\I0000001-S00001-1-if-ls.sh, CamelFileRelativePath=I0000001-S00001-1-if-ls.sh, CamelMessageTimestamp=1701845622539, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, serverNum=1, serviceName=S00001}
+2023-12-07 17:02:25.980  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:15             : 파일명: I0000001-S00001-1-if-ls.sh
+2023-12-07 17:02:25.980  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:16             : 서비스명: S00001
+2023-12-07 17:02:25.980  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:17             : 서버번호: 1
+2023-12-07 17:02:25.981  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:18             : 에이전트: if
+2023-12-07 17:02:25.981  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:19             : 스크립트 전송 시간 지연 2초 시작
+2023-12-07 17:02:27.989  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:22             : 스크립트 전송 시간 지연 2초 끝
+2023-12-07 17:02:28.044  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 주소: 172.30.1.84:6666
+2023-12-07 17:02:28.045  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서버번호: 1
+2023-12-07 17:02:28.045  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서비스코드: S00001
+2023-12-07 17:02:28.045  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 기관코드: I0000001
+2023-12-07 17:02:28.045  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 에이전트: if
+2023-12-07 17:02:28.057  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.d.api.app.service.ServerConnection   : 응답 코드: 200
+2023-12-07 17:02:28.057  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 연결 성공
+2023-12-07 17:02:28.215  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : prov\prov_log_20231207_170228.txt
+2023-12-07 17:03:49.108  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.05 mb
+2023-12-07 17:03:49.109  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:14             : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\I0000001-S00001-1-if-ls.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@4c7920ac, CamelFileLastModified=1701845622539, CamelFileLength=52, CamelFileName=I0000001-S00001-1-if-ls.sh, CamelFileNameConsumed=I0000001-S00001-1-if-ls.sh, CamelFileNameOnly=I0000001-S00001-1-if-ls.sh, CamelFileParent=script, CamelFilePath=script\I0000001-S00001-1-if-ls.sh, CamelFileRelativePath=I0000001-S00001-1-if-ls.sh, CamelMessageTimestamp=1701845622539, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, serverNum=1, serviceName=S00001}
+2023-12-07 17:03:49.109  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:15             : 파일명: I0000001-S00001-1-if-ls.sh
+2023-12-07 17:03:49.109  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:16             : 서비스명: S00001
+2023-12-07 17:03:49.110  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:17             : 서버번호: 1
+2023-12-07 17:03:49.110  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:18             : 에이전트: if
+2023-12-07 17:03:49.110  INFO 1916 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:19             : 스크립트 전송 시간 지연 2초 시작
+2023-12-07 17:03:51.112  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:22             : 스크립트 전송 시간 지연 2초 끝
+2023-12-07 17:03:51.143  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 주소: 172.30.1.84:6666
+2023-12-07 17:03:51.144  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서버번호: 1
+2023-12-07 17:03:51.144  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서비스코드: S00001
+2023-12-07 17:03:51.144  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 기관코드: I0000001
+2023-12-07 17:03:51.144  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 에이전트: if
+2023-12-07 17:03:51.159  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.d.api.app.service.ServerConnection   : 응답 코드: 200
+2023-12-07 17:03:51.159  INFO 1916 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 연결 성공
+2023-12-07 17:25:59.238  INFO 1916 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-07 17:25:59.247  INFO 1916 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-07 17:25:59.247  INFO 1916 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-07 17:25:59.247  INFO 1916 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-07 17:25:59.252  INFO 1916 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 13ms (uptime:23m49s)
+2023-12-07 17:25:59.861  INFO 1916 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-07 17:25:59.873  INFO 1916 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-07 17:25:59.878  INFO 1916 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-07 17:26:05.300  INFO 23292 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 23292 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-07 17:26:05.302  INFO 23292 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
+2023-12-07 17:26:06.470  INFO 23292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-07 17:26:06.477  INFO 23292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-07 17:26:06.477  INFO 23292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-07 17:26:06.585  INFO 23292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-07 17:26:06.586  INFO 23292 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1258 ms
+2023-12-07 17:26:07.635  INFO 23292 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-07 17:26:07.700  INFO 23292 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-07 17:26:07.701  INFO 23292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-07 17:26:07.979  INFO 23292 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-07 17:26:08.008  INFO 23292 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-07 17:26:08.009  INFO 23292 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-07 17:26:08.009  INFO 23292 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-07 17:26:08.009  INFO 23292 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 237ms (build:41ms init:168ms start:28ms)
+2023-12-07 17:26:08.014  INFO 23292 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 3.017 seconds (JVM running for 4.325)
+2023-12-07 17:26:08.698  INFO 23292 --- [RMI TCP Connection(1)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 17:26:08.701  INFO 23292 --- [RMI TCP Connection(1)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-07 17:26:08.704  INFO 23292 --- [RMI TCP Connection(1)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-07 17:26:08.713  INFO 23292 --- [RMI TCP Connection(2)-172.30.1.11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-07 17:26:08.901  INFO 23292 --- [RMI TCP Connection(2)-172.30.1.11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-07 17:26:15.205  INFO 23292 --- [Camel (camel-1) thread #2 - file://script] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.05 mb
+2023-12-07 17:26:15.208  INFO 23292 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:14             : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\I0000001-S00001-1-if-ls.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@122ce163, CamelFileLastModified=1701845622539, CamelFileLength=52, CamelFileName=I0000001-S00001-1-if-ls.sh, CamelFileNameConsumed=I0000001-S00001-1-if-ls.sh, CamelFileNameOnly=I0000001-S00001-1-if-ls.sh, CamelFileParent=script, CamelFilePath=script\I0000001-S00001-1-if-ls.sh, CamelFileRelativePath=I0000001-S00001-1-if-ls.sh, CamelMessageTimestamp=1701845622539, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, serverNum=1, serviceName=S00001}
+2023-12-07 17:26:15.208  INFO 23292 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:15             : 파일명: I0000001-S00001-1-if-ls.sh
+2023-12-07 17:26:15.208  INFO 23292 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:16             : 서비스명: S00001
+2023-12-07 17:26:15.210  INFO 23292 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:17             : 서버번호: 1
+2023-12-07 17:26:15.210  INFO 23292 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:18             : 에이전트: if
+2023-12-07 17:26:15.210  INFO 23292 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:19             : 스크립트 전송 시간 지연 2초 시작
+2023-12-07 17:26:17.214  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:22             : 스크립트 전송 시간 지연 2초 끝
+2023-12-07 17:26:17.269  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 주소: 172.30.1.84:6666
+2023-12-07 17:26:17.269  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서버번호: 1
+2023-12-07 17:26:17.270  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서비스코드: S00001
+2023-12-07 17:26:17.270  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 기관코드: I0000001
+2023-12-07 17:26:17.270  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 에이전트: if
+2023-12-07 17:26:17.287  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] g.k.d.api.app.service.ServerConnection   : 응답 코드: 200
+2023-12-07 17:26:17.288  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 연결 성공
+2023-12-07 17:26:17.452  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : {Accept-Encoding=gzip,deflate, agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\I0000001-S00001-1-if-ls.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@122ce163, CamelFileLastModified=1701845622539, CamelFileLength=52, CamelFileName=I0000001-S00001-1-if-ls.sh, CamelFileNameConsumed=I0000001-S00001-1-if-ls.sh, CamelFileNameOnly=I0000001-S00001-1-if-ls.sh, CamelFileParent=script, CamelFilePath=script\I0000001-S00001-1-if-ls.sh, CamelFileRelativePath=I0000001-S00001-1-if-ls.sh, CamelHttpMethod=POST, CamelHttpResponseCode=200, CamelHttpResponseText=OK, CamelMessageTimestamp=1701845622539, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, Server=Jetty(9.4.50.v20221201), serverNum=1, serviceName=S00001, socketTimeout=10000, Transfer-Encoding=chunked, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20)}
+2023-12-07 17:26:17.453  INFO 23292 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : Test...
+합계 77876
+drwxr-xr-x. 6 root root       77 12월  7 16:52 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79743897 12월  7 16:52 agent-1.0.0.jar
+drwxr-xr-x. 3 root root       58 12월  6 15:48 deploy
+drwxr-xr-x. 3 root root      101 12월  6 15:07 if
+drwxr-xr-x. 2 root root       24 12월  7 16:52 logs
+drwxr-xr-x. 4 root root       40 12월  7 16:48 yaml
+Done
+
+2023-12-07 17:33:18.768  INFO 23292 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-07 17:33:18.778  INFO 23292 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-07 17:33:18.779  INFO 23292 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-07 17:33:18.779  INFO 23292 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-07 17:33:18.783  INFO 23292 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 14ms (uptime:7m10s)
+2023-12-07 17:33:19.390  INFO 23292 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-07 17:33:19.405  INFO 23292 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-07 17:33:19.410  INFO 23292 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-07 17:33:24.386  INFO 33856 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 33856 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-07 17:33:24.388  INFO 33856 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
+2023-12-07 17:33:25.427  INFO 33856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-07 17:33:25.433  INFO 33856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-07 17:33:25.434  INFO 33856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-07 17:33:25.540  INFO 33856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-07 17:33:25.541  INFO 33856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1123 ms
+2023-12-07 17:33:26.532  INFO 33856 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-07 17:33:26.593  INFO 33856 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-07 17:33:26.594  INFO 33856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-07 17:33:26.869  INFO 33856 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-07 17:33:26.896  INFO 33856 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-07 17:33:26.896  INFO 33856 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-07 17:33:26.896  INFO 33856 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-07 17:33:26.896  INFO 33856 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 270ms (build:55ms init:187ms start:28ms)
+2023-12-07 17:33:26.902  INFO 33856 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.784 seconds (JVM running for 3.942)
+2023-12-07 17:33:28.454  INFO 33856 --- [RMI TCP Connection(3)-172.30.1.11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 17:33:28.456  INFO 33856 --- [RMI TCP Connection(3)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-07 17:33:28.458  INFO 33856 --- [RMI TCP Connection(3)-172.30.1.11] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-07 17:33:28.466  INFO 33856 --- [RMI TCP Connection(2)-172.30.1.11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-07 17:33:28.620  INFO 33856 --- [RMI TCP Connection(2)-172.30.1.11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-07 17:33:54.556  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.05 mb
+2023-12-07 17:33:54.558  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:14             : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\I0000001-S00001-1-if-ls.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@4dda715c, CamelFileLastModified=1701845622539, CamelFileLength=52, CamelFileName=I0000001-S00001-1-if-ls.sh, CamelFileNameConsumed=I0000001-S00001-1-if-ls.sh, CamelFileNameOnly=I0000001-S00001-1-if-ls.sh, CamelFileParent=script, CamelFilePath=script\I0000001-S00001-1-if-ls.sh, CamelFileRelativePath=I0000001-S00001-1-if-ls.sh, CamelMessageTimestamp=1701845622539, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, serverNum=1, serviceName=S00001}
+2023-12-07 17:33:54.559  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:15             : 파일명: I0000001-S00001-1-if-ls.sh
+2023-12-07 17:33:54.559  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:16             : 서비스명: S00001
+2023-12-07 17:33:54.559  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:17             : 서버번호: 1
+2023-12-07 17:33:54.559  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:18             : 에이전트: if
+2023-12-07 17:33:54.559  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:19             : 스크립트 전송 시간 지연 2초 시작
+2023-12-07 17:33:56.572  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:22             : 스크립트 전송 시간 지연 2초 끝
+2023-12-07 17:33:56.644  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 주소: 172.30.1.84:6666
+2023-12-07 17:33:56.645  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서버번호: 1
+2023-12-07 17:33:56.646  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서비스코드: S00001
+2023-12-07 17:33:56.646  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 기관코드: I0000001
+2023-12-07 17:33:56.646  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 에이전트: if
+2023-12-07 17:33:56.746  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.d.api.app.service.ServerConnection   : 응답 코드: 200
+2023-12-07 17:33:56.747  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 연결 성공
+2023-12-07 17:33:57.032  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : Test...
+합계 77876
+drwxr-xr-x. 6 root root       77 12월  7 17:32 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79744017 12월  7 17:32 agent-1.0.0.jar
+drwxr-xr-x. 3 root root       58 12월  6 15:48 deploy
+drwxr-xr-x. 3 root root      101 12월  6 15:07 if
+drwxr-xr-x. 2 root root       24 12월  7 16:52 logs
+drwxr-xr-x. 4 root root       40 12월  7 17:32 yaml
+Done
+
+2023-12-07 17:34:56.514  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] g.kr.dsp.api.processor.FileExtProcessor  : 파일 크기: 0.05 mb
+2023-12-07 17:34:56.515  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:14             : {agentName=if, CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\I0000001-S00001-1-if-ls.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@21d72, CamelFileLastModified=1701845622539, CamelFileLength=52, CamelFileName=I0000001-S00001-1-if-ls.sh, CamelFileNameConsumed=I0000001-S00001-1-if-ls.sh, CamelFileNameOnly=I0000001-S00001-1-if-ls.sh, CamelFileParent=script, CamelFilePath=script\I0000001-S00001-1-if-ls.sh, CamelFileRelativePath=I0000001-S00001-1-if-ls.sh, CamelMessageTimestamp=1701845622539, fileExtension=sh, fileName=I0000001-S00001-1-if-ls.sh, serverNum=1, serviceName=S00001}
+2023-12-07 17:34:56.515  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:15             : 파일명: I0000001-S00001-1-if-ls.sh
+2023-12-07 17:34:56.515  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:16             : 서비스명: S00001
+2023-12-07 17:34:56.515  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:17             : 서버번호: 1
+2023-12-07 17:34:56.516  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:18             : 에이전트: if
+2023-12-07 17:34:56.516  INFO 33856 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:19             : 스크립트 전송 시간 지연 2초 시작
+2023-12-07 17:34:58.525  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:22             : 스크립트 전송 시간 지연 2초 끝
+2023-12-07 17:34:58.534  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 주소: 172.30.1.84:6666
+2023-12-07 17:34:58.535  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서버번호: 1
+2023-12-07 17:34:58.535  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 서비스코드: S00001
+2023-12-07 17:34:58.535  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 기관코드: I0000001
+2023-12-07 17:34:58.535  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 에이전트: if
+2023-12-07 17:34:58.543  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.d.api.app.service.ServerConnection   : 응답 코드: 200
+2023-12-07 17:34:58.543  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : 연결 성공
+2023-12-07 17:34:58.572  INFO 33856 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : Test...
+합계 77876
+drwxr-xr-x. 6 root root       77 12월  7 17:32 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79744017 12월  7 17:32 agent-1.0.0.jar
+drwxr-xr-x. 3 root root       58 12월  6 15:48 deploy
+drwxr-xr-x. 3 root root      101 12월  6 15:07 if
+drwxr-xr-x. 2 root root       24 12월  7 16:52 logs
+drwxr-xr-x. 4 root root       40 12월  7 17:32 yaml
+Done
+

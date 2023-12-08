@@ -1,11 +1,2 @@
-### 배포 agent start
-POST http://172.30.1.7:5555/deploy/start
-
-### 배포 agent stop
-POST http://172.30.1.7:5555/deploy/stop
-
-### I/F agent start
-POST http://172.30.1.7:5555/if/start
-
-### I/F agent stop
-POST http://172.30.1.7:5555/if/stop
+###
+GET http://172.30.1.84:7878/actuator/health

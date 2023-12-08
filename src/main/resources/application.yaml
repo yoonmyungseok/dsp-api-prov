@@ -25,3 +25,13 @@ logging:
       max-history: 90
   file:
     name: logs/${spring.config.activate.on-profile}.log
+
+agent:
+  deploy:
+    port:
+      camel: 6666
+      server: 7878
+  if:
+    port:
+      camel: 7777
+      server: 8787

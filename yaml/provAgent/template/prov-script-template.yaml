@@ -22,6 +22,6 @@
         - log: "스크립트 전송 시간 지연 2초 끝"
         - process:
             ref: fileSendProcessor
-        - toD: http://${header.Host}/file?socketTimeout=10000
+        - toD: ${exchangeProperty.url}
         - process:
             ref: resultProcessor

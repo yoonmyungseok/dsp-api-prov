@@ -13,13 +13,23 @@ public class FileExtProcessor implements Processor {
 
   @Override
   public void process(Exchange exchange) throws Exception {
+
     String fileName = exchange.getMessage().getHeader("CamelFileName", String.class);
     String fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
     String[] split=fileName.split("-");
-    String inst=split[0];
-    String service=split[1];
-    String seq=split[2];
-    String agent=split[3];
+    String inst="";
+    String service="";
+    String seq="";
+    String agent="";
+    try {
+      inst=split[0];
+      service=split[1];
+      seq=split[2];
+      agent=split[3];
+    }catch (IndexOutOfBoundsException e){
+      throw new DspException("파일명 잘못됨");
+    }
+
 
     /**
      * I0000001-S00001-1-IF-script-template.yaml

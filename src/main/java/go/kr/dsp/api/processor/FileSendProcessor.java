@@ -1,28 +1,35 @@
 package go.kr.dsp.api.processor;
 
-import com.fasterxml.jackson.databind.json.JsonMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import go.kr.dsp.api.app.dto.DeployDto;
 import go.kr.dsp.api.app.query.DeployQueryService;
-import go.kr.dsp.api.app.service.ServerConnection;
 import go.kr.dsp.api.exception.DspException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
-import org.apache.camel.FluentProducerTemplate;
 import org.apache.camel.Processor;
-import org.eclipse.jetty.util.ajax.JSON;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.HashMap;
 import java.util.Map;
+
 
 @Component
 @Slf4j
 @RequiredArgsConstructor
 public class FileSendProcessor implements Processor {
-  private final FluentProducerTemplate producerTemplate;
+  @Value("${agent.deploy.port.camel}")
+  private String deployCamelPort;
+  @Value("${agent.deploy.port.server}")
+  private String deployServerPort;
+  @Value("${agent.if.port.camel}")
+  private String ifCamelPort;
+  @Value("${agent.if.port.server}")
+  private String ifServerPort;
+
   private final DeployQueryService deployQueryService;
-  private final ServerConnection serverConnection;
+//  RestTemplate restTemplate = new RestTemplate();
 
   @Override
   public void process(Exchange exchange) throws Exception {
@@ -38,14 +45,23 @@ public class FileSendProcessor implements Processor {
     log.info("기관코드: {}",split[0]);
     log.info("에이전트: {}",split[3]);
 
+    String port=split[3].equals("deploy")?deployCamelPort:ifCamelPort;
+    exchange.setProperty("url",deployDto.getHost()+":"+port+"/file?socketTimeout=10000");
 
-    if(serverConnection.isServerConnected("http://"+deployDto.getHost()+"/file?connectTimeout=10000")){
-      log.info("연결 성공");
-      exchange.getMessage().setHeader("Host",deployDto.getHost());
-      exchange.getMessage().setHeader("fileExtension",fileExtension);
-      exchange.getMessage().setHeader(Exchange.HTTP_METHOD,"POST");
-    }else{
-      throw new DspException("연결 실패");
-    }
+//    String healthCheckPort=split[3].equals("deploy")?deployServerPort:ifServerPort;
+//
+//    String forObject=restTemplate.getForObject(deployDto.getHost()+":"+healthCheckPort+"/actuator/health", String.class);
+//    ObjectMapper objectMapper=new ObjectMapper();
+//    Map map=objectMapper.readValue(forObject,Map.class);
+
+//    if(map.get("status").equals("UP")){
+//      log.info("연결 성공");
+//      exchange.getMessage().setHeader("Host",deployDto.getHost());
+//      exchange.getMessage().setHeader("fileExtension",fileExtension);
+//      exchange.getMessage().setHeader(Exchange.HTTP_METHOD,"POST");
+//      exchange.setProperty("url",deployDto.getHost()+":");
+//    }else{
+//      throw new DspException("연결 실패");
+//    }
   }
 }

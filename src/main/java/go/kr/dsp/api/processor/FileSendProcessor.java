@@ -7,6 +7,7 @@ import go.kr.dsp.api.exception.DspException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
+import org.apache.camel.FluentProducerTemplate;
 import org.apache.camel.Processor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -29,6 +30,7 @@ public class FileSendProcessor implements Processor {
   private String ifServerPort;
 
   private final DeployQueryService deployQueryService;
+  private final FluentProducerTemplate fluentProducerTemplate;
 //  RestTemplate restTemplate = new RestTemplate();
 
   @Override
@@ -46,7 +48,7 @@ public class FileSendProcessor implements Processor {
     log.info("에이전트: {}",split[3]);
 
     String port=split[3].equals("deploy")?deployCamelPort:ifCamelPort;
-    exchange.setProperty("url",deployDto.getHost()+":"+port+"/file?socketTimeout=30000");
+    exchange.setProperty("url",deployDto.getHost()+":"+port+"/file?socketTimeout=30000&bridgeEndpoint=true");
 
 //    String healthCheckPort=split[3].equals("deploy")?deployServerPort:ifServerPort;
 //

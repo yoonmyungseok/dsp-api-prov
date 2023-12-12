@@ -37,7 +37,7 @@ public class ResultProcessor implements Processor {
     Map map = mapper.readValue(dataString, Map.class);
     if(exchange.getMessage().getHeader("fileExtension",String.class).equals("sh")){
       String result = map.get("request").toString();
-      log.info(result);
+      log.info("\n{}",result);
     }
     String logFile = map.get("logFile").toString();
 

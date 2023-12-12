@@ -46,7 +46,7 @@ public class FileSendProcessor implements Processor {
     log.info("에이전트: {}",split[3]);
 
     String port=split[3].equals("deploy")?deployCamelPort:ifCamelPort;
-    exchange.setProperty("url",deployDto.getHost()+":"+port+"/file?socketTimeout=10000");
+    exchange.setProperty("url",deployDto.getHost()+":"+port+"/file?socketTimeout=30000");
 
 //    String healthCheckPort=split[3].equals("deploy")?deployServerPort:ifServerPort;
 //

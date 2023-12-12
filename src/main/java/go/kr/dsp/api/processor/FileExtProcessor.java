@@ -49,11 +49,12 @@ public class FileExtProcessor implements Processor {
     double fileSizeInMB=Math.round(convertBytesToMegabytes(exchange.getMessage().getHeader("CamelFileLength", long.class))*100)/100.0;
 
     exchange.getMessage().setHeader("serviceName",service);//서비스 코드
+    exchange.getMessage().setHeader("instName",inst);// 기관 코드
     exchange.getMessage().setHeader("fileExtension",fileExtension);//확장자
     exchange.getMessage().setHeader("fileName",fileName);//파일 명
     exchange.getMessage().setHeader("serverNum",seq);
     exchange.getMessage().setHeader("agentName",agent.toLowerCase());//에이전트 구분(I/F, Deploy)
-    log.info("파일 크기: {} mb",fileSizeInMB);
+//    log.info("파일 크기: {} mb",fileSizeInMB);
   }
 
   private double convertBytesToMegabytes(long bytes) {

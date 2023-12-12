@@ -41,9 +41,20 @@ public class ResultProcessor implements Processor {
     }
     String logFile = map.get("logFile").toString();
 
+    String fileSize=map.get("fileSize").toString();
+    log.info("보낸 파일 크기: {}, 받은 파일 크기: {}",exchange.getMessage().getHeader("CamelFileLength",String.class),fileSize);
+    if (!(exchange.getMessage().getHeader("CamelFileLength",String.class).equals(fileSize))){
+      log.info("파일 손상 됨");
+    }
+    log.info(exchange.getMessage().getHeaders().toString());
+
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
     String formattedDate = LocalDateTime.now().format(formatter);
-    String fileName=agentName+"_log_"+formattedDate+".txt";
+    String fileName=exchange.getMessage().getHeader("instName",String.class)+"-"+
+      exchange.getMessage().getHeader("serviceName",String.class)+"-"+
+      exchange.getMessage().getHeader("serverNum")+"-"+
+      exchange.getMessage().getHeader("agentName",String.class)+"-"+
+      formattedDate+".log";
     Path filePath=Path.of(agentName,fileName);
     try {
       Files.writeString(filePath,logFile, StandardOpenOption.CREATE, StandardOpenOption.WRITE);

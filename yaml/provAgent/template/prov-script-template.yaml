@@ -3,12 +3,12 @@
     from:
       uri: file://script?include=^.*\.sh$
       steps:
-        - onException:
-            handled:
-              constant: true
-            exception: java.lang.Exception
-            steps:
-              - log: ${exception.message}
+#        - onException:
+#            handled:
+#              constant: true
+#            exception: java.lang.Exception
+#            steps:
+#              - log: ${exception.message}
         - process:
             ref: fileExtProcessor
         - log: ${headers}

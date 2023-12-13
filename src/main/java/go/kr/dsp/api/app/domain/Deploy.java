@@ -11,20 +11,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class Deploy {
-  private String id;
-  private String host;
-  private String seq;
-  private String service;
-  private String inst;
-  private String dir;
+    private String id;
+    private String host;
+    private String seq;
+    private String service;
+    private String inst;
 
-  public static Deploy toEntity(DeployDto dto){
-    return Deploy.builder()
-      .host(dto.getHost())
-      .seq(dto.getSeq())
-      .service(dto.getService())
-      .inst(dto.getInst())
-      .dir(dto.getDir())
-      .build();
-  }
+    public static Deploy toEntity(DeployDto dto) {
+        return Deploy.builder()
+            .host(dto.getHost())
+            .seq(dto.getSeq())
+            .service(dto.getService())
+            .inst(dto.getInst())
+            .build();
+    }
 }

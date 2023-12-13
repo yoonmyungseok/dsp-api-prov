@@ -1,0 +1,52 @@
+2023-12-13 16:44:16.184  INFO 2719 --- [main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 2719 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-13 16:44:16.220  INFO 2719 --- [main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-13 16:44:17.504  INFO 2719 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-13 16:44:17.512  INFO 2719 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-13 16:44:17.512  INFO 2719 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-13 16:44:17.563  INFO 2719 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-13 16:44:17.563  INFO 2719 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1293 ms
+2023-12-13 16:44:18.565  INFO 2719 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-13 16:44:18.623  INFO 2719 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-13 16:44:18.624  INFO 2719 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-13 16:44:18.901  INFO 2719 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-13 16:44:18.927  INFO 2719 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3731ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-13 16:44:18.967  INFO 2719 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-13 16:44:18.992  INFO 2719 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@39e43310{/,null,AVAILABLE}
+2023-12-13 16:44:18.999  INFO 2719 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@7e1f584d{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-13 16:44:18.999  INFO 2719 --- [main] org.eclipse.jetty.server.Server          : Started @3803ms
+2023-12-13 16:44:19.006  INFO 2719 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-13 16:44:19.006  INFO 2719 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-13 16:44:19.006  INFO 2719 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 310ms (build:40ms init:166ms start:104ms)
+2023-12-13 16:44:19.009  INFO 2719 --- [main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.327 seconds (JVM running for 3.814)
+2023-12-13 16:50:02.164  INFO 2719 --- [qtp118363130-38] if-template.yaml:14                      : {Accept-Encoding=gzip,deflate, agentName=if, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:7777/file)@cdfd59b, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:7777/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=228, fileExtension=sh, fileName=I0000001-S00001-1-if-stop-1.0.0.sh, Host=172.30.1.84:7777, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-13 16:50:02.181  INFO 2719 --- [qtp118363130-38] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_if
+2023-12-13 16:50:02.182  INFO 2719 --- [qtp118363130-38] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_deploy
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep deploy | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+kill -9 $CURRENT_PID
+echo "kill: {$CURRENT_PID}"
+sleep 10
+
+echo "Done"
+
+2023-12-13 16:50:02.198  INFO 2719 --- [qtp118363130-38] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-13 16:50:02.206  INFO 2719 --- [qtp118363130-38] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {2656}
+2023-12-13 16:50:02.206  INFO 2719 --- [qtp118363130-38] go.kr.dsp.api.processor.ScriptProcessor  : kill: {2656}
+2023-12-13 16:50:12.209  INFO 2719 --- [qtp118363130-38] go.kr.dsp.api.processor.ScriptProcessor  : Done
+2023-12-13 16:50:12.270  INFO 2719 --- [qtp118363130-38] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-13 16:50:12.288  INFO 2719 --- [qtp118363130-38] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {2656}
+kill: {2656}
+Done
+

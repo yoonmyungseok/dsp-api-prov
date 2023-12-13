@@ -13,8 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class DeployQueryService {
-  private final DeployRepository deployRepository;
-  public DeployDto selectService(DeployDto deployDto) throws DspException{
-    return DeployDto.toDto(deployRepository.selectService(Deploy.toEntity(deployDto)));
-  }
+    private final DeployRepository deployRepository;
+
+    public DeployDto selectService(DeployDto deployDto) throws DspException {
+        return DeployDto.toDto(deployRepository.selectService(Deploy.toEntity(deployDto)));
+    }
 }

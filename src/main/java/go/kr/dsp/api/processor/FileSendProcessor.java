@@ -23,12 +23,12 @@ import java.util.Map;
 public class FileSendProcessor implements Processor {
     @Value("${agent.deploy.port.camel}")
     private String deployCamelPort;
-    @Value("${agent.deploy.port.server}")
-    private String deployServerPort;
+//    @Value("${agent.deploy.port.server}")
+//    private String deployServerPort;
     @Value("${agent.if.port.camel}")
     private String ifCamelPort;
-    @Value("${agent.if.port.server}")
-    private String ifServerPort;
+//    @Value("${agent.if.port.server}")
+//    private String ifServerPort;
 
     private final DeployQueryService deployQueryService;
     private final FluentProducerTemplate fluentProducerTemplate;

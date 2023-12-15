@@ -13,9 +13,11 @@
             ref: fileExtProcessor
         - log: ${headers}
         - log: "파일명: ${header.fileName}"
-        - log: "서비스명: ${header.serviceName}"
+        - log: "기관코드: ${header.instName}"
+        - log: "서비스코드: ${header.serviceName}"
         - log: "서버번호: ${header.serverNum}"
         - log: "에이전트: ${header.agentName}"
+        - log: "버전: ${header.version}"
         - log: "스크립트 전송 시간 지연 2초 시작"
         - delay:
             constant: 2000

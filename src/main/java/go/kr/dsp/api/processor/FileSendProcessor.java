@@ -38,15 +38,11 @@ public class FileSendProcessor implements Processor {
     public void process(Exchange exchange) throws Exception {
         String fileName = exchange.getMessage().getHeader("CamelFileName", String.class);
         String fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
-        String[] split = exchange.getMessage().getHeader("CamelFileName", String.class).split("-");
+        String[] split = fileName.split("-");
 
         DeployDto deployDto = deployQueryService.selectService(DeployDto.builder().inst(split[0]).service(split[1]).seq(split[2]).build());
 
         log.info("주소: {}", deployDto.getHost());
-        log.info("서버번호: {}", split[2]);
-        log.info("서비스코드: {}", split[1]);
-        log.info("기관코드: {}", split[0]);
-        log.info("에이전트: {}", split[3]);
 
         String port = split[3].equals("deploy") ? deployCamelPort : ifCamelPort;
         exchange.setProperty("url", deployDto.getHost() + ":" + port + "/file?socketTimeout=30000&bridgeEndpoint=true");

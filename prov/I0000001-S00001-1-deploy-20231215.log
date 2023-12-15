@@ -1,0 +1,1260 @@
+2023-12-15 08:59:45.728  INFO 9211 --- [main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9211 (/home/dsp_deploy/agent-1.0.0.jar started by root in /home/dsp_deploy)
+2023-12-15 08:59:45.745  INFO 9211 --- [main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "deploy"
+2023-12-15 08:59:47.032  INFO 9211 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7878 (http)
+2023-12-15 08:59:47.082  INFO 9211 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1298 ms
+2023-12-15 08:59:47.631  WARN 9211 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tracer' defined in class path resource [io/opentracing/contrib/java/spring/jaeger/starter/JaegerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.opentracing.Tracer]: Factory method 'tracer' threw exception; nested exception is java.lang.IllegalStateException: Shutdown in progress
+2023-12-15 08:59:47.646  INFO 9211 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-12-15 09:38:13.345  INFO 9268 --- [main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9268 (/home/dsp_deploy/agent-1.0.0.jar started by root in /home/dsp_deploy)
+2023-12-15 09:38:13.370  INFO 9268 --- [main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "deploy"
+2023-12-15 09:38:14.654  INFO 9268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7878 (http)
+2023-12-15 09:38:14.662  INFO 9268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:38:14.662  INFO 9268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:38:14.716  INFO 9268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:38:14.717  INFO 9268 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1254 ms
+2023-12-15 09:38:15.749  INFO 9268 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:38:15.795  INFO 9268 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:38:15.796  INFO 9268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7878 (http) with context path ''
+2023-12-15 09:38:16.105  INFO 9268 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:38:16.129  INFO 9268 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3648ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:38:16.175  INFO 9268 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:38:16.197  INFO 9268 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@221dad51{/,null,AVAILABLE}
+2023-12-15 09:38:16.204  INFO 9268 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@45f421c{HTTP/1.1, (http/1.1)}{172.30.1.84:6666}
+2023-12-15 09:38:16.204  INFO 9268 --- [main] org.eclipse.jetty.server.Server          : Started @3724ms
+2023-12-15 09:38:16.212  INFO 9268 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:38:16.212  INFO 9268 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy (jetty:http://172.30.1.84:6666/file)
+2023-12-15 09:38:16.212  INFO 9268 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 345ms (build:39ms init:199ms start:107ms)
+2023-12-15 09:38:16.216  INFO 9268 --- [main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.338 seconds (JVM running for 3.735)
+2023-12-15 09:44:57.269  INFO 9268 --- [qtp1776312161-38] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@7067596f, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:44:57.305  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:44:57.305  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:44:57.312  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:44:57.333  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {8612}
+2023-12-15 09:44:57.334  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 8612: command not found
+2023-12-15 09:44:57.335  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : kill: {8612}
+2023-12-15 09:45:07.339  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:45:08.099  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:45:08.161  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:08.157  INFO 9326 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9326 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:45:08.167  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:08.165  INFO 9326 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:45:09.470  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:09.465  INFO 9326 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:45:09.484  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:09.473  INFO 9326 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:45:09.484  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:09.473  INFO 9326 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:45:09.526  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:09.516  INFO 9326 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:45:09.527  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:09.516  INFO 9326 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1305 ms
+2023-12-15 09:45:10.423  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.421  INFO 9326 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:45:10.495  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.484  INFO 9326 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:45:10.495  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.485  INFO 9326 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:45:10.747  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.742  INFO 9326 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:45:10.769  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.766  INFO 9326 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3419ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:45:10.805  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.803  INFO 9326 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:45:10.831  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.828  INFO 9326 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@240f6c41{/,null,AVAILABLE}
+2023-12-15 09:45:10.838  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.835  INFO 9326 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@162b3d47{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:45:10.838  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.835  INFO 9326 --- [           main] org.eclipse.jetty.server.Server          : Started @3489ms
+2023-12-15 09:45:10.849  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.841  INFO 9326 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:45:10.849  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.841  INFO 9326 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:45:10.849  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.841  INFO 9326 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 293ms (build:41ms init:153ms start:99ms)
+2023-12-15 09:45:10.849  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:45:10.845  INFO 9326 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.145 seconds (JVM running for 3.499)
+2023-12-15 09:45:17.345  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:45:17.347  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:45:17.391  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:45:17.391  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:45:17.391  INFO 9268 --- [qtp1776312161-38] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:45:22.408  INFO 9268 --- [Camel (camel-1) thread #1 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {8612}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 8612: command not found
+kill: {8612}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:45:08.157  INFO 9326 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9326 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:45:08.165  INFO 9326 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:45:09.465  INFO 9326 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:45:09.473  INFO 9326 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:45:09.473  INFO 9326 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:45:09.516  INFO 9326 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:45:09.516  INFO 9326 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1305 ms
+2023-12-15 09:45:10.421  INFO 9326 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:45:10.484  INFO 9326 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:45:10.485  INFO 9326 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:45:10.742  INFO 9326 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:45:10.766  INFO 9326 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3419ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:45:10.803  INFO 9326 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:45:10.828  INFO 9326 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@240f6c41{/,null,AVAILABLE}
+2023-12-15 09:45:10.835  INFO 9326 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@162b3d47{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:45:10.835  INFO 9326 --- [           main] org.eclipse.jetty.server.Server          : Started @3489ms
+2023-12-15 09:45:10.841  INFO 9326 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:45:10.841  INFO 9326 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:45:10.841  INFO 9326 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 293ms (build:41ms init:153ms start:99ms)
+2023-12-15 09:45:10.845  INFO 9326 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.145 seconds (JVM running for 3.499)
+Execution successful.
+
+2023-12-15 09:51:07.095  INFO 9268 --- [qtp1776312161-39] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@22086f25, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:51:07.097  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:51:07.098  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:51:07.100  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:51:07.113  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9326}
+2023-12-15 09:51:07.114  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9326: command not found
+2023-12-15 09:51:07.114  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9326}
+2023-12-15 09:51:17.123  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:51:17.883  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:51:17.884  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:51:17.884  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:51:17.884  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:51:17.884  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:51:17.884  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:51:17.884  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:51:17.884  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:51:17.884  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:51:17.949  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:17.948  INFO 9385 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9385 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:51:17.962  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:17.961  INFO 9385 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:51:19.351  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:19.344  INFO 9385 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:51:19.361  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:19.353  INFO 9385 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:51:19.361  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:19.354  INFO 9385 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:51:19.432  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:19.420  INFO 9385 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:51:19.432  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:19.420  INFO 9385 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1398 ms
+2023-12-15 09:51:20.455  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.446  INFO 9385 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:51:20.509  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.500  INFO 9385 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:51:20.509  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.501  INFO 9385 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:51:20.807  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.804  INFO 9385 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:51:20.831  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.829  INFO 9385 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3700ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:51:20.868  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.866  INFO 9385 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:51:20.891  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.884  INFO 9385 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@624a24f6{/,null,AVAILABLE}
+2023-12-15 09:51:20.907  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.893  INFO 9385 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@3bae64d0{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:51:20.907  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.893  INFO 9385 --- [           main] org.eclipse.jetty.server.Server          : Started @3764ms
+2023-12-15 09:51:20.907  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.898  INFO 9385 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:51:20.907  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.898  INFO 9385 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:51:20.907  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.898  INFO 9385 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 315ms (build:38ms init:184ms start:93ms)
+2023-12-15 09:51:20.907  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:51:20.901  INFO 9385 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.401 seconds (JVM running for 3.772)
+2023-12-15 09:51:27.129  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:51:27.134  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:51:27.137  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:51:27.137  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:51:27.137  INFO 9268 --- [qtp1776312161-39] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:51:32.141  INFO 9268 --- [Camel (camel-1) thread #1 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9326}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9326: command not found
+kill: {9326}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:51:17.948  INFO 9385 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9385 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:51:17.961  INFO 9385 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:51:19.344  INFO 9385 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:51:19.353  INFO 9385 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:51:19.354  INFO 9385 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:51:19.420  INFO 9385 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:51:19.420  INFO 9385 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1398 ms
+2023-12-15 09:51:20.446  INFO 9385 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:51:20.500  INFO 9385 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:51:20.501  INFO 9385 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:51:20.804  INFO 9385 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:51:20.829  INFO 9385 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3700ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:51:20.866  INFO 9385 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:51:20.884  INFO 9385 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@624a24f6{/,null,AVAILABLE}
+2023-12-15 09:51:20.893  INFO 9385 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@3bae64d0{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:51:20.893  INFO 9385 --- [           main] org.eclipse.jetty.server.Server          : Started @3764ms
+2023-12-15 09:51:20.898  INFO 9385 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:51:20.898  INFO 9385 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:51:20.898  INFO 9385 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 315ms (build:38ms init:184ms start:93ms)
+2023-12-15 09:51:20.901  INFO 9385 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.401 seconds (JVM running for 3.772)
+Execution successful.
+
+2023-12-15 09:53:59.423  INFO 9268 --- [qtp1776312161-35] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@7e454580, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:53:59.425  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:53:59.425  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:53:59.428  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:53:59.441  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9385}
+2023-12-15 09:53:59.441  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9385: command not found
+2023-12-15 09:53:59.442  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9385}
+2023-12-15 09:54:09.447  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:54:10.192  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:54:10.293  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:10.280  INFO 9442 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9442 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:54:10.293  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:10.282  INFO 9442 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:54:11.524  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:11.520  INFO 9442 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:54:11.536  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:11.529  INFO 9442 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:54:11.536  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:11.529  INFO 9442 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:54:11.591  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:11.588  INFO 9442 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:54:11.591  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:11.588  INFO 9442 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1271 ms
+2023-12-15 09:54:12.581  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:12.567  INFO 9442 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:54:12.620  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:12.618  INFO 9442 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:54:12.621  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:12.619  INFO 9442 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:54:12.907  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:12.903  INFO 9442 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:54:12.931  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:12.930  INFO 9442 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3476ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:54:12.978  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:12.970  INFO 9442 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:54:13.001  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:12.995  INFO 9442 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@6b0615ae{/,null,AVAILABLE}
+2023-12-15 09:54:13.002  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:13.001  INFO 9442 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@736048ed{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:54:13.002  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:13.002  INFO 9442 --- [           main] org.eclipse.jetty.server.Server          : Started @3548ms
+2023-12-15 09:54:13.017  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:13.009  INFO 9442 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:54:13.017  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:13.009  INFO 9442 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:54:13.017  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:13.009  INFO 9442 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 302ms (build:40ms init:157ms start:105ms)
+2023-12-15 09:54:13.017  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:13.012  INFO 9442 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.195 seconds (JVM running for 3.559)
+2023-12-15 09:54:19.452  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:54:31.823  INFO 9268 --- [qtp1776312161-32] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@11000754, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:54:31.824  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:54:31.824  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:54:31.826  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:54:31.831  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9442}
+2023-12-15 09:54:31.831  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9442: command not found
+2023-12-15 09:54:31.831  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9442}
+2023-12-15 09:54:31.837  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:54:31.839  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:54:31.839  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:54:31.839  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:54:36.843  INFO 9268 --- [Camel (camel-1) thread #3 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9385}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9385: command not found
+kill: {9385}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:54:10.280  INFO 9442 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9442 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:54:10.282  INFO 9442 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:54:11.520  INFO 9442 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:54:11.529  INFO 9442 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:54:11.529  INFO 9442 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:54:11.588  INFO 9442 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:54:11.588  INFO 9442 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1271 ms
+2023-12-15 09:54:12.567  INFO 9442 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:54:12.618  INFO 9442 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:54:12.619  INFO 9442 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:54:12.903  INFO 9442 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:54:12.930  INFO 9442 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3476ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:54:12.970  INFO 9442 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:54:12.995  INFO 9442 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@6b0615ae{/,null,AVAILABLE}
+2023-12-15 09:54:13.001  INFO 9442 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@736048ed{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:54:13.002  INFO 9442 --- [           main] org.eclipse.jetty.server.Server          : Started @3548ms
+2023-12-15 09:54:13.009  INFO 9442 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:54:13.009  INFO 9442 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:54:13.009  INFO 9442 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 302ms (build:40ms init:157ms start:105ms)
+2023-12-15 09:54:13.012  INFO 9442 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.195 seconds (JVM running for 3.559)
+Execution successful.
+
+2023-12-15 09:54:41.835  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:54:42.630  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:54:42.706  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:42.704  INFO 9498 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9498 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:54:42.706  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:42.706  INFO 9498 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:54:44.078  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:44.074  INFO 9498 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:54:44.089  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:44.083  INFO 9498 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:54:44.089  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:44.083  INFO 9498 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:54:44.133  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:44.129  INFO 9498 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:54:44.133  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:44.129  INFO 9498 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1361 ms
+2023-12-15 09:54:45.156  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.149  INFO 9498 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:54:45.213  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.200  INFO 9498 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:54:45.213  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.201  INFO 9498 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:54:45.500  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.494  INFO 9498 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:54:45.529  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.522  INFO 9498 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3682ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:54:45.563  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.563  INFO 9498 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:54:45.588  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.584  INFO 9498 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@624a24f6{/,null,AVAILABLE}
+2023-12-15 09:54:45.602  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.591  INFO 9498 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@3bae64d0{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:54:45.602  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.591  INFO 9498 --- [           main] org.eclipse.jetty.server.Server          : Started @3752ms
+2023-12-15 09:54:45.602  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.597  INFO 9498 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:54:45.602  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.597  INFO 9498 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:54:45.602  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.597  INFO 9498 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 323ms (build:50ms init:170ms start:103ms)
+2023-12-15 09:54:45.602  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:54:45.601  INFO 9498 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.344 seconds (JVM running for 3.761)
+2023-12-15 09:54:51.839  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:54:51.840  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:54:51.842  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:54:51.842  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:54:51.842  INFO 9268 --- [qtp1776312161-32] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:54:56.844  INFO 9268 --- [Camel (camel-1) thread #1 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9442}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9442: command not found
+kill: {9442}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:54:42.704  INFO 9498 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9498 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:54:42.706  INFO 9498 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:54:44.074  INFO 9498 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:54:44.083  INFO 9498 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:54:44.083  INFO 9498 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:54:44.129  INFO 9498 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:54:44.129  INFO 9498 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1361 ms
+2023-12-15 09:54:45.149  INFO 9498 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:54:45.200  INFO 9498 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:54:45.201  INFO 9498 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:54:45.494  INFO 9498 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:54:45.522  INFO 9498 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3682ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:54:45.563  INFO 9498 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:54:45.584  INFO 9498 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@624a24f6{/,null,AVAILABLE}
+2023-12-15 09:54:45.591  INFO 9498 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@3bae64d0{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:54:45.591  INFO 9498 --- [           main] org.eclipse.jetty.server.Server          : Started @3752ms
+2023-12-15 09:54:45.597  INFO 9498 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:54:45.597  INFO 9498 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:54:45.597  INFO 9498 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 323ms (build:50ms init:170ms start:103ms)
+2023-12-15 09:54:45.601  INFO 9498 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.344 seconds (JVM running for 3.761)
+Execution successful.
+
+2023-12-15 09:56:05.397  INFO 9268 --- [qtp1776312161-37] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@7f367d9e, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:56:05.398  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:56:05.399  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:56:05.401  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:56:05.414  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9498}
+2023-12-15 09:56:05.415  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9498: command not found
+2023-12-15 09:56:05.415  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9498}
+2023-12-15 09:56:15.417  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:56:16.485  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:56:16.582  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:16.569  INFO 9566 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9566 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:56:16.582  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:16.577  INFO 9566 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:56:18.368  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:18.365  INFO 9566 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:56:18.379  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:18.375  INFO 9566 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:56:18.379  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:18.376  INFO 9566 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:56:18.442  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:18.431  INFO 9566 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:56:18.442  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:18.432  INFO 9566 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1783 ms
+2023-12-15 09:56:19.800  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:19.794  INFO 9566 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:56:19.855  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:19.852  INFO 9566 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:56:19.866  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:19.857  INFO 9566 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:56:20.198  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.192  INFO 9566 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:56:20.230  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.221  INFO 9566 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @4798ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:56:20.262  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.261  INFO 9566 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:56:20.320  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.315  INFO 9566 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@4e73b552{/,null,AVAILABLE}
+2023-12-15 09:56:20.335  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.333  INFO 9566 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@1976f537{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:56:20.335  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.333  INFO 9566 --- [           main] org.eclipse.jetty.server.Server          : Started @4911ms
+2023-12-15 09:56:20.352  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.342  INFO 9566 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:56:20.352  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.342  INFO 9566 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:56:20.352  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.342  INFO 9566 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 449ms (build:91ms init:208ms start:150ms)
+2023-12-15 09:56:20.352  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:20.346  INFO 9566 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 4.411 seconds (JVM running for 4.924)
+2023-12-15 09:56:25.421  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:56:25.426  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:56:25.429  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:56:25.429  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:56:25.429  INFO 9268 --- [qtp1776312161-37] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:56:30.436  INFO 9268 --- [Camel (camel-1) thread #5 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9498}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9498: command not found
+kill: {9498}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:56:16.569  INFO 9566 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9566 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:56:16.577  INFO 9566 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:56:18.365  INFO 9566 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:56:18.375  INFO 9566 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:56:18.376  INFO 9566 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:56:18.431  INFO 9566 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:56:18.432  INFO 9566 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1783 ms
+2023-12-15 09:56:19.794  INFO 9566 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:56:19.852  INFO 9566 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:56:19.857  INFO 9566 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:56:20.192  INFO 9566 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:56:20.221  INFO 9566 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @4798ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:56:20.261  INFO 9566 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:56:20.315  INFO 9566 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@4e73b552{/,null,AVAILABLE}
+2023-12-15 09:56:20.333  INFO 9566 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@1976f537{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:56:20.333  INFO 9566 --- [           main] org.eclipse.jetty.server.Server          : Started @4911ms
+2023-12-15 09:56:20.342  INFO 9566 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:56:20.342  INFO 9566 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:56:20.342  INFO 9566 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 449ms (build:91ms init:208ms start:150ms)
+2023-12-15 09:56:20.346  INFO 9566 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 4.411 seconds (JVM running for 4.924)
+Execution successful.
+
+2023-12-15 09:56:45.882  INFO 9268 --- [qtp1776312161-36] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@7f367d9e, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:56:45.885  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:56:45.885  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:56:45.887  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:56:45.900  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9566}
+2023-12-15 09:56:45.901  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9566: command not found
+2023-12-15 09:56:45.901  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9566}
+2023-12-15 09:56:55.904  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:56:56.666  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:56:56.744  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:56.740  INFO 9633 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9633 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:56:56.744  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:56.742  INFO 9633 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:56:58.145  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:58.138  INFO 9633 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:56:58.154  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:58.147  INFO 9633 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:56:58.154  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:58.147  INFO 9633 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:56:58.196  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:58.192  INFO 9633 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:56:58.196  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:58.193  INFO 9633 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1391 ms
+2023-12-15 09:56:59.186  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.180  INFO 9633 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:56:59.243  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.234  INFO 9633 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:56:59.243  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.236  INFO 9633 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:56:59.558  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.554  INFO 9633 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:56:59.590  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.581  INFO 9633 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3673ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:56:59.620  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.618  INFO 9633 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:56:59.656  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.652  INFO 9633 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@221dad51{/,null,AVAILABLE}
+2023-12-15 09:56:59.664  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.660  INFO 9633 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@45f421c{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:56:59.664  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.660  INFO 9633 --- [           main] org.eclipse.jetty.server.Server          : Started @3752ms
+2023-12-15 09:56:59.677  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.667  INFO 9633 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:56:59.677  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.667  INFO 9633 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:56:59.677  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.667  INFO 9633 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 303ms (build:49ms init:141ms start:113ms)
+2023-12-15 09:56:59.677  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:56:59.671  INFO 9633 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.416 seconds (JVM running for 3.763)
+2023-12-15 09:57:05.910  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:57:18.226  INFO 9268 --- [qtp1776312161-34] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@7ab13a1d, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:57:18.229  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:57:18.229  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:57:18.231  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:57:18.244  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9633}
+2023-12-15 09:57:18.244  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9633: command not found
+2023-12-15 09:57:18.245  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9633}
+2023-12-15 09:57:18.253  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:57:18.255  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:57:18.255  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:57:18.255  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:57:23.257  INFO 9268 --- [Camel (camel-1) thread #6 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9566}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9566: command not found
+kill: {9566}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:56:56.740  INFO 9633 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9633 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:56:56.742  INFO 9633 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:56:58.138  INFO 9633 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:56:58.147  INFO 9633 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:56:58.147  INFO 9633 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:56:58.192  INFO 9633 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:56:58.193  INFO 9633 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1391 ms
+2023-12-15 09:56:59.180  INFO 9633 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:56:59.234  INFO 9633 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:56:59.236  INFO 9633 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:56:59.554  INFO 9633 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:56:59.581  INFO 9633 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3673ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:56:59.618  INFO 9633 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:56:59.652  INFO 9633 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@221dad51{/,null,AVAILABLE}
+2023-12-15 09:56:59.660  INFO 9633 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@45f421c{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:56:59.660  INFO 9633 --- [           main] org.eclipse.jetty.server.Server          : Started @3752ms
+2023-12-15 09:56:59.667  INFO 9633 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:56:59.667  INFO 9633 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:56:59.667  INFO 9633 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 303ms (build:49ms init:141ms start:113ms)
+2023-12-15 09:56:59.671  INFO 9633 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.416 seconds (JVM running for 3.763)
+Execution successful.
+
+2023-12-15 09:57:28.247  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:57:29.068  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:57:29.184  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:29.168  INFO 9689 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9689 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:57:29.184  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:29.181  INFO 9689 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:57:30.468  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:30.466  INFO 9689 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:57:30.479  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:30.476  INFO 9689 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:57:30.479  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:30.476  INFO 9689 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:57:30.533  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:30.527  INFO 9689 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:57:30.533  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:30.527  INFO 9689 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1239 ms
+2023-12-15 09:57:31.476  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.474  INFO 9689 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:57:31.536  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.523  INFO 9689 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:57:31.536  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.524  INFO 9689 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:57:31.827  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.821  INFO 9689 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:57:31.858  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.849  INFO 9689 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3597ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:57:31.890  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.889  INFO 9689 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:57:31.914  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.913  INFO 9689 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@49c8f6e8{/,null,AVAILABLE}
+2023-12-15 09:57:31.924  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.920  INFO 9689 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@5d7835a8{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:57:31.924  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.920  INFO 9689 --- [           main] org.eclipse.jetty.server.Server          : Started @3669ms
+2023-12-15 09:57:31.937  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.927  INFO 9689 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:57:31.938  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.927  INFO 9689 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:57:31.938  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.927  INFO 9689 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 303ms (build:40ms init:157ms start:106ms)
+2023-12-15 09:57:31.938  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:57:31.931  INFO 9689 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.288 seconds (JVM running for 3.679)
+2023-12-15 09:57:38.250  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:57:50.598  INFO 9268 --- [qtp1776312161-35] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@7cd6f404, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:57:50.599  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:57:50.599  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:57:50.601  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:57:50.608  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9689}
+2023-12-15 09:57:50.608  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9689: command not found
+2023-12-15 09:57:50.608  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9689}
+2023-12-15 09:57:50.613  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:57:50.614  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:57:50.614  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:57:50.614  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:57:55.616  INFO 9268 --- [Camel (camel-1) thread #4 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9633}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9633: command not found
+kill: {9633}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:57:29.168  INFO 9689 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9689 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:57:29.181  INFO 9689 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:57:30.466  INFO 9689 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:57:30.476  INFO 9689 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:57:30.476  INFO 9689 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:57:30.527  INFO 9689 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:57:30.527  INFO 9689 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1239 ms
+2023-12-15 09:57:31.474  INFO 9689 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:57:31.523  INFO 9689 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:57:31.524  INFO 9689 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:57:31.821  INFO 9689 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:57:31.849  INFO 9689 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3597ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:57:31.889  INFO 9689 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:57:31.913  INFO 9689 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@49c8f6e8{/,null,AVAILABLE}
+2023-12-15 09:57:31.920  INFO 9689 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@5d7835a8{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:57:31.920  INFO 9689 --- [           main] org.eclipse.jetty.server.Server          : Started @3669ms
+2023-12-15 09:57:31.927  INFO 9689 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:57:31.927  INFO 9689 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:57:31.927  INFO 9689 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 303ms (build:40ms init:157ms start:106ms)
+2023-12-15 09:57:31.931  INFO 9689 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.288 seconds (JVM running for 3.679)
+Execution successful.
+
+2023-12-15 09:58:00.611  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:58:01.450  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:58:01.570  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:01.565  INFO 9744 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9744 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:58:01.570  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:01.567  INFO 9744 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:58:02.993  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:02.992  INFO 9744 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:58:03.005  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:03.000  INFO 9744 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:58:03.005  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:03.000  INFO 9744 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:58:03.053  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:03.049  INFO 9744 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:58:03.053  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:03.049  INFO 9744 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1397 ms
+2023-12-15 09:58:04.068  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.063  INFO 9744 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:58:04.134  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.124  INFO 9744 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:58:04.134  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.125  INFO 9744 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:58:04.420  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.415  INFO 9744 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:58:04.455  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.447  INFO 9744 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3833ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:58:04.494  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.488  INFO 9744 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:58:04.518  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.518  INFO 9744 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@49c8f6e8{/,null,AVAILABLE}
+2023-12-15 09:58:04.526  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.523  INFO 9744 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@5d7835a8{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:58:04.527  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.524  INFO 9744 --- [           main] org.eclipse.jetty.server.Server          : Started @3910ms
+2023-12-15 09:58:04.537  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.530  INFO 9744 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:58:04.537  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.530  INFO 9744 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:58:04.537  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.530  INFO 9744 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 333ms (build:41ms init:178ms start:114ms)
+2023-12-15 09:58:04.537  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:04.533  INFO 9744 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.544 seconds (JVM running for 3.92)
+2023-12-15 09:58:10.613  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:58:22.985  INFO 9268 --- [qtp1776312161-36] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@37ec8c17, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:58:22.987  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:58:22.987  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:58:22.989  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:58:22.999  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9744}
+2023-12-15 09:58:23.000  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9744: command not found
+2023-12-15 09:58:23.000  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9744}
+2023-12-15 09:58:23.005  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:58:23.008  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:58:23.008  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:58:23.008  INFO 9268 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:58:28.015  INFO 9268 --- [Camel (camel-1) thread #1 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9689}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9689: command not found
+kill: {9689}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:58:01.565  INFO 9744 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9744 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:58:01.567  INFO 9744 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:58:02.992  INFO 9744 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:58:03.000  INFO 9744 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:58:03.000  INFO 9744 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:58:03.049  INFO 9744 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:58:03.049  INFO 9744 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1397 ms
+2023-12-15 09:58:04.063  INFO 9744 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:58:04.124  INFO 9744 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:58:04.125  INFO 9744 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:58:04.415  INFO 9744 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:58:04.447  INFO 9744 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3833ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:58:04.488  INFO 9744 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:58:04.518  INFO 9744 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@49c8f6e8{/,null,AVAILABLE}
+2023-12-15 09:58:04.523  INFO 9744 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@5d7835a8{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:58:04.524  INFO 9744 --- [           main] org.eclipse.jetty.server.Server          : Started @3910ms
+2023-12-15 09:58:04.530  INFO 9744 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:58:04.530  INFO 9744 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:58:04.530  INFO 9744 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 333ms (build:41ms init:178ms start:114ms)
+2023-12-15 09:58:04.533  INFO 9744 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.544 seconds (JVM running for 3.92)
+Execution successful.
+
+2023-12-15 09:58:33.004  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:58:33.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:58:33.793  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:33.788  INFO 9839 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9839 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:58:33.793  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:33.790  INFO 9839 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:58:35.031  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:35.027  INFO 9839 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:58:35.042  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:35.034  INFO 9839 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:58:35.042  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:35.035  INFO 9839 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:58:35.077  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:35.076  INFO 9839 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:58:35.077  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:35.076  INFO 9839 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2023-12-15 09:58:36.048  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.038  INFO 9839 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:58:36.103  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.091  INFO 9839 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:58:36.103  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.093  INFO 9839 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:58:36.382  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.374  INFO 9839 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:58:36.404  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.403  INFO 9839 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3385ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:58:36.446  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.443  INFO 9839 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:58:36.475  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.471  INFO 9839 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@4f453e63{/,null,AVAILABLE}
+2023-12-15 09:58:36.483  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.480  INFO 9839 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@7e736350{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:58:36.483  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.480  INFO 9839 --- [           main] org.eclipse.jetty.server.Server          : Started @3467ms
+2023-12-15 09:58:36.491  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.490  INFO 9839 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:58:36.492  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.490  INFO 9839 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:58:36.492  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.490  INFO 9839 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 335ms (build:44ms init:175ms start:116ms)
+2023-12-15 09:58:36.507  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:58:36.507  INFO 9839 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.111 seconds (JVM running for 3.494)
+2023-12-15 09:58:43.010  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:58:55.288  INFO 9268 --- [qtp1776312161-34] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@61133aa6, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:58:55.288  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:58:55.288  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:58:55.290  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:58:55.314  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9839}
+2023-12-15 09:58:55.314  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9839: command not found
+2023-12-15 09:58:55.314  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9839}
+2023-12-15 09:58:55.319  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:58:55.320  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:58:55.320  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:58:55.320  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:59:00.324  INFO 9268 --- [Camel (camel-1) thread #2 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9744}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9744: command not found
+kill: {9744}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:58:33.788  INFO 9839 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9839 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:58:33.790  INFO 9839 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:58:35.027  INFO 9839 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:58:35.034  INFO 9839 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:58:35.035  INFO 9839 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:58:35.076  INFO 9839 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:58:35.076  INFO 9839 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2023-12-15 09:58:36.038  INFO 9839 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:58:36.091  INFO 9839 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:58:36.093  INFO 9839 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:58:36.374  INFO 9839 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:58:36.403  INFO 9839 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3385ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:58:36.443  INFO 9839 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:58:36.471  INFO 9839 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@4f453e63{/,null,AVAILABLE}
+2023-12-15 09:58:36.480  INFO 9839 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@7e736350{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:58:36.480  INFO 9839 --- [           main] org.eclipse.jetty.server.Server          : Started @3467ms
+2023-12-15 09:58:36.490  INFO 9839 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:58:36.490  INFO 9839 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:58:36.490  INFO 9839 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 335ms (build:44ms init:175ms start:116ms)
+2023-12-15 09:58:36.507  INFO 9839 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.111 seconds (JVM running for 3.494)
+Execution successful.
+
+2023-12-15 09:59:05.318  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:59:06.157  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:59:06.261  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:06.260  INFO 9894 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9894 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:59:06.262  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:06.262  INFO 9894 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:59:07.511  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:07.507  INFO 9894 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:59:07.522  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:07.516  INFO 9894 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:59:07.522  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:07.516  INFO 9894 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:59:07.562  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:07.561  INFO 9894 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:59:07.562  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:07.562  INFO 9894 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1220 ms
+2023-12-15 09:59:08.541  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.539  INFO 9894 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:59:08.592  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.583  INFO 9894 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:59:08.592  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.584  INFO 9894 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:59:08.855  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.852  INFO 9894 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:59:08.898  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.888  INFO 9894 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3560ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:59:08.929  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.926  INFO 9894 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:59:08.956  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.954  INFO 9894 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@49c8f6e8{/,null,AVAILABLE}
+2023-12-15 09:59:08.963  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.961  INFO 9894 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@5d7835a8{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:59:08.964  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.961  INFO 9894 --- [           main] org.eclipse.jetty.server.Server          : Started @3633ms
+2023-12-15 09:59:08.979  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.967  INFO 9894 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:59:08.979  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.967  INFO 9894 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:59:08.979  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.967  INFO 9894 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 325ms (build:45ms init:166ms start:114ms)
+2023-12-15 09:59:08.979  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:08.971  INFO 9894 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.203 seconds (JVM running for 3.643)
+2023-12-15 09:59:15.324  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:59:27.720  INFO 9268 --- [qtp1776312161-36] deploy-template.yaml:14                  : {Accept-Encoding=gzip,deflate, agentName=deploy, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:6666/file)@300c7099, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:6666/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=509, fileExtension=sh, fileName=I0000001-S00001-1-deploy-start-1.0.0.sh, Host=172.30.1.84:6666, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-15 09:59:27.721  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy
+2023-12-15 09:59:27.721  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+
+cd /home/dsp_if
+
+echo "PID Check..."
+
+CURRENT_PID=$(ps -ef | grep java | grep if | awk '{print $2}')
+
+echo "Running PID: {$CURRENT_PID}"
+
+if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+    echo "Project is not running"
+else
+    kill -9 $CURRENT_PID
+    echo "kill: {$CURRENT_PID}"
+    sleep 10
+fi
+
+echo "Deploy Project...."
+
+nohup java -jar agent-1.0.0.jar --spring.profiles.active=if &
+
+sleep 10
+
+if [ $? -eq 0 ]; then
+    echo "Execution successful."
+else
+    echo "Execution failed."
+    exit 1
+fi
+
+2023-12-15 09:59:27.722  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : PID Check...
+2023-12-15 09:59:27.733  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Running PID: {9894}
+2023-12-15 09:59:27.733  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9894: command not found
+2023-12-15 09:59:27.734  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : kill: {9894}
+2023-12-15 09:59:27.740  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:59:27.741  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:59:27.741  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:59:27.741  INFO 9268 --- [qtp1776312161-34] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:59:32.744  INFO 9268 --- [Camel (camel-1) thread #5 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9839}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9839: command not found
+kill: {9839}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:59:06.260  INFO 9894 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9894 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:59:06.262  INFO 9894 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:59:07.507  INFO 9894 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:59:07.516  INFO 9894 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:59:07.516  INFO 9894 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:59:07.561  INFO 9894 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:59:07.562  INFO 9894 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1220 ms
+2023-12-15 09:59:08.539  INFO 9894 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:59:08.583  INFO 9894 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:59:08.584  INFO 9894 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:59:08.852  INFO 9894 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:59:08.888  INFO 9894 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3560ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:59:08.926  INFO 9894 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:59:08.954  INFO 9894 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@49c8f6e8{/,null,AVAILABLE}
+2023-12-15 09:59:08.961  INFO 9894 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@5d7835a8{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:59:08.961  INFO 9894 --- [           main] org.eclipse.jetty.server.Server          : Started @3633ms
+2023-12-15 09:59:08.967  INFO 9894 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:59:08.967  INFO 9894 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:59:08.967  INFO 9894 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 325ms (build:45ms init:166ms start:114ms)
+2023-12-15 09:59:08.971  INFO 9894 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.203 seconds (JVM running for 3.643)
+Execution successful.
+
+2023-12-15 09:59:37.736  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Deploy Project....
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :   .   ____          _            __ _ _
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  =========|_|==============|___/=/_/_/_/
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  :  :: Spring Boot ::                (v2.7.7)
+2023-12-15 09:59:38.473  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 
+2023-12-15 09:59:38.564  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:38.554  INFO 9951 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9951 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:59:38.564  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:38.555  INFO 9951 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:59:39.760  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:39.755  INFO 9951 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:59:39.771  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:39.763  INFO 9951 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:59:39.771  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:39.763  INFO 9951 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:59:39.809  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:39.807  INFO 9951 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:59:39.809  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:39.807  INFO 9951 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1179 ms
+2023-12-15 09:59:40.778  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:40.771  INFO 9951 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:59:40.832  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:40.828  INFO 9951 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:59:40.832  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:40.829  INFO 9951 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:59:41.088  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.083  INFO 9951 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:59:41.112  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.106  INFO 9951 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3362ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:59:41.155  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.154  INFO 9951 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:59:41.191  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.188  INFO 9951 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@221dad51{/,null,AVAILABLE}
+2023-12-15 09:59:41.199  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.195  INFO 9951 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@45f421c{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:59:41.199  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.195  INFO 9951 --- [           main] org.eclipse.jetty.server.Server          : Started @3452ms
+2023-12-15 09:59:41.210  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.202  INFO 9951 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:59:41.210  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.202  INFO 9951 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:59:41.210  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.202  INFO 9951 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 301ms (build:39ms init:144ms start:118ms)
+2023-12-15 09:59:41.210  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 2023-12-15 09:59:41.205  INFO 9951 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.11 seconds (JVM running for 3.462)
+2023-12-15 09:59:47.743  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Execution successful.
+2023-12-15 09:59:47.746  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-15 09:59:47.750  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-15 09:59:47.750  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-15 09:59:47.750  INFO 9268 --- [qtp1776312161-36] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-15 09:59:52.752  INFO 9268 --- [Camel (camel-1) thread #3 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+PID Check...
+Running PID: {9894}
+/home/dsp_deploy/script/I0000001-S00001-1-deploy-start-1.0.0.sh: line 11: 9894: command not found
+kill: {9894}
+Deploy Project....
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-12-15 09:59:38.554  INFO 9951 --- [           main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 9951 (/home/dsp_if/agent-1.0.0.jar started by root in /home/dsp_if)
+2023-12-15 09:59:38.555  INFO 9951 --- [           main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "if"
+2023-12-15 09:59:39.755  INFO 9951 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2023-12-15 09:59:39.763  INFO 9951 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-15 09:59:39.763  INFO 9951 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-15 09:59:39.807  INFO 9951 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-15 09:59:39.807  INFO 9951 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1179 ms
+2023-12-15 09:59:40.771  INFO 9951 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-15 09:59:40.828  INFO 9951 --- [           main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-15 09:59:40.829  INFO 9951 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2023-12-15 09:59:41.083  INFO 9951 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-15 09:59:41.106  INFO 9951 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @3362ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-15 09:59:41.154  INFO 9951 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-15 09:59:41.188  INFO 9951 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@221dad51{/,null,AVAILABLE}
+2023-12-15 09:59:41.195  INFO 9951 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@45f421c{HTTP/1.1, (http/1.1)}{172.30.1.84:7777}
+2023-12-15 09:59:41.195  INFO 9951 --- [           main] org.eclipse.jetty.server.Server          : Started @3452ms
+2023-12-15 09:59:41.202  INFO 9951 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-15 09:59:41.202  INFO 9951 --- [           main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-if (jetty:http://172.30.1.84:7777/file)
+2023-12-15 09:59:41.202  INFO 9951 --- [           main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 301ms (build:39ms init:144ms start:118ms)
+2023-12-15 09:59:41.205  INFO 9951 --- [           main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.11 seconds (JVM running for 3.462)
+Execution successful.
+

@@ -40,7 +40,6 @@ public class FileExtProcessor implements Processor {
         String version = "";
         if (matcher.find()) {
             version = matcher.group(1); // Extracts the version number
-            log.info("Extracted version: {}", version);
         } else {
             throw new DspException("버전명 잘못됨");
         }

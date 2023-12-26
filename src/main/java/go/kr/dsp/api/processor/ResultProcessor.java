@@ -1,9 +1,9 @@
 package go.kr.dsp.api.processor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import go.kr.dsp.api.app.command.DeployRecordEditService;
-import go.kr.dsp.api.app.dto.DeployFileDto;
-import go.kr.dsp.api.app.dto.DeployScriptDto;
+import go.kr.dsp.api.app.command.AgentEditService;
+import go.kr.dsp.api.app.dto.AgentFileDto;
+import go.kr.dsp.api.app.dto.AgentScriptDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
@@ -20,20 +20,18 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 @Component
 @Slf4j
 @RequiredArgsConstructor
 public class ResultProcessor implements Processor {
-
-    private final DeployRecordEditService deployRecordEditService;
-
+    
+    private final AgentEditService agentEditService;
+    
     @Value("${spring.config.activate.on-profile}")
     private String agentName;
-
+    
     @Override
     public void process(Exchange exchange) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
@@ -47,45 +45,37 @@ public class ResultProcessor implements Processor {
         Map map = mapper.readValue(dataString, Map.class);
         String logFile = map.get("logFile").toString();
         String fileSize = map.get("fileSize").toString();
-
+        String agtInstlSysId = exchange.getMessage().getHeader("agtInstlSysId", String.class);
+        
         if (exchange.getMessage().getHeader("fileExtension", String.class).equals("sh")) {
-            String result = map.get("request").toString();
-            String execSh = map.get("execSh").toString();
-            log.info("\n{}", result);
-            DeployScriptDto build = DeployScriptDto.builder()
-                .instCd(exchange.getMessage().getHeader("instName", String.class))
-                .svcCd(exchange.getMessage().getHeader("serviceName", String.class))
-                .seq(exchange.getMessage().getHeader("serverNum", String.class))
-                .agentCd(exchange.getMessage().getHeader("agentName", String.class))
-                .execSh(execSh)
-                .resultSh(result)
+            String resultMsgVl = map.get("request").toString();
+            String scrpCn = map.get("execSh").toString();
+            log.info("\n{}", resultMsgVl);
+            
+            AgentScriptDto agentScriptDto = AgentScriptDto.builder()
+                .agtInstlSysId(agtInstlSysId)
+                .scrpCn(scrpCn)
+                .resultMsgVl(resultMsgVl)
                 .build();
-            deployRecordEditService.insertScriptRecord(DeployScriptDto.toEntity(build));
+            
+            agentEditService.insertAgentScript(agentScriptDto);
         } else {
-            DeployFileDto build = DeployFileDto.builder()
-                .instCd(exchange.getMessage().getHeader("instName", String.class))
-                .svcCd(exchange.getMessage().getHeader("serviceName", String.class))
-                .seq(exchange.getMessage().getHeader("serverNum", String.class))
-                .agentCd(exchange.getMessage().getHeader("agentName", String.class))
-                .fileName(exchange.getMessage().getHeader("fileName", String.class))
-                .version(exchange.getMessage().getHeader("version", String.class))
-                .filesize(fileSize)
+            AgentFileDto agentFileDto = AgentFileDto.builder()
+                .agtInstlSysId(agtInstlSysId)
+                .trsmFileNm(exchange.getMessage().getHeader("fileName", String.class))
+                .trsmFileVerVl(exchange.getMessage().getHeader("version", String.class))
                 .build();
-            deployRecordEditService.insertFileRecord(DeployFileDto.toEntity(build));
+            agentEditService.insertAgentFile(agentFileDto);
         }
         
         log.info("보낸 파일 크기: {}, 받은 파일 크기: {}", exchange.getMessage().getHeader("CamelFileLength", String.class), fileSize);
         if (!(exchange.getMessage().getHeader("CamelFileLength", String.class).equals(fileSize))) {
             log.info("파일 손상 됨");
         }
-
+        
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
         String formattedDate = LocalDateTime.now().format(formatter);
-        String fileName = exchange.getMessage().getHeader("instName", String.class) + "-" +
-            exchange.getMessage().getHeader("serviceName", String.class) + "-" +
-            exchange.getMessage().getHeader("serverNum") + "-" +
-            exchange.getMessage().getHeader("agentName", String.class) + "-" +
-            formattedDate + ".log";
+        String fileName = agtInstlSysId + "_" + formattedDate + ".log";
         Path filePath = Path.of(agentName, fileName);
         try {
             Files.writeString(filePath, logFile, StandardOpenOption.CREATE, StandardOpenOption.WRITE);

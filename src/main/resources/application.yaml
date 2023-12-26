@@ -4,9 +4,9 @@ spring:
       on-profile: prov
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://172.30.1.7:5432/dsp
-    username: admin
-    password: admin
+    url: jdbc:postgresql://172.30.1.76:5432/dbdsp2
+    username: devusdsp2
+    password: devusdsp2
 mybatis:
   config-location: classpath:/mybatis/mapper-config.xml
   mapper-locations: classpath:/mybatis/mapper/*.xml
@@ -26,12 +26,16 @@ logging:
   file:
     name: logs/${spring.config.activate.on-profile}.log
 
-agent:
-  deploy:
-    port:
-      camel: 6666
-      server: 7878
-  if:
-    port:
-      camel: 7777
-      server: 8787
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://172.30.1.76:5432/dbdsp2
+    username: devusdsp2
+    password: devusdsp2
+mybatis:
+  config-location: classpath:/mybatis/mapper-config.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml

@@ -1,2 +1,6 @@
-###
-GET http://172.30.1.84:7878/actuator/health
+POST http://localhost:8080/test
+Content-Type: application/json
+
+{
+  "agtInstlSysId": "ASID2023122217000002"
+}

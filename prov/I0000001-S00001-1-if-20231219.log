@@ -1,0 +1,33 @@
+2023-12-19 14:17:45.122  INFO 9951 --- [qtp1776312161-35] if-template.yaml:14                      : {Accept-Encoding=gzip,deflate, agentName=if, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:7777/file)@6c16ff2, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:7777/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=52, fileExtension=sh, fileName=I0000001-S00001-1-if-ls-1.0.0.sh, Host=172.30.1.84:7777, instName=I0000001, serverNum=1, serviceName=S00001, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.0.0}
+2023-12-19 14:17:45.151  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : /home/dsp_if
+2023-12-19 14:17:45.152  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+echo "Test..."
+
+cd ..
+
+ls -al
+
+echo "Done"
+2023-12-19 14:17:45.160  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Test...
+2023-12-19 14:17:45.160  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 합계 0
+2023-12-19 14:17:45.160  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x.  4 root root  38 11월 21 09:16 .
+2023-12-19 14:17:45.160  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : dr-xr-xr-x. 17 root root 224 11월 27 09:27 ..
+2023-12-19 14:17:45.160  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x.  6 root root  79 12월 14 17:59 dsp_deploy
+2023-12-19 14:17:45.160  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x.  6 root root  79 12월 14 17:59 dsp_if
+2023-12-19 14:17:45.160  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Done
+2023-12-19 14:17:45.160  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 결과 넣음
+2023-12-19 14:17:45.190  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 문자열로 바꿈
+2023-12-19 14:17:45.191  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : 바디에 넣음
+2023-12-19 14:17:45.191  INFO 9951 --- [qtp1776312161-35] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-19 14:17:50.207  INFO 9951 --- [Camel (camel-1) thread #1 - Delay] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+Test...
+합계 0
+drwxr-xr-x.  4 root root  38 11월 21 09:16 .
+dr-xr-xr-x. 17 root root 224 11월 27 09:27 ..
+drwxr-xr-x.  6 root root  79 12월 14 17:59 dsp_deploy
+drwxr-xr-x.  6 root root  79 12월 14 17:59 dsp_if
+Done
+

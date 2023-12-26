@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="go.kr.dsp.api.app.repository.AgentRepository">
+    <resultMap id="AgentAddr" type="go.kr.dsp.api.app.domain.AgentAddr">
+        <id property="agtInstlSysId" column="agt_instl_sys_id"/>
+        <result property="srvcInstCd" column="srvc_inst_cd"/>
+        <result property="srvcCd" column="srvc_cd"/>
+        <result property="sysIpAddr" column="sys_ip_addr"/>
+        <result property="sysPortNo" column="sys_port_no"/>
+        <result property="sysNm" column="sys_nm"/>
+        <result property="agtInstlLocSeCd" column="agt_instl_loc_se_cd"/>
+        <result property="agtSeCd" column="agt_se_cd"/>
+    </resultMap>
+    
+    <select id="getAgentAddr" resultMap="AgentAddr">
+        SELECT agt_instl_sys_id,
+               srvc_inst_cd,
+               srvc_cd,
+               sys_ip_addr,
+               sys_port_no,
+               sys_nm,
+               agt_instl_loc_se_cd,
+               agt_se_cd,
+               use_yn,
+               frst_rgtr_id,
+               frst_reg_dt,
+               last_chnrg_id,
+               last_chg_dt
+        FROM scdsp.dam_agt_instl_sys_info_b
+        WHERE agt_instl_sys_id=#{agtInstlSysId}
+    </select>
+    
+    <insert id="insertAgentScript">
+        INSERT INTO scdsp.dam_agt_chg_scrp_excn_rslt_info_b
+        VALUES (#{agtInstlSysId},
+                now(),
+                #{scrpCn},
+                #{resultMsgVl},
+                'Y'::bpchar,
+                'YOON',
+                now(),
+                'YOON',
+                now());
+    </insert>
+    
+    <insert id="insertAgentFile">
+        INSERT INTO scdsp.dfm_agt_chg_file_hist_info_b
+        VALUES(#{agtInstlSysId},
+               now(),
+               #{trsmFileNm},
+               #{trsmFileVerVl},
+               'Y'::bpchar,
+               'YOON',
+               now(),
+               'YOON',
+               now());
+    </insert>
+</mapper>

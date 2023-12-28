@@ -1,0 +1,33 @@
+- route-template:
+    id: provDeploy-template
+    parameters:
+      - name: dir
+    from:
+      uri: file://{{dir}}?include=^.*\.(yaml|jar|sh)$
+      steps:
+        - onException:
+            handled:
+              constant: true
+            exception: java.lang.Exception
+            steps:
+              - log: ${exception.message}
+        - choice:
+            when:
+              - simple: "'{{dir}}' == 'script'"
+                steps:
+                  - log: 스크립트 전송 시간 지연 2초 시작
+                  - delay:
+                      constant: 2000
+                  - log: 스크립트 전송 시간 지연 2초 끝
+              - simple: "'{{dir}}' == 'file'"
+                steps:
+                  - log: 파일 전송 시간 지연 5초 시작
+                  - delay:
+                      constant: 5000
+                  - log: 파일 전송 시간 지연 5초 끝
+        - log: ${headers}
+        - process:
+            ref: fileSendProcessor
+        - toD: ${exchangeProperty.url}
+        - process:
+            ref: resultProcessor

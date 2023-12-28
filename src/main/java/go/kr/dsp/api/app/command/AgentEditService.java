@@ -18,7 +18,7 @@ public class AgentEditService {
         agentRepository.insertAgentScript(AgentScriptDto.toEntity(agentScriptDto));
     }
     
-    public void insertAgentFile(AgentFileDto agentFileDto) throws DspException{
+    public void insertAgentFile(AgentFileDto agentFileDto) throws DspException {
         agentRepository.insertAgentFile(AgentFileDto.toEntity(agentFileDto));
     }
 }

@@ -1,0 +1,95 @@
+2023-12-28 13:24:11.286  INFO 19829 --- [main] go.kr.dsp.api.DspApiApplication          : Starting DspApiApplication using Java 11.0.21 on localhost.localdomain with PID 19829 (/home/dsp_deploy/agent-1.0.0.jar started by root in /home/dsp_deploy)
+2023-12-28 13:24:11.288  INFO 19829 --- [main] go.kr.dsp.api.DspApiApplication          : The following 1 profile is active: "deployAgent"
+2023-12-28 13:24:12.568  INFO 19829 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10022 (http)
+2023-12-28 13:24:12.576  INFO 19829 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 13:24:12.577  INFO 19829 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 13:24:12.624  INFO 19829 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 13:24:12.625  INFO 19829 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1293 ms
+2023-12-28 13:24:13.571  INFO 19829 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 13:24:13.616  INFO 19829 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 13:24:13.617  INFO 19829 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10022 (http) with context path ''
+2023-12-28 13:24:13.876  INFO 19829 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 13:24:13.898  INFO 19829 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3370ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-12-28 13:24:13.934  INFO 19829 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-LTS
+2023-12-28 13:24:13.956  INFO 19829 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.e.j.s.ServletContextHandler@6f4ade6e{/,null,AVAILABLE}
+2023-12-28 13:24:13.962  INFO 19829 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@b2f4ece{HTTP/1.1, (http/1.1)}{172.30.1.84:10023}
+2023-12-28 13:24:13.962  INFO 19829 --- [main] org.eclipse.jetty.server.Server          : Started @3433ms
+2023-12-28 13:24:13.973  INFO 19829 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:1)
+2023-12-28 13:24:13.973  INFO 19829 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-deploy (jetty:http://172.30.1.84:10023/file)
+2023-12-28 13:24:13.973  INFO 19829 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 304ms (build:48ms init:159ms start:97ms)
+2023-12-28 13:24:13.977  INFO 19829 --- [main] go.kr.dsp.api.DspApiApplication          : Started DspApiApplication in 3.11 seconds (JVM running for 3.449)
+2023-12-28 13:27:24.104  INFO 19829 --- [qtp281151050-36] deploy-template.yaml:15                  : {Accept-Encoding=gzip,deflate, agtInstlLocSeCd=1, agtInstlSysId=ASID2023122217000002, agtSeCd=02, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:10023/file)@480f28b3, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:10023/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=62, fileExtension=sh, fileName=ASID2023122217000002-if-template.sh, Host=172.30.1.84:10023, srvcCd=S00000, srvcInstCd=I0000000, sysIpAddr=172.30.1.84, sysNm=was-camel, sysPortNo=10023, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=}
+2023-12-28 13:27:24.120  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : 디렉토리: /home/dsp_deploy
+2023-12-28 13:27:24.121  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+echo "Test..."
+
+cd /home/dsp_if
+
+ls -al
+
+echo "Done"
+2023-12-28 13:27:24.126  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : Test...
+2023-12-28 13:27:24.131  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : 합계 77880
+2023-12-28 13:27:24.132  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 6 root root       79 12월 28 13:23 .
+2023-12-28 13:27:24.132  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+2023-12-28 13:27:24.132  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : -rw-r--r--. 1 root root 79746334 12월 28 13:23 agent-1.0.0.jar
+2023-12-28 13:27:24.132  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 2 root root        6 12월 27 08:59 file
+2023-12-28 13:27:24.132  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 2 root root      230 12월 19 14:17 logs
+2023-12-28 13:27:24.132  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 3 root root       20 12월 27 08:59 script
+2023-12-28 13:27:24.132  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 4 root root       40 12월 28 13:23 yaml
+2023-12-28 13:27:24.132  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : Done
+2023-12-28 13:27:24.161  INFO 19829 --- [qtp281151050-36] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-28 13:27:24.174  INFO 19829 --- [qtp281151050-36] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+Test...
+합계 77880
+drwxr-xr-x. 6 root root       79 12월 28 13:23 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79746334 12월 28 13:23 agent-1.0.0.jar
+drwxr-xr-x. 2 root root        6 12월 27 08:59 file
+drwxr-xr-x. 2 root root      230 12월 19 14:17 logs
+drwxr-xr-x. 3 root root       20 12월 27 08:59 script
+drwxr-xr-x. 4 root root       40 12월 28 13:23 yaml
+Done
+
+2023-12-28 15:55:27.055  INFO 19829 --- [qtp281151050-34] deploy-template.yaml:15                  : {Accept-Encoding=gzip,deflate, agtInstlLocSeCd=1, agtInstlSysId=ASID2023122217000002, agtSeCd=02, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:10023/file)@1233f7bc, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:10023/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=62, fileExtension=sh, fileName=ASID2023122217000002-if-template.sh, Host=172.30.1.84:10023, srvcCd=S00000, srvcInstCd=I0000000, sysIpAddr=172.30.1.84, sysNm=was-camel, sysPortNo=10023, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=}
+2023-12-28 15:55:27.058  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : 디렉토리: /home/dsp_deploy
+2023-12-28 15:55:27.059  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : 실행 스크립트: 
+#!/bin/sh
+echo "Test..."
+
+cd /home/dsp_if
+
+ls -al
+
+echo "Done"
+2023-12-28 15:55:27.062  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : Test...
+2023-12-28 15:55:27.065  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : 합계 77880
+2023-12-28 15:55:27.065  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 6 root root       79 12월 28 13:23 .
+2023-12-28 15:55:27.066  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+2023-12-28 15:55:27.066  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : -rw-r--r--. 1 root root 79746334 12월 28 13:23 agent-1.0.0.jar
+2023-12-28 15:55:27.067  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 2 root root        6 12월 27 08:59 file
+2023-12-28 15:55:27.067  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 2 root root      230 12월 19 14:17 logs
+2023-12-28 15:55:27.067  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 3 root root       20 12월 27 08:59 script
+2023-12-28 15:55:27.067  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : drwxr-xr-x. 4 root root       40 12월 28 13:23 yaml
+2023-12-28 15:55:27.067  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : Done
+2023-12-28 15:55:27.069  INFO 19829 --- [qtp281151050-34] go.kr.dsp.api.processor.ScriptProcessor  : Exited with code 0
+2023-12-28 15:55:27.071  INFO 19829 --- [qtp281151050-34] g.kr.dsp.api.processor.LogFileProcessor  : 스크립트 결과:
+Test...
+합계 77880
+drwxr-xr-x. 6 root root       79 12월 28 13:23 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79746334 12월 28 13:23 agent-1.0.0.jar
+drwxr-xr-x. 2 root root        6 12월 27 08:59 file
+drwxr-xr-x. 2 root root      230 12월 19 14:17 logs
+drwxr-xr-x. 3 root root       20 12월 27 08:59 script
+drwxr-xr-x. 4 root root       40 12월 28 13:23 yaml
+Done
+
+2023-12-28 15:57:25.857  INFO 19829 --- [qtp281151050-34] deploy-template.yaml:15                  : {Accept-Encoding=gzip,deflate, agtInstlLocSeCd=1, agtInstlSysId=ASID2023122217000002, agtSeCd=02, CamelHttpMethod=POST, CamelHttpPath=, CamelHttpQuery=null, CamelHttpServletRequest=Request(POST //172.30.1.84:10023/file)@548761ea, CamelHttpServletResponse=HTTP/1.1 200 
+
+, CamelHttpUri=/file, CamelHttpUrl=http://172.30.1.84:10023/file, CamelServletContextPath=/file, Connection=keep-alive, Content-Length=1271, fileExtension=yaml, fileName=ASID2023122217000002-if-template-1.1.0.yaml, Host=172.30.1.84:10023, srvcCd=S00000, srvcInstCd=I0000000, sysIpAddr=172.30.1.84, sysNm=was-camel, sysPortNo=10023, User-Agent=Apache-HttpClient/4.5.13 (Java/11.0.20), version=1.1.0}

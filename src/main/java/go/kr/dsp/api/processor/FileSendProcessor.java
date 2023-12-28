@@ -39,7 +39,7 @@ public class FileSendProcessor implements Processor {
         
         //버전 추출
         String version = "";
-        if(!fileExtension.equalsIgnoreCase("sh")){
+        if (!fileExtension.equalsIgnoreCase("sh")) {
             Pattern pattern = Pattern.compile("-([\\d.]+)\\.[^.]+$");
             Matcher matcher = pattern.matcher(fileName);
             if (matcher.find()) {
@@ -47,14 +47,15 @@ public class FileSendProcessor implements Processor {
             }
         }
         
-        //파일명 검증
-        if(!(fileName.startsWith("ASID")&&fileName.length()==20)){
-            throw new DspException("파일명 잘못됨");
-        }
+        
         
         //에이전트설치시스템ID
         try {
             agtInstlSysId = split[0];
+            //파일명 검증
+            if (!(fileName.startsWith("ASID") && agtInstlSysId.length() == 20)) {
+                throw new DspException("파일명 잘못됨");
+            }
         } catch (IndexOutOfBoundsException e) {
             throw new DspException("파일명 잘못됨");
         }
@@ -75,7 +76,7 @@ public class FileSendProcessor implements Processor {
         exchange.getMessage().setHeader("agtSeCd", agentAddr.getAgtSeCd());
         exchange.getMessage().setHeader("fileExtension", fileExtension);
         exchange.getMessage().setHeader("version", version);
-        exchange.getMessage().setHeader("fileName",fileName);
+        exchange.getMessage().setHeader("fileName", fileName);
         
         //주소 설정
         exchange.setProperty("url", "http://" + sysIpAddr + ":" + sysPortNo + "/file?socketTimeout=30000&bridgeEndpoint=true");

@@ -28,7 +28,7 @@
                last_chnrg_id,
                last_chg_dt
         FROM scdsp.dam_agt_instl_sys_info_b
-        WHERE agt_instl_sys_id=#{agtInstlSysId}
+        WHERE agt_instl_sys_id=#{agtInstlSysId} AND use_yn='Y'
     </select>
     
     <insert id="insertAgentScript">

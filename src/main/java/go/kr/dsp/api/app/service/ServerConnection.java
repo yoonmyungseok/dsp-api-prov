@@ -10,14 +10,14 @@ import java.net.URL;
 @Slf4j
 @Service
 public class ServerConnection {
-
+    
     public boolean isServerConnected(String urlString) {
         try {
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("HEAD");
             connection.connect();
-
+            
             int responseCode = connection.getResponseCode();
             if (responseCode >= 200 && responseCode < 400) {
                 // 2xx and 3xx codes indicate successful responses
@@ -26,7 +26,7 @@ public class ServerConnection {
             }
         } catch (Exception e) {
             log.error("연결 에러: {}", e.getMessage());
-
+            
         }
         return false;
     }

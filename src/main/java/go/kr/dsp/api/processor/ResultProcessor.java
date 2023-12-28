@@ -48,7 +48,7 @@ public class ResultProcessor implements Processor {
         String agtInstlSysId = exchange.getMessage().getHeader("agtInstlSysId", String.class);
         
         if (exchange.getMessage().getHeader("fileExtension", String.class).equals("sh")) {
-            String resultMsgVl = map.get("request").toString();
+            String resultMsgVl = map.get("result").toString();
             String scrpCn = map.get("execSh").toString();
             log.info("\n{}", resultMsgVl);
             
@@ -76,6 +76,7 @@ public class ResultProcessor implements Processor {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
         String formattedDate = LocalDateTime.now().format(formatter);
         String fileName = agtInstlSysId + "_" + formattedDate + ".log";
+        //TODO: agentName의 폴더가 생성되어 있어야 함
         Path filePath = Path.of(agentName, fileName);
         try {
             Files.writeString(filePath, logFile, StandardOpenOption.CREATE, StandardOpenOption.WRITE);

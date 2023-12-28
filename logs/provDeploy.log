@@ -1,0 +1,120 @@
+2023-12-28 13:25:18.982  INFO 18792 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 18792 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 13:25:18.984  INFO 18792 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "provDeploy"
+2023-12-28 13:25:20.092  INFO 18792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9064 (http)
+2023-12-28 13:25:20.099  INFO 18792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 13:25:20.110  INFO 18792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 13:25:20.222  INFO 18792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 13:25:20.222  INFO 18792 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1205 ms
+2023-12-28 13:25:21.259  INFO 18792 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 13:25:21.319  INFO 18792 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 13:25:21.321  INFO 18792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9064 (http) with context path ''
+2023-12-28 13:25:21.608  INFO 18792 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 13:25:21.628  INFO 18792 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 13:25:21.628  INFO 18792 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-provDeploy-script (file://script)
+2023-12-28 13:25:21.628  INFO 18792 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-provDeploy-file (file://file)
+2023-12-28 13:25:21.629  INFO 18792 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 255ms (build:40ms init:196ms start:19ms)
+2023-12-28 13:25:21.634  INFO 18792 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 2.953 seconds (JVM running for 4.1)
+2023-12-28 13:25:22.932  INFO 18792 --- [RMI TCP Connection(2)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 13:25:22.935  INFO 18792 --- [RMI TCP Connection(2)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 13:25:22.936  INFO 18792 --- [RMI TCP Connection(2)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-28 13:25:22.943  INFO 18792 --- [RMI TCP Connection(3)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 13:25:23.086  INFO 18792 --- [RMI TCP Connection(3)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 13:25:48.281  INFO 18792 --- [Camel (camel-1) thread #1 - file://script] provDeploy-template.yaml:18              : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 13:25:50.286  INFO 18792 --- [Camel (camel-1) thread #3 - Delay] provDeploy-template.yaml:21              : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 13:25:50.289  INFO 18792 --- [Camel (camel-1) thread #3 - Delay] provDeploy-template.yaml:28              : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\ASID2023122217000002-if-template.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@51950c5f, CamelFileLastModified=1702282598696, CamelFileLength=62, CamelFileName=ASID2023122217000002-if-template.sh, CamelFileNameConsumed=ASID2023122217000002-if-template.sh, CamelFileNameOnly=ASID2023122217000002-if-template.sh, CamelFileParent=script, CamelFilePath=script\ASID2023122217000002-if-template.sh, CamelFileRelativePath=ASID2023122217000002-if-template.sh, CamelMessageTimestamp=1702282598696}
+2023-12-28 13:25:50.306  INFO 18792 --- [Camel (camel-1) thread #3 - Delay] provDeploy-template.yaml:13              : 파일명 잘못됨
+2023-12-28 13:27:19.794  INFO 18792 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 13:27:19.821  INFO 18792 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 13:27:19.821  INFO 18792 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-provDeploy-file (file://file)
+2023-12-28 13:27:19.821  INFO 18792 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-provDeploy-script (file://script)
+2023-12-28 13:27:19.824  INFO 18792 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 29ms (uptime:1m58s)
+2023-12-28 13:27:20.458  INFO 18792 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 13:27:20.482  INFO 18792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 13:27:20.492  INFO 18792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 13:27:26.288  INFO 13844 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 13844 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 13:27:26.291  INFO 13844 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "provDeploy"
+2023-12-28 13:27:27.385  INFO 13844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9064 (http)
+2023-12-28 13:27:27.391  INFO 13844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 13:27:27.391  INFO 13844 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 13:27:27.498  INFO 13844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 13:27:27.498  INFO 13844 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1176 ms
+2023-12-28 13:27:28.558  INFO 13844 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 13:27:28.631  INFO 13844 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 13:27:28.632  INFO 13844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9064 (http) with context path ''
+2023-12-28 13:27:28.929  INFO 13844 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 13:27:28.948  INFO 13844 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 13:27:28.948  INFO 13844 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-provDeploy-script (file://script)
+2023-12-28 13:27:28.948  INFO 13844 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-provDeploy-file (file://file)
+2023-12-28 13:27:28.948  INFO 13844 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 259ms (build:44ms init:196ms start:19ms)
+2023-12-28 13:27:28.954  INFO 13844 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 2.96 seconds (JVM running for 4.263)
+2023-12-28 13:27:29.690  INFO 13844 --- [RMI TCP Connection(2)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 13:27:29.691  INFO 13844 --- [RMI TCP Connection(2)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 13:27:29.693  INFO 13844 --- [RMI TCP Connection(2)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-28 13:27:29.700  INFO 13844 --- [RMI TCP Connection(1)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 13:27:29.839  INFO 13844 --- [RMI TCP Connection(1)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 13:27:41.241  INFO 13844 --- [Camel (camel-1) thread #1 - file://script] provDeploy-template.yaml:18              : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 13:27:43.253  INFO 13844 --- [Camel (camel-1) thread #3 - Delay] provDeploy-template.yaml:21              : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 13:27:43.255  INFO 13844 --- [Camel (camel-1) thread #3 - Delay] provDeploy-template.yaml:28              : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\ASID2023122217000002-if-template.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@101d2838, CamelFileLastModified=1702282598696, CamelFileLength=62, CamelFileName=ASID2023122217000002-if-template.sh, CamelFileNameConsumed=ASID2023122217000002-if-template.sh, CamelFileNameOnly=ASID2023122217000002-if-template.sh, CamelFileParent=script, CamelFilePath=script\ASID2023122217000002-if-template.sh, CamelFileRelativePath=ASID2023122217000002-if-template.sh, CamelMessageTimestamp=1702282598696}
+2023-12-28 13:27:43.703  INFO 13844 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 
+Test...
+합계 77880
+drwxr-xr-x. 6 root root       79 12월 28 13:23 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79746334 12월 28 13:23 agent-1.0.0.jar
+drwxr-xr-x. 2 root root        6 12월 27 08:59 file
+drwxr-xr-x. 2 root root      230 12월 19 14:17 logs
+drwxr-xr-x. 3 root root       20 12월 27 08:59 script
+drwxr-xr-x. 4 root root       40 12월 28 13:23 yaml
+Done
+
+2023-12-28 13:27:43.713  INFO 13844 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 보낸 파일 크기: 62, 받은 파일 크기: 62
+2023-12-28 13:27:43.714  INFO 13844 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : provDeploy\ASID2023122217000002_20231228.log
+2023-12-28 15:55:21.865  INFO 13844 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 15:55:21.883  INFO 13844 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 15:55:21.884  INFO 13844 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-provDeploy-file (file://file)
+2023-12-28 15:55:21.884  INFO 13844 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-provDeploy-script (file://script)
+2023-12-28 15:55:21.891  INFO 13844 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 25ms (uptime:2h27m)
+2023-12-28 15:55:22.471  INFO 13844 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 15:55:22.488  INFO 13844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 15:55:22.493  INFO 13844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 15:55:27.914  INFO 3504 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 3504 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 15:55:27.917  INFO 3504 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "provDeploy"
+2023-12-28 15:55:29.114  INFO 3504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9064 (http)
+2023-12-28 15:55:29.121  INFO 3504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 15:55:29.122  INFO 3504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 15:55:29.235  INFO 3504 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 15:55:29.236  INFO 3504 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1288 ms
+2023-12-28 15:55:30.285  INFO 3504 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 15:55:30.361  INFO 3504 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 15:55:30.363  INFO 3504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9064 (http) with context path ''
+2023-12-28 15:55:30.606  INFO 3504 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 15:55:30.626  INFO 3504 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 15:55:30.626  INFO 3504 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-provDeploy-script (file://script)
+2023-12-28 15:55:30.626  INFO 3504 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-provDeploy-file (file://file)
+2023-12-28 15:55:30.626  INFO 3504 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 217ms (build:42ms init:156ms start:19ms)
+2023-12-28 15:55:30.631  INFO 3504 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 3.085 seconds (JVM running for 4.254)
+2023-12-28 15:55:31.321  INFO 3504 --- [RMI TCP Connection(1)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 15:55:31.323  INFO 3504 --- [RMI TCP Connection(1)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 15:55:31.324  INFO 3504 --- [RMI TCP Connection(1)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-28 15:55:31.332  INFO 3504 --- [RMI TCP Connection(2)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 15:55:31.462  INFO 3504 --- [RMI TCP Connection(2)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 15:55:44.438  INFO 3504 --- [Camel (camel-1) thread #1 - file://script] provDeploy-template.yaml:18              : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 15:55:46.455  INFO 3504 --- [Camel (camel-1) thread #3 - Delay] provDeploy-template.yaml:21              : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 15:55:46.456  INFO 3504 --- [Camel (camel-1) thread #3 - Delay] provDeploy-template.yaml:28              : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\ASID2023122217000002-if-template.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@11ff79c3, CamelFileLastModified=1702282598696, CamelFileLength=62, CamelFileName=ASID2023122217000002-if-template.sh, CamelFileNameConsumed=ASID2023122217000002-if-template.sh, CamelFileNameOnly=ASID2023122217000002-if-template.sh, CamelFileParent=script, CamelFilePath=script\ASID2023122217000002-if-template.sh, CamelFileRelativePath=ASID2023122217000002-if-template.sh, CamelMessageTimestamp=1702282598696}
+2023-12-28 15:55:46.692  INFO 3504 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 
+Test...
+합계 77880
+drwxr-xr-x. 6 root root       79 12월 28 13:23 .
+drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
+-rw-r--r--. 1 root root 79746334 12월 28 13:23 agent-1.0.0.jar
+drwxr-xr-x. 2 root root        6 12월 27 08:59 file
+drwxr-xr-x. 2 root root      230 12월 19 14:17 logs
+drwxr-xr-x. 3 root root       20 12월 27 08:59 script
+drwxr-xr-x. 4 root root       40 12월 28 13:23 yaml
+Done
+
+2023-12-28 15:55:46.699  INFO 3504 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 보낸 파일 크기: 62, 받은 파일 크기: 62
+2023-12-28 15:57:40.420  INFO 3504 --- [Camel (camel-1) thread #2 - file://file] provDeploy-template.yaml:24              : 파일 전송 시간 지연 5초 시작
+2023-12-28 15:57:45.424  INFO 3504 --- [Camel (camel-1) thread #4 - Delay] provDeploy-template.yaml:27              : 파일 전송 시간 지연 5초 끝
+2023-12-28 15:57:45.426  INFO 3504 --- [Camel (camel-1) thread #4 - Delay] provDeploy-template.yaml:28              : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\ASID2023122217000002-if-template-1.1.0.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@3cd2b5f3, CamelFileLastModified=1701938286306, CamelFileLength=1271, CamelFileName=ASID2023122217000002-if-template-1.1.0.yaml, CamelFileNameConsumed=ASID2023122217000002-if-template-1.1.0.yaml, CamelFileNameOnly=ASID2023122217000002-if-template-1.1.0.yaml, CamelFileParent=file, CamelFilePath=file\ASID2023122217000002-if-template-1.1.0.yaml, CamelFileRelativePath=ASID2023122217000002-if-template-1.1.0.yaml, CamelMessageTimestamp=1701938286306}
+2023-12-28 15:57:45.493  INFO 3504 --- [Camel (camel-1) thread #4 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 보낸 파일 크기: 1271, 받은 파일 크기: 1271

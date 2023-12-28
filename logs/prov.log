@@ -1,446 +1,254 @@
-2023-12-26 09:15:28.196  INFO 19944 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 19944 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-26 09:15:28.202  INFO 19944 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-26 09:15:29.736  INFO 19944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-26 09:15:29.742  INFO 19944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-26 09:15:29.742  INFO 19944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-26 09:15:29.848  INFO 19944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-26 09:15:29.849  INFO 19944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1617 ms
-2023-12-26 09:15:30.949  INFO 19944 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-26 09:15:31.007  INFO 19944 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-26 09:15:31.009  INFO 19944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-26 09:15:31.290  INFO 19944 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-26 09:15:31.306  INFO 19944 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-26 09:15:31.307  INFO 19944 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
-2023-12-26 09:15:31.307  INFO 19944 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
-2023-12-26 09:15:31.307  INFO 19944 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 242ms (build:68ms init:158ms start:16ms)
-2023-12-26 09:15:31.312  INFO 19944 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 3.366 seconds (JVM running for 4.428)
-2023-12-26 09:15:31.784  INFO 19944 --- [RMI TCP Connection(1)-172.30.1.14] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-26 09:15:31.785  INFO 19944 --- [RMI TCP Connection(1)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-26 09:15:31.787  INFO 19944 --- [RMI TCP Connection(1)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-12-26 09:15:31.796  INFO 19944 --- [RMI TCP Connection(2)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-26 09:15:31.967  INFO 19944 --- [RMI TCP Connection(2)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-26 09:15:52.652  INFO 19944 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
-2023-12-26 09:15:52.675  INFO 19944 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
-2023-12-26 09:15:52.675  INFO 19944 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
-2023-12-26 09:15:52.675  INFO 19944 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
-2023-12-26 09:15:52.680  INFO 19944 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 27ms (uptime:21s)
-2023-12-26 09:15:53.273  INFO 19944 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
-2023-12-26 09:15:53.288  INFO 19944 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-26 09:15:53.292  INFO 19944 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-26 16:53:52.962  INFO 32896 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 32896 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-26 16:53:52.964  INFO 32896 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-26 16:53:54.291  INFO 32896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-26 16:53:54.297  INFO 32896 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-26 16:53:54.298  INFO 32896 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-26 16:53:54.411  INFO 32896 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-26 16:53:54.411  INFO 32896 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1423 ms
-2023-12-26 16:53:54.684  WARN 32896 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'agentEditService' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\command\AgentEditService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'agentRepository' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\repository\AgentRepository.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-2023-12-26 16:53:54.686  INFO 32896 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-12-26 16:53:54.698  INFO 32896 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-12-26 16:53:54.717 ERROR 32896 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'agentEditService' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\command\AgentEditService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'agentRepository' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\repository\AgentRepository.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
-	at go.kr.dsp.api.DspApiProvApplication.main(DspApiProvApplication.java:12) ~[main/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'agentRepository' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\repository\AgentRepository.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 33 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 43 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 57 common frames omitted
-Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613) ~[mybatis-spring-2.0.7.jar:2.0.7]
-	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491) ~[mybatis-spring-2.0.7.jar:2.0.7]
-	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633) ~[mybatis-spring-2.0.7.jar:2.0.7]
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$46e96764.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$46e96764$$FastClassBySpringCGLIB$$c0cee6e3.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.24.jar:5.3.24]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.24.jar:5.3.24]
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$46e96764.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 58 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611) ~[mybatis-spring-2.0.7.jar:2.0.7]
-	... 71 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:263) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:254) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:246) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:119) ~[mybatis-3.5.9.jar:3.5.9]
-	... 73 common frames omitted
-Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.5.9.jar:3.5.9]
-	... 77 common frames omitted
-Caused by: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.5.9.jar:3.5.9]
-	... 79 common frames omitted
-
-2023-12-26 16:55:49.419  INFO 23432 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 23432 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-26 16:55:49.421  INFO 23432 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-26 16:55:50.534  INFO 23432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-26 16:55:50.540  INFO 23432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-26 16:55:50.541  INFO 23432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-26 16:55:50.652  INFO 23432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-26 16:55:50.652  INFO 23432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1203 ms
-2023-12-26 16:55:50.941  WARN 23432 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'agentEditService' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\command\AgentEditService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'agentRepository' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\repository\AgentRepository.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-2023-12-26 16:55:50.943  INFO 23432 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-12-26 16:55:50.956  INFO 23432 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-12-26 16:55:50.976 ERROR 23432 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'agentEditService' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\command\AgentEditService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'agentRepository' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\repository\AgentRepository.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
-	at go.kr.dsp.api.DspApiProvApplication.main(DspApiProvApplication.java:12) ~[main/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'agentRepository' defined in file [C:\dsp\dsp-api-prov\build\classes\java\main\go\kr\dsp\api\app\repository\AgentRepository.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 33 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 43 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.24.jar:5.3.24]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 57 common frames omitted
-Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613) ~[mybatis-spring-2.0.7.jar:2.0.7]
-	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491) ~[mybatis-spring-2.0.7.jar:2.0.7]
-	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633) ~[mybatis-spring-2.0.7.jar:2.0.7]
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$86266a74.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$86266a74$$FastClassBySpringCGLIB$$922c9f8.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.24.jar:5.3.24]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.24.jar:5.3.24]
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$86266a74.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.24.jar:5.3.24]
-	... 58 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\dsp\dsp-api-prov\build\resources\main\mybatis\mapper\DeployScript.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611) ~[mybatis-spring-2.0.7.jar:2.0.7]
-	... 71 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:263) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:254) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:246) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:119) ~[mybatis-3.5.9.jar:3.5.9]
-	... 73 common frames omitted
-Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'go.kr.dsp.api.app.domain.DeployScript'.  Cause: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.5.9.jar:3.5.9]
-	... 77 common frames omitted
-Caused by: java.lang.ClassNotFoundException: Cannot find class: go.kr.dsp.api.app.domain.DeployScript
-	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.5.9.jar:3.5.9]
-	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.5.9.jar:3.5.9]
-	... 79 common frames omitted
-
-2023-12-26 16:56:23.732  INFO 18712 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 18712 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-26 16:56:23.734  INFO 18712 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-26 16:56:24.823  INFO 18712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-26 16:56:24.830  INFO 18712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-26 16:56:24.830  INFO 18712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-26 16:56:24.932  INFO 18712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-26 16:56:24.932  INFO 18712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1171 ms
-2023-12-26 16:56:25.926  INFO 18712 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-26 16:56:25.984  INFO 18712 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-26 16:56:25.986  INFO 18712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-26 16:56:26.241  INFO 18712 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-26 16:56:26.273  INFO 18712 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-26 16:56:26.274  INFO 18712 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
-2023-12-26 16:56:26.274  INFO 18712 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
-2023-12-26 16:56:26.274  INFO 18712 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 219ms (build:42ms init:145ms start:32ms)
-2023-12-26 16:56:26.281  INFO 18712 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.843 seconds (JVM running for 4.008)
-2023-12-26 16:56:27.674  INFO 18712 --- [RMI TCP Connection(3)-172.30.1.14] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-26 16:56:27.675  INFO 18712 --- [RMI TCP Connection(3)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-26 16:56:27.677  INFO 18712 --- [RMI TCP Connection(3)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-12-26 16:56:27.685  INFO 18712 --- [RMI TCP Connection(2)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-26 16:56:27.837  INFO 18712 --- [RMI TCP Connection(2)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-26 17:00:52.876  INFO 18712 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:12             : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\ASID2023122217000002-if-template.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@37f7f39b, CamelFileLastModified=1702282598696, CamelFileLength=62, CamelFileName=ASID2023122217000002-if-template.sh, CamelFileNameConsumed=ASID2023122217000002-if-template.sh, CamelFileNameOnly=ASID2023122217000002-if-template.sh, CamelFileParent=script, CamelFilePath=script\ASID2023122217000002-if-template.sh, CamelFileRelativePath=ASID2023122217000002-if-template.sh, CamelMessageTimestamp=1702282598696}
-2023-12-26 17:00:52.877  INFO 18712 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:19             : 스크립트 전송 시간 지연 2초 시작
-2023-12-26 17:00:54.889  INFO 18712 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:22             : 스크립트 전송 시간 지연 2초 끝
-2023-12-26 17:00:54.973  INFO 18712 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : agentAddr: AgentAddrDto(agtInstlSysId=ASID2023122217000002, srvcInstCd=I0000000, srvcCd=S00000, sysIpAddr=172.30.1.84, sysPortNo=9085, sysNm=was-camel, agtInstlLocSeCd=1, agtSeCd=02)
-2023-12-26 17:00:55.298  INFO 18712 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:11             : Unexpected character ('#' (code 35)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
- at [Source: (String)"#!/bin/sh
-echo "Test..."
-
-cd /home/dsp_if
-
-ls -al
-
-echo "Done""; line: 1, column: 2]
-2023-12-26 17:06:13.989  INFO 18712 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
-2023-12-26 17:06:14.015  INFO 18712 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
-2023-12-26 17:06:14.016  INFO 18712 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
-2023-12-26 17:06:14.016  INFO 18712 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
-2023-12-26 17:06:14.023  INFO 18712 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 33ms (uptime:9m47s)
-2023-12-26 17:06:14.633  INFO 18712 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
-2023-12-26 17:06:14.647  INFO 18712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-26 17:06:14.651  INFO 18712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-26 17:06:19.721  INFO 27276 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 27276 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-26 17:06:19.723  INFO 27276 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-26 17:06:20.853  INFO 27276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-26 17:06:20.860  INFO 27276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-26 17:06:20.860  INFO 27276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-26 17:06:20.967  INFO 27276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-26 17:06:20.967  INFO 27276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1221 ms
-2023-12-26 17:06:21.990  INFO 27276 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-26 17:06:22.044  INFO 27276 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-26 17:06:22.045  INFO 27276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-26 17:06:22.323  INFO 27276 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-26 17:06:22.354  INFO 27276 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-26 17:06:22.354  INFO 27276 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
-2023-12-26 17:06:22.354  INFO 27276 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
-2023-12-26 17:06:22.354  INFO 27276 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 223ms (build:41ms init:151ms start:31ms)
-2023-12-26 17:06:22.359  INFO 27276 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.898 seconds (JVM running for 4.118)
-2023-12-26 17:06:23.130  INFO 27276 --- [RMI TCP Connection(2)-172.30.1.14] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-26 17:06:23.131  INFO 27276 --- [RMI TCP Connection(2)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-26 17:06:23.132  INFO 27276 --- [RMI TCP Connection(2)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-26 17:06:23.137  INFO 27276 --- [RMI TCP Connection(1)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-26 17:06:23.236  INFO 27276 --- [RMI TCP Connection(1)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-26 17:06:29.043  INFO 27276 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:12             : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\ASID2023122217000002-if-template.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@38d4fa8f, CamelFileLastModified=1702282598696, CamelFileLength=62, CamelFileName=ASID2023122217000002-if-template.sh, CamelFileNameConsumed=ASID2023122217000002-if-template.sh, CamelFileNameOnly=ASID2023122217000002-if-template.sh, CamelFileParent=script, CamelFilePath=script\ASID2023122217000002-if-template.sh, CamelFileRelativePath=ASID2023122217000002-if-template.sh, CamelMessageTimestamp=1702282598696}
-2023-12-26 17:06:29.044  INFO 27276 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:19             : 스크립트 전송 시간 지연 2초 시작
-2023-12-26 17:06:31.059  INFO 27276 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:22             : 스크립트 전송 시간 지연 2초 끝
-2023-12-26 17:06:31.107  INFO 27276 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : agentAddr: AgentAddrDto(agtInstlSysId=ASID2023122217000002, srvcInstCd=I0000000, srvcCd=S00000, sysIpAddr=172.30.1.84, sysPortNo=9085, sysNm=was-camel, agtInstlLocSeCd=1, agtSeCd=02)
-2023-12-26 17:06:31.334  INFO 27276 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 
-Test...
-합계 77880
-drwxr-xr-x. 6 root root       79 12월 26 17:00 .
-drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
--rw-r--r--. 1 root root 79746322 12월 26 16:58 agent-1.0.0.jar
-drwxr-xr-x. 2 root root       55 12월  8 17:14 file
-drwxr-xr-x. 2 root root      230 12월 19 14:17 logs
-drwxr-xr-x. 3 root root      173 12월 19 14:17 script
-drwxr-xr-x. 4 root root       40 12월 26 17:00 yaml
-Done
-
-2023-12-26 17:06:31.345  INFO 27276 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 보낸 파일 크기: 62, 받은 파일 크기: 62
-2023-12-26 17:06:54.181  INFO 27276 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:12             : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\script\ASID2023122217000002-if-template.sh, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@4519d832, CamelFileLastModified=1702282598696, CamelFileLength=62, CamelFileName=ASID2023122217000002-if-template.sh, CamelFileNameConsumed=ASID2023122217000002-if-template.sh, CamelFileNameOnly=ASID2023122217000002-if-template.sh, CamelFileParent=script, CamelFilePath=script\ASID2023122217000002-if-template.sh, CamelFileRelativePath=ASID2023122217000002-if-template.sh, CamelMessageTimestamp=1702282598696}
-2023-12-26 17:06:54.182  INFO 27276 --- [Camel (camel-1) thread #2 - file://script] prov-script-template.yaml:19             : 스크립트 전송 시간 지연 2초 시작
-2023-12-26 17:06:56.188  INFO 27276 --- [Camel (camel-1) thread #3 - Delay] prov-script-template.yaml:22             : 스크립트 전송 시간 지연 2초 끝
-2023-12-26 17:06:56.194  INFO 27276 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : agentAddr: AgentAddrDto(agtInstlSysId=ASID2023122217000002, srvcInstCd=I0000000, srvcCd=S00000, sysIpAddr=172.30.1.84, sysPortNo=9085, sysNm=was-camel, agtInstlLocSeCd=1, agtSeCd=02)
-2023-12-26 17:06:56.244  INFO 27276 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 
-Test...
-합계 77880
-drwxr-xr-x. 6 root root       79 12월 26 17:00 .
-drwxr-xr-x. 4 root root       38 11월 21 09:16 ..
--rw-r--r--. 1 root root 79746322 12월 26 16:58 agent-1.0.0.jar
-drwxr-xr-x. 2 root root       55 12월  8 17:14 file
-drwxr-xr-x. 2 root root      230 12월 19 14:17 logs
-drwxr-xr-x. 3 root root      173 12월 19 14:17 script
-drwxr-xr-x. 4 root root       40 12월 26 17:00 yaml
-Done
-
-2023-12-26 17:06:56.248  INFO 27276 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 보낸 파일 크기: 62, 받은 파일 크기: 62
-2023-12-26 17:16:45.365  INFO 27276 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
-2023-12-26 17:16:45.383  INFO 27276 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
-2023-12-26 17:16:45.384  INFO 27276 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
-2023-12-26 17:16:45.390  INFO 27276 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
-2023-12-26 17:16:45.396  INFO 27276 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 31ms (uptime:10m23s)
-2023-12-26 17:16:45.945  INFO 27276 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
-2023-12-26 17:16:45.954  INFO 27276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-26 17:16:45.958  INFO 27276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-26 17:16:50.549  INFO 2132 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 2132 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-26 17:16:50.550  INFO 2132 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-26 17:16:51.539  INFO 2132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-26 17:16:51.548  INFO 2132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-26 17:16:51.548  INFO 2132 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-26 17:16:51.657  INFO 2132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-26 17:16:51.658  INFO 2132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1083 ms
-2023-12-26 17:16:52.581  INFO 2132 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-26 17:16:52.639  INFO 2132 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-26 17:16:52.639  INFO 2132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-26 17:16:52.862  INFO 2132 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-26 17:16:52.891  INFO 2132 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-26 17:16:52.892  INFO 2132 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
-2023-12-26 17:16:52.892  INFO 2132 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
-2023-12-26 17:16:52.892  INFO 2132 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 207ms (build:39ms init:139ms start:29ms)
-2023-12-26 17:16:52.897  INFO 2132 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.591 seconds (JVM running for 3.687)
-2023-12-26 17:16:54.569  INFO 2132 --- [RMI TCP Connection(3)-172.30.1.14] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-26 17:16:54.571  INFO 2132 --- [RMI TCP Connection(3)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-26 17:16:54.574  INFO 2132 --- [RMI TCP Connection(3)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-12-26 17:16:54.582  INFO 2132 --- [RMI TCP Connection(2)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-26 17:16:54.693  INFO 2132 --- [RMI TCP Connection(2)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-26 17:17:29.822  INFO 2132 --- [Camel (camel-1) thread #1 - file://file] prov-file-template.yaml:12               : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\ASID2023122217000002-if-template-1.0.0.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@2cd1b8c2, CamelFileLastModified=1701938286306, CamelFileLength=1271, CamelFileName=ASID2023122217000002-if-template-1.0.0.yaml, CamelFileNameConsumed=ASID2023122217000002-if-template-1.0.0.yaml, CamelFileNameOnly=ASID2023122217000002-if-template-1.0.0.yaml, CamelFileParent=file, CamelFilePath=file\ASID2023122217000002-if-template-1.0.0.yaml, CamelFileRelativePath=ASID2023122217000002-if-template-1.0.0.yaml, CamelMessageTimestamp=1701938286306}
-2023-12-26 17:17:29.823  INFO 2132 --- [Camel (camel-1) thread #1 - file://file] prov-file-template.yaml:17               : 파일 전송 시간 지연 10초 시작
-2023-12-26 17:17:39.826  INFO 2132 --- [Camel (camel-1) thread #3 - Delay] prov-file-template.yaml:20               : 파일 전송 시간 지연 10초 끝
-2023-12-26 17:17:39.877  INFO 2132 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : agentAddr: AgentAddrDto(agtInstlSysId=ASID2023122217000002, srvcInstCd=I0000000, srvcCd=S00000, sysIpAddr=172.30.1.84, sysPortNo=9085, sysNm=was-camel, agtInstlLocSeCd=1, agtSeCd=02)
-2023-12-26 17:17:40.087  INFO 2132 --- [Camel (camel-1) thread #3 - Delay] prov-file-template.yaml:11               : nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'scrpCn' in 'class go.kr.dsp.api.app.domain.AgentFile'
-2023-12-26 17:18:55.718  INFO 2132 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
-2023-12-26 17:18:55.735  INFO 2132 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
-2023-12-26 17:18:55.736  INFO 2132 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
-2023-12-26 17:18:55.737  INFO 2132 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
-2023-12-26 17:18:55.743  INFO 2132 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 25ms (uptime:2m2s)
-2023-12-26 17:18:56.289  INFO 2132 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
-2023-12-26 17:18:56.299  INFO 2132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-26 17:18:56.303  INFO 2132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-26 17:18:59.878  INFO 31220 --- [main] go.kr.dsp.api.DspApiProvApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 31220 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
-2023-12-26 17:18:59.879  INFO 31220 --- [main] go.kr.dsp.api.DspApiProvApplication      : The following 1 profile is active: "prov"
-2023-12-26 17:19:00.849  INFO 31220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2023-12-26 17:19:00.855  INFO 31220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-26 17:19:00.856  INFO 31220 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-2023-12-26 17:19:00.963  INFO 31220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-26 17:19:00.963  INFO 31220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1058 ms
-2023-12-26 17:19:01.875  INFO 31220 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-26 17:19:01.930  INFO 31220 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
-2023-12-26 17:19:01.931  INFO 31220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2023-12-26 17:19:02.154  INFO 31220 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
-2023-12-26 17:19:02.174  INFO 31220 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
-2023-12-26 17:19:02.174  INFO 31220 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
-2023-12-26 17:19:02.174  INFO 31220 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
-2023-12-26 17:19:02.174  INFO 31220 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 201ms (build:39ms init:142ms start:20ms)
-2023-12-26 17:19:02.180  INFO 31220 --- [main] go.kr.dsp.api.DspApiProvApplication      : Started DspApiProvApplication in 2.539 seconds (JVM running for 3.597)
-2023-12-26 17:19:02.805  INFO 31220 --- [RMI TCP Connection(2)-172.30.1.14] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-26 17:19:02.806  INFO 31220 --- [RMI TCP Connection(2)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-26 17:19:02.807  INFO 31220 --- [RMI TCP Connection(2)-172.30.1.14] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-26 17:19:02.812  INFO 31220 --- [RMI TCP Connection(1)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-26 17:19:02.906  INFO 31220 --- [RMI TCP Connection(1)-172.30.1.14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-26 17:19:08.334  INFO 31220 --- [Camel (camel-1) thread #1 - file://file] prov-file-template.yaml:12               : {CamelFileAbsolute=false, CamelFileAbsolutePath=C:\dsp\dsp-api-prov\file\ASID2023122217000002-if-template-1.0.0.yaml, CamelFileInitialOffset=org.apache.camel.support.resume.Resumables$AnonymousResumable@7c18437e, CamelFileLastModified=1701938286306, CamelFileLength=1271, CamelFileName=ASID2023122217000002-if-template-1.0.0.yaml, CamelFileNameConsumed=ASID2023122217000002-if-template-1.0.0.yaml, CamelFileNameOnly=ASID2023122217000002-if-template-1.0.0.yaml, CamelFileParent=file, CamelFilePath=file\ASID2023122217000002-if-template-1.0.0.yaml, CamelFileRelativePath=ASID2023122217000002-if-template-1.0.0.yaml, CamelMessageTimestamp=1701938286306}
-2023-12-26 17:19:08.334  INFO 31220 --- [Camel (camel-1) thread #1 - file://file] prov-file-template.yaml:17               : 파일 전송 시간 지연 10초 시작
-2023-12-26 17:19:18.348  INFO 31220 --- [Camel (camel-1) thread #3 - Delay] prov-file-template.yaml:20               : 파일 전송 시간 지연 10초 끝
-2023-12-26 17:19:18.401  INFO 31220 --- [Camel (camel-1) thread #3 - Delay] g.k.dsp.api.processor.FileSendProcessor  : agentAddr: AgentAddrDto(agtInstlSysId=ASID2023122217000002, srvcInstCd=I0000000, srvcCd=S00000, sysIpAddr=172.30.1.84, sysPortNo=9085, sysNm=was-camel, agtInstlLocSeCd=1, agtSeCd=02)
-2023-12-26 17:19:18.580  INFO 31220 --- [Camel (camel-1) thread #3 - Delay] go.kr.dsp.api.processor.ResultProcessor  : 보낸 파일 크기: 1271, 받은 파일 크기: 1271
+2023-12-28 08:38:08.515  WARN 3568 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h35m36s731ms174µs100ns).
+2023-12-28 09:00:48.584  INFO 3568 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:00:49.098  INFO 3568 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:00:50.589  INFO 3568 --- [Camel (camel-1) thread #4 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:00:51.102  INFO 3568 --- [Camel (camel-1) thread #7 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:01:15.178  INFO 3568 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 09:01:15.190  INFO 3568 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 09:01:15.190  INFO 3568 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-28 09:01:15.190  INFO 3568 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-28 09:01:15.195  INFO 3568 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 16ms (uptime:15h6m)
+2023-12-28 09:01:15.791  INFO 3568 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 09:01:15.806  INFO 3568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 09:01:15.811  INFO 3568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 09:01:28.174  INFO 23556 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 23556 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 09:01:28.176  INFO 23556 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "prov"
+2023-12-28 09:01:29.432  INFO 23556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-28 09:01:29.442  INFO 23556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 09:01:29.442  INFO 23556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 09:01:29.564  INFO 23556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 09:01:29.564  INFO 23556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1358 ms
+2023-12-28 09:01:30.643  INFO 23556 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 09:01:30.700  INFO 23556 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 09:01:30.702  INFO 23556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-28 09:01:30.988  INFO 23556 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 09:01:31.004  INFO 23556 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 09:01:31.004  INFO 23556 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-28 09:01:31.004  INFO 23556 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-28 09:01:31.004  INFO 23556 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 238ms (build:42ms init:181ms start:15ms)
+2023-12-28 09:01:31.010  INFO 23556 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 3.138 seconds (JVM running for 4.432)
+2023-12-28 09:01:31.134  INFO 23556 --- [RMI TCP Connection(1)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 09:01:31.135  INFO 23556 --- [RMI TCP Connection(1)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 09:01:31.136  INFO 23556 --- [RMI TCP Connection(1)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-28 09:01:32.253  INFO 23556 --- [RMI TCP Connection(3)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 09:01:32.377  INFO 23556 --- [RMI TCP Connection(3)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 09:01:41.154  INFO 23556 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:01:42.168  INFO 23556 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:01:43.163  INFO 23556 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:01:44.172  INFO 23556 --- [Camel (camel-1) thread #4 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:06:09.855  INFO 23556 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 09:06:09.865  INFO 23556 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 09:06:09.865  INFO 23556 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-28 09:06:09.865  INFO 23556 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-28 09:06:09.869  INFO 23556 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 13ms (uptime:4m38s)
+2023-12-28 09:06:10.455  INFO 23556 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 09:06:10.478  INFO 23556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 09:06:10.489  INFO 23556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 09:06:14.754  INFO 20504 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 20504 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 09:06:14.757  INFO 20504 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "prov"
+2023-12-28 09:06:15.840  INFO 20504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-28 09:06:15.847  INFO 20504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 09:06:15.848  INFO 20504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 09:06:15.954  INFO 20504 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 09:06:15.954  INFO 20504 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1164 ms
+2023-12-28 09:06:16.925  INFO 20504 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 09:06:16.983  INFO 20504 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 09:06:16.984  INFO 20504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-28 09:06:17.213  INFO 20504 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 09:06:17.226  INFO 20504 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 09:06:17.226  INFO 20504 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-28 09:06:17.226  INFO 20504 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-28 09:06:17.227  INFO 20504 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 200ms (build:40ms init:147ms start:13ms)
+2023-12-28 09:06:17.232  INFO 20504 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 2.774 seconds (JVM running for 3.896)
+2023-12-28 09:06:17.863  INFO 20504 --- [RMI TCP Connection(2)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 09:06:17.865  INFO 20504 --- [RMI TCP Connection(2)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 09:06:17.868  INFO 20504 --- [RMI TCP Connection(2)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-28 09:06:17.875  INFO 20504 --- [RMI TCP Connection(1)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 09:06:18.022  INFO 20504 --- [RMI TCP Connection(1)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 09:06:38.284  INFO 20504 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:06:40.288  INFO 20504 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:06:48.287  INFO 20504 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:06:50.294  INFO 20504 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:15:48.749  INFO 20504 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:15:50.759  INFO 20504 --- [Camel (camel-1) thread #4 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:15:58.754  INFO 20504 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:16:00.769  INFO 20504 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:43:57.249  INFO 20504 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 09:43:57.258  INFO 20504 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 09:43:57.258  INFO 20504 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-28 09:43:57.259  INFO 20504 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-28 09:43:57.262  INFO 20504 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 13ms (uptime:37m40s)
+2023-12-28 09:43:57.848  INFO 20504 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 09:43:57.861  INFO 20504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 09:43:57.867  INFO 20504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 09:44:02.009  INFO 37600 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 37600 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 09:44:02.011  INFO 37600 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "prov"
+2023-12-28 09:44:03.123  INFO 37600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-28 09:44:03.130  INFO 37600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 09:44:03.131  INFO 37600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 09:44:03.245  INFO 37600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 09:44:03.245  INFO 37600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1201 ms
+2023-12-28 09:44:04.268  INFO 37600 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 09:44:04.329  INFO 37600 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 09:44:04.330  INFO 37600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-28 09:44:04.589  INFO 37600 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 09:44:04.603  INFO 37600 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 09:44:04.603  INFO 37600 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-28 09:44:04.603  INFO 37600 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-28 09:44:04.603  INFO 37600 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 214ms (build:43ms init:157ms start:14ms)
+2023-12-28 09:44:04.609  INFO 37600 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 2.897 seconds (JVM running for 4.017)
+2023-12-28 09:44:06.626  INFO 37600 --- [RMI TCP Connection(3)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 09:44:06.628  INFO 37600 --- [RMI TCP Connection(3)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 09:44:06.629  INFO 37600 --- [RMI TCP Connection(3)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-28 09:44:06.636  INFO 37600 --- [RMI TCP Connection(4)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 09:44:06.755  INFO 37600 --- [RMI TCP Connection(4)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 09:44:33.922  INFO 37600 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:44:33.923  INFO 37600 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 09:44:35.931  INFO 37600 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 09:44:35.931  INFO 37600 --- [Camel (camel-1) thread #4 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 10:05:25.875  INFO 37600 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:24                    : 파일 전송 시간 지연 5초 시작
+2023-12-28 10:05:25.876  INFO 37600 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:24                    : 파일 전송 시간 지연 5초 시작
+2023-12-28 10:05:30.887  INFO 37600 --- [Camel (camel-1) thread #6 - Delay] prov-template.yaml:27                    : 파일 전송 시간 지연 5초 끝
+2023-12-28 10:05:30.887  INFO 37600 --- [Camel (camel-1) thread #5 - Delay] prov-template.yaml:27                    : 파일 전송 시간 지연 5초 끝
+2023-12-28 10:14:44.246  INFO 37600 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 10:14:44.254  INFO 37600 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 10:14:44.254  INFO 37600 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-28 10:14:44.254  INFO 37600 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-28 10:14:44.258  INFO 37600 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 12ms (uptime:30m39s)
+2023-12-28 10:14:44.838  INFO 37600 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 10:14:44.849  INFO 37600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 10:14:44.852  INFO 37600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 10:14:48.697  INFO 38576 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 38576 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 10:14:48.699  INFO 38576 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "prov"
+2023-12-28 10:14:49.708  INFO 38576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-28 10:14:49.715  INFO 38576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 10:14:49.715  INFO 38576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 10:14:49.820  INFO 38576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 10:14:49.820  INFO 38576 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1089 ms
+2023-12-28 10:14:50.819  INFO 38576 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 10:14:50.878  INFO 38576 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 10:14:50.880  INFO 38576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-28 10:14:51.122  INFO 38576 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 10:14:51.142  INFO 38576 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 10:14:51.143  INFO 38576 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-28 10:14:51.143  INFO 38576 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-28 10:14:51.143  INFO 38576 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 217ms (build:40ms init:158ms start:19ms)
+2023-12-28 10:14:51.148  INFO 38576 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 2.706 seconds (JVM running for 3.813)
+2023-12-28 10:14:52.660  INFO 38576 --- [RMI TCP Connection(3)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 10:14:52.662  INFO 38576 --- [RMI TCP Connection(3)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 10:14:52.663  INFO 38576 --- [RMI TCP Connection(3)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-28 10:14:52.668  INFO 38576 --- [RMI TCP Connection(2)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 10:14:52.768  INFO 38576 --- [RMI TCP Connection(2)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 10:14:59.788  INFO 38576 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:24                    : 파일 전송 시간 지연 5초 시작
+2023-12-28 10:14:59.790  INFO 38576 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:24                    : 파일 전송 시간 지연 5초 시작
+2023-12-28 10:15:04.797  INFO 38576 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:27                    : 파일 전송 시간 지연 5초 끝
+2023-12-28 10:15:04.797  INFO 38576 --- [Camel (camel-1) thread #4 - Delay] prov-template.yaml:27                    : 파일 전송 시간 지연 5초 끝
+2023-12-28 10:15:35.160  INFO 38576 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 10:15:37.175  INFO 38576 --- [Camel (camel-1) thread #5 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 10:15:54.908  INFO 38576 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 10:15:54.917  INFO 38576 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 10:15:54.917  INFO 38576 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-28 10:15:54.917  INFO 38576 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-28 10:15:54.920  INFO 38576 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 12ms (uptime:1m3s)
+2023-12-28 10:15:55.508  INFO 38576 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 10:15:55.527  INFO 38576 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 10:15:55.534  INFO 38576 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 10:15:59.418  INFO 39720 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 39720 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 10:15:59.420  INFO 39720 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "prov"
+2023-12-28 10:16:00.525  INFO 39720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-28 10:16:00.531  INFO 39720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 10:16:00.532  INFO 39720 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 10:16:00.633  INFO 39720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 10:16:00.633  INFO 39720 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1180 ms
+2023-12-28 10:16:01.600  INFO 39720 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 10:16:01.675  INFO 39720 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 10:16:01.676  INFO 39720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-28 10:16:01.924  INFO 39720 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 10:16:01.939  INFO 39720 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 10:16:01.940  INFO 39720 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-28 10:16:01.940  INFO 39720 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-28 10:16:01.940  INFO 39720 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 218ms (build:41ms init:162ms start:15ms)
+2023-12-28 10:16:01.946  INFO 39720 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 2.818 seconds (JVM running for 3.951)
+2023-12-28 10:16:02.458  INFO 39720 --- [RMI TCP Connection(1)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 10:16:02.539  INFO 39720 --- [RMI TCP Connection(1)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 10:16:03.601  INFO 39720 --- [RMI TCP Connection(3)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 10:16:03.602  INFO 39720 --- [RMI TCP Connection(3)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 10:16:03.603  INFO 39720 --- [RMI TCP Connection(3)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-28 10:16:11.994  INFO 39720 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:24                    : 파일 전송 시간 지연 5초 시작
+2023-12-28 10:16:11.996  INFO 39720 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:24                    : 파일 전송 시간 지연 5초 시작
+2023-12-28 10:16:17.007  INFO 39720 --- [Camel (camel-1) thread #4 - Delay] prov-template.yaml:27                    : 파일 전송 시간 지연 5초 끝
+2023-12-28 10:16:17.008  INFO 39720 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:27                    : 파일 전송 시간 지연 5초 끝
+2023-12-28 10:17:34.923  INFO 39720 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 10:17:34.932  INFO 39720 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 10:17:34.932  INFO 39720 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-28 10:17:34.933  INFO 39720 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-28 10:17:34.938  INFO 39720 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 14ms (uptime:1m33s)
+2023-12-28 10:17:35.534  INFO 39720 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 10:17:35.552  INFO 39720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 10:17:35.558  INFO 39720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 10:17:39.520  INFO 36684 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 36684 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 10:17:39.522  INFO 36684 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "prov"
+2023-12-28 10:17:40.601  INFO 36684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-28 10:17:40.607  INFO 36684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 10:17:40.607  INFO 36684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 10:17:40.715  INFO 36684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 10:17:40.715  INFO 36684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1156 ms
+2023-12-28 10:17:41.699  INFO 36684 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 10:17:41.757  INFO 36684 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 10:17:41.758  INFO 36684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-28 10:17:42.027  INFO 36684 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 10:17:42.045  INFO 36684 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 10:17:42.045  INFO 36684 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-28 10:17:42.046  INFO 36684 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-28 10:17:42.046  INFO 36684 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 238ms (build:40ms init:180ms start:18ms)
+2023-12-28 10:17:42.050  INFO 36684 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 2.816 seconds (JVM running for 3.938)
+2023-12-28 10:17:43.312  INFO 36684 --- [RMI TCP Connection(5)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 10:17:43.313  INFO 36684 --- [RMI TCP Connection(5)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 10:17:43.315  INFO 36684 --- [RMI TCP Connection(5)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-28 10:17:43.322  INFO 36684 --- [RMI TCP Connection(4)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 10:17:43.459  INFO 36684 --- [RMI TCP Connection(4)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 10:20:38.894  INFO 36684 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 10:20:38.909  INFO 36684 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 10:20:38.909  INFO 36684 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-28 10:20:38.909  INFO 36684 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-28 10:20:38.913  INFO 36684 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 18ms (uptime:2m56s)
+2023-12-28 10:20:39.519  INFO 36684 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 10:20:39.540  INFO 36684 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 10:20:39.549  INFO 36684 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-28 10:20:43.592  INFO 2524 --- [main] go.kr.dsp.api.DspApiApplication      : Starting DspApiProvApplication using Java 11.0.20 on yoonms0623 with PID 2524 (C:\dsp\dsp-api-prov\build\classes\java\main started by yoonms0623 in C:\dsp\dsp-api-prov)
+2023-12-28 10:20:43.594  INFO 2524 --- [main] go.kr.dsp.api.DspApiApplication      : The following 1 profile is active: "prov"
+2023-12-28 10:20:44.664  INFO 2524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-12-28 10:20:44.671  INFO 2524 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-28 10:20:44.673  INFO 2524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-12-28 10:20:44.795  INFO 2524 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-28 10:20:44.795  INFO 2524 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1167 ms
+2023-12-28 10:20:45.817  INFO 2524 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-28 10:20:45.883  INFO 2524 --- [main] o.a.c.c.s.CamelHttpTransportServlet      : Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-12-28 10:20:45.884  INFO 2524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-12-28 10:20:46.141  INFO 2524 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is starting
+2023-12-28 10:20:46.155  INFO 2524 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (started:2)
+2023-12-28 10:20:46.156  INFO 2524 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-file (file://file)
+2023-12-28 10:20:46.156  INFO 2524 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started dsp-api-prov-script (file://script)
+2023-12-28 10:20:46.156  INFO 2524 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) started in 218ms (build:41ms init:163ms start:14ms)
+2023-12-28 10:20:46.161  INFO 2524 --- [main] go.kr.dsp.api.DspApiApplication      : Started DspApiProvApplication in 2.865 seconds (JVM running for 4.002)
+2023-12-28 10:20:47.212  INFO 2524 --- [RMI TCP Connection(2)-172.30.1.18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 10:20:47.214  INFO 2524 --- [RMI TCP Connection(2)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-28 10:20:47.217  INFO 2524 --- [RMI TCP Connection(2)-172.30.1.18] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-28 10:20:47.227  INFO 2524 --- [RMI TCP Connection(1)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-28 10:20:47.229  INFO 2524 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:24                    : 파일 전송 시간 지연 5초 시작
+2023-12-28 10:20:47.231  INFO 2524 --- [Camel (camel-1) thread #1 - file://file] prov-template.yaml:24                    : 파일 전송 시간 지연 5초 시작
+2023-12-28 10:20:47.339  INFO 2524 --- [RMI TCP Connection(1)-172.30.1.18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-28 10:20:52.243  INFO 2524 --- [Camel (camel-1) thread #3 - Delay] prov-template.yaml:27                    : 파일 전송 시간 지연 5초 끝
+2023-12-28 10:20:52.243  INFO 2524 --- [Camel (camel-1) thread #4 - Delay] prov-template.yaml:27                    : 파일 전송 시간 지연 5초 끝
+2023-12-28 10:21:04.046  INFO 2524 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 10:21:04.047  INFO 2524 --- [Camel (camel-1) thread #2 - file://script] prov-template.yaml:18                    : 스크립트 전송 시간 지연 2초 시작
+2023-12-28 10:21:06.051  INFO 2524 --- [Camel (camel-1) thread #5 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 10:21:06.051  INFO 2524 --- [Camel (camel-1) thread #6 - Delay] prov-template.yaml:21                    : 스크립트 전송 시간 지연 2초 끝
+2023-12-28 10:49:23.859  INFO 2524 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) is shutting down (timeout:45s)
+2023-12-28 10:49:23.867  INFO 2524 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (stopped:2)
+2023-12-28 10:49:23.867  INFO 2524 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-script (file://script)
+2023-12-28 10:49:23.867  INFO 2524 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped dsp-api-prov-file (file://file)
+2023-12-28 10:49:23.871  INFO 2524 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 3.20.0 (camel-1) shutdown in 12ms (uptime:28m37s)
+2023-12-28 10:49:24.436  INFO 2524 --- [SpringApplicationShutdownHook] o.a.c.c.s.CamelHttpTransportServlet      : Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-12-28 10:49:24.452  INFO 2524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-28 10:49:24.460  INFO 2524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

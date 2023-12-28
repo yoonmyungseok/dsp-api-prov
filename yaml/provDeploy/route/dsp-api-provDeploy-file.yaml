@@ -1,0 +1,6 @@
+- templated-route:
+    route-id: dsp-api-provDeploy-file
+    route-template-ref: provDeploy-template
+    parameters:
+        - name: dir
+          value: file
